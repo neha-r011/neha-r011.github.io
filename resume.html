@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume - Neha R | Bachelor of Commerce & Innovation Trainee</title>
-  <meta name="description" content="ATS-Optimized Resume of Neha R - B.Com student at KCLAS and Innovation Engineer Trainee at PRICE ProtoSem. Specializing in Finance, Economics, and Applied Innovation.">
-  
-  <!-- FontAwesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
+  <title>Resume - Neha R | ATS-Optimized</title>
+  <meta name="description" content="Official ATS-optimized Curriculum Vitae / Resume of Neha R - B.Com Student, Merit Scholar, CMA Foundation Certified.">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    * {
+    /* Reset & Base Styles */
+    *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -23,446 +21,343 @@
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: #F1F5F9;
-      color: #1E293B;
+      color: #111827;
+      background-color: #f3f4f6;
       line-height: 1.5;
-      font-size: 14px;
-      padding: 24px 16px;
+      font-size: 11pt;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* Screen Wrapper Container */
-    .screen-wrapper {
-      max-width: 850px;
-      margin: 0 auto;
+    /* Print Optimization Rules */
+    @media print {
+      @page {
+        margin: 15mm;
+        size: A4 portrait;
+      }
+      body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+      }
+      header, footer, .no-print {
+        display: none !important;
+      }
+      .resume-container {
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+      }
+      a {
+        text-decoration: none !important;
+        color: #000000 !important;
+      }
     }
 
-    /* Action Bar (Screen Only) */
+    /* Resume Container (A4 preview look on screen) */
+    .resume-container {
+      max-width: 800px;
+      margin: 30px auto;
+      background: #ffffff;
+      padding: 40px 45px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      border-radius: 8px;
+    }
+
+    /* Top Actions Bar (Screen only) */
     .action-bar {
+      max-width: 800px;
+      margin: 20px auto 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 20px;
-      background: #0B1F3A;
-      color: white;
-      padding: 14px 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(11, 31, 58, 0.15);
+      padding: 0 10px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       padding: 8px 16px;
-      border-radius: 8px;
-      font-weight: 600;
+      border-radius: 6px;
       font-size: 13px;
+      font-weight: 600;
       text-decoration: none;
       cursor: pointer;
-      border: none;
       transition: all 0.2s ease;
+      border: 1px solid transparent;
     }
 
     .btn-primary {
-      background-color: #6495ED;
-      color: #0B1F3A;
+      background-color: #0B1F3A;
+      color: #F5EFEB;
     }
-
     .btn-primary:hover {
-      background-color: #93B7F5;
+      background-color: #163660;
     }
 
-    .btn-secondary {
-      background-color: rgba(255, 255, 255, 0.15);
-      color: white;
-      border: 1px solid rgba(255, 255, 255, 0.25);
+    .btn-outline {
+      background-color: #ffffff;
+      color: #374151;
+      border-color: #d1d5db;
+    }
+    .btn-outline:hover {
+      background-color: #f9fafb;
     }
 
-    .btn-secondary:hover {
-      background-color: rgba(255, 255, 255, 0.25);
-    }
-
-    /* ATS Document Canvas */
-    .resume-canvas {
-      background: #FFFFFF;
-      padding: 40px 48px;
-      border-radius: 8px;
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-      border: 1px solid #E2E8F0;
-    }
-
-    /* Header Section */
+    /* Resume Header */
     .header-section {
-      text-align: center;
       border-bottom: 2px solid #0B1F3A;
-      padding-bottom: 18px;
-      margin-bottom: 20px;
+      padding-bottom: 14px;
+      margin-bottom: 18px;
     }
 
-    .candidate-name {
-      font-size: 28px;
+    h1 {
+      font-size: 24pt;
       font-weight: 800;
       color: #0B1F3A;
       letter-spacing: -0.5px;
-      margin-bottom: 4px;
       text-transform: uppercase;
     }
 
-    .candidate-tagline {
-      font-size: 14px;
+    .subtitle {
+      font-size: 11pt;
       font-weight: 600;
-      color: #334155;
-      margin-bottom: 8px;
+      color: #374151;
+      margin-top: 2px;
     }
 
-    .contact-row {
+    .contact-line {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
-      gap: 16px;
-      font-size: 12.5px;
-      color: #475569;
+      gap: 12px;
+      font-size: 9.5pt;
+      color: #4b5563;
+      margin-top: 8px;
     }
 
-    .contact-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      color: #334155;
-      text-decoration: none;
-    }
-
-    /* Resume Section Structure */
-    .resume-section {
-      margin-bottom: 20px;
-    }
-
-    .section-title {
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
+    .contact-line a {
       color: #0B1F3A;
-      border-bottom: 1.5px solid #CBD5E1;
-      padding-bottom: 4px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Resume Sections */
+    .section {
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      font-size: 12pt;
+      font-weight: 700;
+      color: #0B1F3A;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 3px;
       margin-bottom: 10px;
     }
 
-    .summary-text {
-      font-size: 13.5px;
-      color: #334155;
-      text-align: justify;
-      line-height: 1.6;
-    }
-
-    /* Timeline & Entry Layout */
-    .entry-item {
-      margin-bottom: 14px;
-    }
-
-    .entry-item:last-child {
-      margin-bottom: 0;
+    .entry {
+      margin-bottom: 12px;
     }
 
     .entry-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 2px;
+      font-size: 10.5pt;
     }
 
     .entry-title {
-      font-size: 14px;
       font-weight: 700;
-      color: #0F172A;
-    }
-
-    .entry-date {
-      font-size: 12.5px;
-      font-weight: 600;
-      color: #64748B;
-      text-align: right;
+      color: #111827;
     }
 
     .entry-subtitle {
-      font-size: 13px;
+      font-size: 10pt;
       font-weight: 600;
-      color: #2563EB;
-      margin-bottom: 4px;
+      color: #4b5563;
+      margin-bottom: 3px;
     }
 
-    /* Bullet List */
-    .bullet-list {
-      list-style-type: disc;
-      padding-left: 18px;
+    .entry-date {
+      font-size: 9.5pt;
+      font-weight: 500;
+      color: #6b7280;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    p, ul {
+      font-size: 10pt;
+      color: #374151;
+    }
+
+    ul {
+      margin-left: 18px;
       margin-top: 4px;
     }
 
-    .bullet-list li {
-      font-size: 13px;
-      color: #334155;
-      margin-bottom: 4px;
-      line-height: 1.5;
+    li {
+      margin-bottom: 3px;
+      line-height: 1.45;
     }
 
     /* Skills Grid */
-    .skills-category {
-      margin-bottom: 8px;
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      row-gap: 6px;
+      column-gap: 12px;
+      font-size: 10pt;
     }
 
-    .skills-category:last-child {
-      margin-bottom: 0;
-    }
-
-    .skill-type {
+    .skill-category {
       font-weight: 700;
-      color: #0F172A;
-      font-size: 13px;
-      display: inline;
+      color: #0B1F3A;
     }
 
-    .skill-values {
-      color: #334155;
-      font-size: 13px;
-      display: inline;
-    }
-
-    /* PRINT STYLING (ATS-Optimized) */
-    @media print {
-      @page {
-        margin: 15mm;
-        size: A4 portrait;
-      }
-
-      body {
-        background: #FFFFFF !important;
-        color: #000000 !important;
-        padding: 0 !important;
-        font-size: 11pt !important;
-      }
-
-      header, footer, .no-print, .action-bar {
-        display: none !important;
-      }
-
-      .screen-wrapper {
-        max-width: 100% !important;
-        margin: 0 !important;
-      }
-
-      .resume-canvas {
-        padding: 0 !important;
-        border: none !important;
-        box-shadow: none !important;
-        border-radius: 0 !important;
-      }
-
-      .candidate-name {
-        color: #000000 !important;
-        font-size: 20pt !important;
-      }
-
-      .section-title {
-        color: #000000 !important;
-        border-bottom-color: #000000 !important;
-        font-size: 12pt !important;
-      }
-
-      .entry-title {
-        color: #000000 !important;
-        font-size: 11pt !important;
-      }
-
-      .entry-subtitle {
-        color: #333333 !important;
-      }
-
-      a {
-        text-decoration: none !important;
-        color: inherit !important;
-      }
+    .skill-list {
+      color: #374151;
     }
   </style>
 </head>
 <body>
 
-  <div class="screen-wrapper">
+  <!-- Top Action Bar (hidden when printing) -->
+  <div class="action-bar no-print">
+    <a href="index.html" class="btn btn-outline">&larr; Back to Portfolio</a>
+    <button onclick="window.print()" class="btn btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect width="12" height="8" x="6" y="14"></rect></svg>
+      Print / Save as PDF
+    </button>
+  </div>
+
+  <!-- ATS Resume Page -->
+  <div class="resume-container">
     
-    <!-- Action Bar (Screen View Only) -->
-    <div class="action-bar no-print">
-      <div style="display: flex; align-items: center; gap: 10px;">
-        <i class="fa-solid fa-file-invoice" style="color: #6495ED; font-size: 18px;"></i>
-        <div>
-          <strong style="font-size: 14px;">ATS-Optimized Resume Format</strong>
-          <div style="font-size: 11px; opacity: 0.8;">Single-column semantic hierarchy, printer-friendly & parser-ready</div>
-        </div>
-      </div>
-      <div style="display: flex; gap: 10px;">
-        <a href="index.html" class="btn btn-secondary">
-          <i class="fa-solid fa-arrow-left"></i>
-          <span>Back to Portfolio</span>
-        </a>
-        <button onclick="window.print()" class="btn btn-primary">
-          <i class="fa-solid fa-print"></i>
-          <span>Print / Save PDF</span>
-        </button>
+    <!-- HEADER -->
+    <div class="header-section">
+      <h1>Neha R</h1>
+      <div class="subtitle">B.Com Scholar | Finance, Economics & Design Thinking | Aspiring Global Graduate</div>
+      <div class="contact-line">
+        <span><strong>Email:</strong> <a href="mailto:rneha.21017@gmail.com">rneha.21017@gmail.com</a></span>
+        <span>&bull;</span>
+        <span><strong>GitHub:</strong> <a href="https://github.com/neha-r011" target="_blank">github.com/neha-r011</a></span>
+        <span>&bull;</span>
+        <span><strong>Portfolio:</strong> <a href="https://neha-r011.github.io" target="_blank">neha-r011.github.io</a></span>
       </div>
     </div>
 
-    <!-- ATS Resume Document -->
-    <div class="resume-canvas">
+    <!-- PROFESSIONAL SUMMARY -->
+    <div class="section">
+      <h2>Professional Summary</h2>
+      <p>
+        High-achieving Bachelor of Commerce (B.Com) undergraduate at Kumaraguru College of Liberal Arts and Science with proven academic merit and foundational credentials in Cost & Management Accounting (CMA Foundation). Awardee of the prestigious Mahatma Gandhi Merit Scholarship and Top 5% Elite performer in NPTEL Soft Skill Development. Demonstrates strong analytical aptitude in financial concepts and economics paired with creative design thinking, adaptability, and effective communication. Dedicated to pursuing advanced international higher education in Finance, Economics, and Business Analytics.
+      </p>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section">
+      <h2>Education</h2>
       
-      <!-- HEADER -->
-      <header class="header-section">
-        <h1 class="candidate-name">Neha R</h1>
-        <div class="candidate-tagline">Commerce Scholar | Innovation Engineer Trainee (PRICE ProtoSem) | Creative Designer</div>
-        <div class="contact-row">
-          <span class="contact-item">
-            <i class="fa-solid fa-location-dot"></i> Coimbatore, Tamil Nadu, India
-          </span>
-          <span class="contact-item">•</span>
-          <a href="mailto:rneha.21017@gmail.com" class="contact-item">
-            <i class="fa-solid fa-envelope"></i> rneha.21017@gmail.com
-          </a>
-          <span class="contact-item">•</span>
-          <a href="https://github.com/neha-r011" target="_blank" class="contact-item">
-            <i class="fa-brands fa-github"></i> github.com/neha-r011
-          </a>
-          <span class="contact-item">•</span>
-          <a href="https://neha-r011.github.io" target="_blank" class="contact-item">
-            <i class="fa-solid fa-globe"></i> neha-r011.github.io
-          </a>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Bachelor of Commerce (B.Com) &mdash; 2nd Year</span>
+          <span class="entry-date">2024 &ndash; 2027</span>
         </div>
-      </header>
+        <div class="entry-subtitle">Kumaraguru College of Liberal Arts and Science (KCLAS)</div>
+        <ul>
+          <li><strong>Relevant Coursework:</strong> Financial Accounting, Cost Accounting, Managerial Economics, Business Statistics, Corporate Law, Business Communication.</li>
+          <li><strong>Honors:</strong> Mahatma Gandhi Merit Scholarship recipient for outstanding academic performance and institutional engagement.</li>
+          <li><strong>Target Direction:</strong> Preparing foundations for competitive postgraduate admissions abroad in Finance & International Economics.</li>
+        </ul>
+      </div>
+    </div>
 
-      <!-- PROFESSIONAL SUMMARY -->
-      <section class="resume-section">
-        <h2 class="section-title">Professional Summary</h2>
-        <p class="summary-text">
-          Motivated and adaptable <strong>Bachelor of Commerce (B.Com)</strong> student at <strong>Kumaraguru College of Liberal Arts and Science</strong> and <strong>Innovation Engineer Trainee</strong> in the prestigious <strong>PRICE ProtoSem</strong> programme. Combines structured business problem-solving in finance and economics with practical technology prototyping, AI analytics, and intelligent commerce solutions. Passionate about applying analytical models and creative design to solve real-world industry challenges.
-        </p>
-      </section>
+    <!-- KEY HONORS & CERTIFICATIONS -->
+    <div class="section">
+      <h2>Honors & Certifications</h2>
+      
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Mahatma Gandhi Merit Scholarship</span>
+          <span class="entry-date">Awarded 2025</span>
+        </div>
+        <div class="entry-subtitle">Kumaraguru Institutions</div>
+        <p>Conferred for outstanding academic merit, discipline, and exemplary leadership potential across the student cohort.</p>
+      </div>
 
-      <!-- PROFESSIONAL EXPERIENCE & PROGRAMMES -->
-      <section class="resume-section">
-        <h2 class="section-title">Professional Experience & Innovation Programmes</h2>
-        <div class="entry-item">
-          <div class="entry-header">
-            <span class="entry-title">PRICE ProtoSem</span>
-            <span class="entry-date">20-Week Industry Programme</span>
-          </div>
-          <div class="entry-subtitle">Innovation Engineer Trainee • Phygital Retail, Intelligent Commerce & Prototyping</div>
-          <ul class="bullet-list">
-            <li>Selected for an intensive 20-week industry-integrated innovation programme focused on solving real-world retail and commerce challenges through AI, analytics, intelligent systems, IoT, prototyping, and entrepreneurship.</li>
-            <li>Collaborating on industry problem statements to explore, engineer, and validate practical technology solutions beyond conventional classroom learning.</li>
-          </ul>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">CMA Foundation Exam &mdash; Certified</span>
+          <span class="entry-date">Certified</span>
         </div>
-      </section>
+        <div class="entry-subtitle">The Institute of Cost Accountants of India (ICAI)</div>
+        <p>Successfully completed national professional certification covering Fundamentals of Accounting, Laws & Ethics, Business Mathematics & Statistics, and Business Economics.</p>
+      </div>
 
-      <!-- EDUCATION -->
-      <section class="resume-section">
-        <h2 class="section-title">Education</h2>
-        <div class="entry-item">
-          <div class="entry-header">
-            <span class="entry-title">Kumaraguru College of Liberal Arts and Science (KCLAS)</span>
-            <span class="entry-date">Expected 2026 / Ongoing</span>
-          </div>
-          <div class="entry-subtitle">Bachelor of Commerce (B.Com)</div>
-          <ul class="bullet-list">
-            <li>Core Coursework: Financial Accounting, Corporate Finance, Micro & Macro Economics, Business Law, Principles of Management, and Business Statistics.</li>
-            <li>Actively engaged in academic case studies, data presentation seminars, and collaborative student initiatives.</li>
-          </ul>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Soft Skill Development &mdash; Elite (Top 5% National Rank)</span>
+          <span class="entry-date">NPTEL Certification</span>
         </div>
-      </section>
+        <div class="entry-subtitle">National Programme on Technology Enhanced Learning (IIT / IISc Initiative)</div>
+        <p>Achieved elite status within the top 5th percentile nationwide, demonstrating mastery in executive communication, conflict management, interpersonal dynamics, and team leadership.</p>
+      </div>
+    </div>
 
-      <!-- CORE COMPETENCIES & SKILLS -->
-      <section class="resume-section">
-        <h2 class="section-title">Core Competencies & Skills</h2>
-        <div class="skills-category">
-          <span class="skill-type">Programme & Innovation Disciplines: </span>
-          <span class="skill-values">Phygital Retail & Intelligent Commerce, AI & Analytics Concepts, Intelligent Systems & IoT Fundamentals, Rapid Prototyping, Entrepreneurship.</span>
+    <!-- ACADEMIC & PRACTICAL PROJECTS -->
+    <div class="section">
+      <h2>Academic Focus & Practical Exposure</h2>
+      
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Financial Analysis & Cost Accounting Case Studies</span>
+          <span class="entry-date">Academic Portfolio</span>
         </div>
-        <div class="skills-category">
-          <span class="skill-type">Financial & Analytical Skills: </span>
-          <span class="skill-values">Financial Statement Analysis, Economics Principles, Market Trend Research, Analytical Thinking, Quantitative Reasoning.</span>
-        </div>
-        <div class="skills-category">
-          <span class="skill-type">Creative & Digital Skills: </span>
-          <span class="skill-values">Creative Design & Handicrafts, UI/UX Presentation Design, Visual Layout Curation, Digital Collaboration Tools, Web Showcase Development.</span>
-        </div>
-        <div class="skills-category">
-          <span class="skill-type">Soft Skills & Leadership: </span>
-          <span class="skill-values">Adaptability & Agility, Strategic Team Collaboration, Effective Verbal & Written Communication, Time Management, Creative Problem Solving.</span>
-        </div>
-      </section>
+        <ul>
+          <li>Analyzed corporate balance sheets, cash flow statements, and cost sheet models to evaluate operational efficiency and capital budgeting metrics.</li>
+          <li>Synthesized macroeconomic market indicators and regulatory frameworks to examine their impact on enterprise decision-making.</li>
+        </ul>
+      </div>
 
-      <!-- ACADEMIC FOCUS & PROJECTS -->
-      <section class="resume-section">
-        <h2 class="section-title">Projects & Academic Focus</h2>
-        
-        <div class="entry-item">
-          <div class="entry-header">
-            <span class="entry-title">Personal Digital Portfolio & ProtoSem Archive</span>
-            <span class="entry-date">2026</span>
-          </div>
-          <div class="entry-subtitle">Creator & Designer • Live at neha-r011.github.io</div>
-          <ul class="bullet-list">
-            <li>Designed and deployed an interactive responsive web portfolio with dedicated 20-week ProtoSem archive, Bento Grid architecture, and 3D physics.</li>
-            <li>Integrated data-driven week modules to document ongoing engineering field notes and industry problem validations.</li>
-          </ul>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Design Thinking, Creative Crafts & Interdisciplinary Communication</span>
+          <span class="entry-date">Independent Endeavors</span>
         </div>
+        <ul>
+          <li>Applied design thinking principles and visual layout methodologies to translate complex numerical datasets into intuitive, aesthetically rich presentations.</li>
+          <li>Engaged in creative writing, craftwork, and collaborative group initiatives fostering lateral problem-solving, resilience, and adaptability.</li>
+        </ul>
+      </div>
+    </div>
 
-        <div class="entry-item">
-          <div class="entry-header">
-            <span class="entry-title">Economics & Financial Markets Analysis Case Studies</span>
-            <span class="entry-date">Academic</span>
-          </div>
-          <div class="entry-subtitle">B.Com Academic Project Series • KCLAS</div>
-          <ul class="bullet-list">
-            <li>Conducted analytical reviews on market dynamics, fiscal policies, and economic indicators influencing modern commerce.</li>
-            <li>Synthesized complex commercial case studies into clear visual summaries and strategic business presentations.</li>
-          </ul>
-        </div>
+    <!-- SKILLS & COMPETENCIES -->
+    <div class="section">
+      <h2>Skills & Competencies</h2>
+      <div class="skills-grid">
+        <div class="skill-category">Analytical & Finance:</div>
+        <div class="skill-list">Financial Accounting, Costing Principles, Economics (Micro & Macro), Business Law, Quantitative Data Interpretation.</div>
 
-        <div class="entry-item">
-          <div class="entry-header">
-            <span class="entry-title">Creative Design, Crafts & Visual Arts Endeavors</span>
-            <span class="entry-date">Ongoing</span>
-          </div>
-          <div class="entry-subtitle">Independent Creative Practitioner</div>
-          <ul class="bullet-list">
-            <li>Curated hands-on handicrafts and structured visual design compositions requiring precision, aesthetic judgment, and material planning.</li>
-            <li>Applied design principles to enhance visual presentations, reports, and student club promotional materials.</li>
-          </ul>
-        </div>
+        <div class="skill-category">Soft Skills & Power:</div>
+        <div class="skill-list">Creativity, Adaptability, Resilience, High Determination, Cross-Functional Collaboration, Public Speaking & English Fluency.</div>
 
-      </section>
+        <div class="skill-category">Creative & Technical:</div>
+        <div class="skill-list">Design Thinking, Visual Composition & Layout, Creative Writing, GitHub, Modern Web Basics (HTML/CSS).</div>
 
-      <!-- EXTRACURRICULAR ACTIVITIES & LEADERSHIP -->
-      <section class="resume-section">
-        <h2 class="section-title">Extracurricular Activities & Leadership</h2>
-        <div class="entry-item">
-          <div class="entry-header">
-            <span class="entry-title">Sports, Athletics & Team Dynamics</span>
-            <span class="entry-date">Active Participant</span>
-          </div>
-          <ul class="bullet-list">
-            <li>Regular participant in sports and team athletic activities, fostering discipline, resilience, stamina, and effective on-the-spot team communication.</li>
-            <li>Demonstrated high sportsmanship and agile execution in dynamic competitive settings.</li>
-          </ul>
-        </div>
+        <div class="skill-category">Languages:</div>
+        <div class="skill-list">English (Fluent / Professional Proficiency), Tamil.</div>
+      </div>
+    </div>
 
-        <div class="entry-item" style="margin-top: 8px;">
-          <div class="entry-header">
-            <span class="entry-title">Campus & Community Involvement</span>
-            <span class="entry-date">Kumaraguru College of Liberal Arts & Science</span>
-          </div>
-          <ul class="bullet-list">
-            <li>Collaborated with peers on campus events, group seminars, and multidisciplinary workshops.</li>
-          </ul>
-        </div>
-      </section>
-
+    <!-- CO-CURRICULAR & INTERESTS -->
+    <div class="section">
+      <h2>Co-Curricular & Personal Pursuits</h2>
+      <p>
+        <strong>Interests:</strong> Creative Arts & Crafts, Sports & Fitness, Economic Research, Creative Writing, Travel & Global Cultural Studies.
+      </p>
     </div>
 
   </div>
