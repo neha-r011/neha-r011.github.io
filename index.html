@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neha R | Finance, Economics & Creative Design Portfolio</title>
-  <meta name="description" content="Personal portfolio of Neha R – B.Com student passionate about Finance, Economics, and Creative Design.">
+  <title>Neha R | Finance, Economics, Design & PRICE ProtoSem Portfolio</title>
+  <meta name="description" content="Personal portfolio of Neha R – B.Com student and Innovation Engineer Trainee at PRICE ProtoSem, passionate about Finance, Economics, and Creative Design.">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,6 +44,7 @@
           boxShadow: {
             'glow': '0 0 35px -5px rgba(100, 149, 237, 0.35)',
             'card-glow': '0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 0 20px -5px rgba(100, 149, 237, 0.15)',
+            'week-glow': '0 8px 25px -6px rgba(100, 149, 237, 0.25)',
           }
         }
       }
@@ -104,14 +105,110 @@
     .tilt-inner {
       transform: translateZ(30px);
     }
+
+    /* Week Card Styles */
+    .week-card {
+      background: linear-gradient(145deg, rgba(17, 41, 77, 0.9), rgba(11, 31, 58, 0.95));
+      border: 1px solid rgba(100, 149, 237, 0.22);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .week-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, rgba(100, 149, 237, 0.6), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .week-card:hover {
+      border-color: #6495ED;
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.6), 0 0 20px -3px rgba(100, 149, 237, 0.35);
+      background: linear-gradient(145deg, rgba(22, 51, 95, 0.95), rgba(15, 36, 68, 0.98));
+    }
+
+    .week-card:hover::before {
+      opacity: 1;
+    }
+
+    .phase-tab.active {
+      background-color: #6495ED;
+      color: #0B1F3A;
+      border-color: #6495ED;
+      box-shadow: 0 0 20px rgba(100, 149, 237, 0.4);
+    }
+
+    .timeline-node {
+      position: relative;
+    }
+    
+    .timeline-node::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -12px;
+      width: 12px;
+      height: 2px;
+      background: rgba(100, 149, 237, 0.3);
+    }
   </style>
 </head>
 <body class="min-h-screen gradient-mesh selection:bg-[#6495ED] selection:text-[#0B1F3A]">
 
-  <!-- Toast Notification for Copy -->
+  <!-- Toast Notification for Copy / Modals -->
   <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-[#6495ED] text-[#0B1F3A] font-bold px-5 py-3 rounded-xl shadow-2xl flex items-center space-x-2">
     <i class="fa-solid fa-circle-check"></i>
     <span id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <!-- Story Placeholder Modal -->
+  <div id="weekModal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-md flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
+    <div class="bg-[#0F2444] border border-[#6495ED]/40 rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-2xl transform scale-95 transition-all duration-300" id="modalContainer">
+      <div class="flex items-center justify-between pb-4 border-b border-brand-border/60">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-xl bg-[#6495ED]/20 text-[#6495ED] flex items-center justify-center font-bold font-display" id="modalWeekBadge">
+            W01
+          </div>
+          <div>
+            <h4 class="text-white font-display font-bold text-lg" id="modalTitle">Week 01 Story</h4>
+            <span class="text-xs text-[#93B7F5] font-semibold" id="modalPhase">Phase 01</span>
+          </div>
+        </div>
+        <button onclick="closeWeekModal()" class="w-8 h-8 rounded-lg bg-brand-surface hover:bg-[#6495ED] hover:text-[#0B1F3A] text-slate-300 transition-colors flex items-center justify-center">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="py-6 space-y-4">
+        <div class="p-4 rounded-2xl bg-[#0B1F3A]/70 border border-[#6495ED]/20 flex items-start space-x-3">
+          <i class="fa-solid fa-feather-pointed text-[#6495ED] text-lg mt-0.5"></i>
+          <div>
+            <div class="text-sm font-bold text-white mb-1">Field Notes in Progress</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              This week's deep-dive industry insights, project reflections, and technical outcomes are currently being documented as part of the PRICE ProtoSem archive.
+            </p>
+          </div>
+        </div>
+        
+        <div class="flex items-center justify-between text-xs text-brand-textMuted px-1">
+          <span>Programme: PRICE ProtoSem (20 Weeks)</span>
+          <span class="text-[#6495ED] font-semibold">Coming Soon</span>
+        </div>
+      </div>
+
+      <div class="flex justify-end space-x-3 pt-2">
+        <button onclick="closeWeekModal()" class="px-5 py-2 rounded-xl bg-[#6495ED] text-[#0B1F3A] font-bold text-xs hover:bg-[#93B7F5] transition-all">
+          Understood
+        </button>
+      </div>
+    </div>
   </div>
 
   <!-- Navigation Bar -->
@@ -128,9 +225,13 @@
       </a>
 
       <!-- Desktop Nav Links -->
-      <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+      <div class="hidden lg:flex items-center space-x-7 text-sm font-medium">
         <a href="#about" class="text-slate-300 hover:text-[#6495ED] transition-colors">About</a>
         <a href="#skills" class="text-slate-300 hover:text-[#6495ED] transition-colors">Competencies</a>
+        <a href="#protosem" class="text-slate-300 hover:text-[#6495ED] transition-colors flex items-center space-x-1.5 font-semibold text-white">
+          <span class="w-2 h-2 rounded-full bg-[#6495ED] animate-pulse"></span>
+          <span>ProtoSem</span>
+        </a>
         <a href="#journey" class="text-slate-300 hover:text-[#6495ED] transition-colors">Learning Journey</a>
         <a href="#passions" class="text-slate-300 hover:text-[#6495ED] transition-colors">Creative Focus</a>
         <a href="#contact" class="text-slate-300 hover:text-[#6495ED] transition-colors">Connect</a>
@@ -142,8 +243,8 @@
           <i class="fa-solid fa-file-lines text-xs"></i>
           <span>ATS Resume</span>
         </a>
-        <a href="#contact" class="hidden sm:inline-flex items-center px-4 py-2 rounded-xl bg-[#6495ED] text-[#0B1F3A] hover:bg-[#93B7F5] transition-all duration-300 text-sm font-bold shadow-glow">
-          <span>Get in Touch</span>
+        <a href="#protosem" class="hidden sm:inline-flex items-center px-4 py-2 rounded-xl bg-[#6495ED] text-[#0B1F3A] hover:bg-[#93B7F5] transition-all duration-300 text-sm font-bold shadow-glow">
+          <span>ProtoSem Journey</span>
         </a>
       </div>
     </div>
@@ -177,12 +278,12 @@
                   alt="Neha R" 
                   class="relative w-36 h-36 md:w-44 md:h-44 rounded-2xl object-cover border-2 border-white/20 shadow-2xl bg-[#0B1F3A]"
                 >
-                <div class="absolute bottom-2 right-2 w-5 h-5 bg-emerald-500 rounded-full border-2 border-[#0B1F3A] title='Open to Opportunities'"></div>
+                <div class="absolute bottom-2 right-2 w-5 h-5 bg-emerald-500 rounded-full border-2 border-[#0B1F3A]" title="Open to Opportunities"></div>
               </div>
 
               <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full shimmer-badge border border-[#6495ED]/30 text-xs font-semibold text-[#93B7F5] mt-1">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>Open to Internships & Projects</span>
+                <span>PRICE ProtoSem Trainee</span>
               </div>
               
               <div class="mt-4 flex items-center space-x-3 text-brand-textMuted">
@@ -212,11 +313,14 @@
               </div>
 
               <p class="text-slate-300 text-sm md:text-base leading-relaxed">
-                Currently pursuing my <strong class="text-white">B.Com</strong> at <strong class="text-[#93B7F5]">Kumaraguru College of Liberal Arts and Science</strong>. Bridging analytical insight in <strong class="text-white">Finance & Economics</strong> with a strong flair for <strong class="text-white">Creative Design, Crafts, and Collaborative Leadership</strong>.
+                Currently pursuing my <strong class="text-white">B.Com</strong> at <strong class="text-[#93B7F5]">Kumaraguru College of Liberal Arts and Science</strong> and selected as an <strong class="text-white">Innovation Engineer Trainee</strong> at <strong class="text-[#93B7F5]">PRICE ProtoSem</strong>. Bridging analytical insight in <strong class="text-white">Finance & Economics</strong> with <strong class="text-white">Applied Innovation, Creative Design, and Systems Prototyping</strong>.
               </p>
 
               <!-- Quick Highlights Badges -->
               <div class="flex flex-wrap gap-2 pt-1">
+                <span class="px-3 py-1 text-xs rounded-lg bg-[#6495ED]/15 text-[#93B7F5] border border-[#6495ED]/30 font-medium">
+                  <i class="fa-solid fa-bolt mr-1.5 text-xs"></i>PRICE ProtoSem
+                </span>
                 <span class="px-3 py-1 text-xs rounded-lg bg-[#6495ED]/15 text-[#93B7F5] border border-[#6495ED]/30 font-medium">
                   <i class="fa-solid fa-graduation-cap mr-1.5 text-xs"></i>B.Com @ KCLAS
                 </span>
@@ -224,15 +328,15 @@
                   <i class="fa-solid fa-chart-line mr-1.5 text-xs"></i>Finance & Economics
                 </span>
                 <span class="px-3 py-1 text-xs rounded-lg bg-[#6495ED]/15 text-[#93B7F5] border border-[#6495ED]/30 font-medium">
-                  <i class="fa-solid fa-palette mr-1.5 text-xs"></i>Creative Design & Crafts
+                  <i class="fa-solid fa-palette mr-1.5 text-xs"></i>Creative Design
                 </span>
               </div>
 
               <!-- CTA Row -->
               <div class="pt-4 flex flex-wrap gap-3">
-                <a href="#about" class="px-5 py-2.5 rounded-xl bg-[#6495ED] text-[#0B1F3A] font-bold text-sm hover:bg-[#93B7F5] hover:shadow-glow transition-all duration-300 flex items-center space-x-2">
-                  <span>Explore Bento Portfolio</span>
-                  <i class="fa-solid fa-arrow-down text-xs"></i>
+                <a href="#protosem" class="px-5 py-2.5 rounded-xl bg-[#6495ED] text-[#0B1F3A] font-bold text-sm hover:bg-[#93B7F5] hover:shadow-glow transition-all duration-300 flex items-center space-x-2">
+                  <i class="fa-solid fa-compass text-xs"></i>
+                  <span>Explore ProtoSem (20 Weeks)</span>
                 </a>
                 <a href="resume.html" class="px-5 py-2.5 rounded-xl bg-brand-surface text-white border border-brand-border hover:border-[#6495ED] hover:text-[#6495ED] font-semibold text-sm transition-all duration-300 flex items-center space-x-2">
                   <i class="fa-solid fa-print text-xs"></i>
@@ -444,58 +548,233 @@
         </div>
       </div>
 
-      <!-- BENTO CARD 5: Current Focus & Learning Horizons (Span 12) -->
-      <div id="journey" class="md:col-span-12 bento-card p-8 md:p-10 rounded-3xl" data-aos="fade-up" data-aos-delay="500">
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
-          <div>
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#6495ED]/15 text-[#93B7F5] border border-[#6495ED]/30 text-xs font-bold uppercase tracking-wider mb-2">
-              <i class="fa-solid fa-compass"></i>
-              <span>Roadmap</span>
-            </div>
-            <h3 class="text-2xl md:text-3xl font-display font-extrabold text-white">
-              Current Focus & Learning Horizons
-            </h3>
-          </div>
-          <span class="text-xs text-brand-textMuted font-medium">
-            Continuously leveling up skills in 2026
-          </span>
-        </div>
+    </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- PROTOSEM DEDICATED SECTION -->
+    <section id="protosem" class="scroll-mt-28 space-y-12" data-aos="fade-up">
+      
+      <!-- PROTOSEM INTRO CARD -->
+      <div class="bento-card p-8 md:p-12 rounded-3xl relative overflow-hidden">
+        
+        <!-- Decorative Ambient Light -->
+        <div class="absolute -right-24 -top-24 w-96 h-96 bg-[#6495ED]/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#6495ED] to-transparent"></div>
+
+        <div class="relative z-10 space-y-8">
           
-          <div class="p-6 rounded-2xl bg-brand-surface/70 border border-brand-border hover:border-[#6495ED]/60 transition-all group">
-            <div class="w-10 h-10 rounded-xl bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-chart-pie"></i>
+          <!-- Top Row: Section Label & Badges -->
+          <div class="flex flex-wrap items-center justify-between gap-4">
+            <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#6495ED]/15 text-[#93B7F5] border border-[#6495ED]/40 text-xs font-bold uppercase tracking-widest">
+              <i class="fa-solid fa-microchip text-xs"></i>
+              <span>PROTOSEM</span>
             </div>
-            <h4 class="text-base font-bold text-white mb-1.5">Financial & Market Analysis</h4>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Studying corporate valuation, economic cycles, risk management, and personal financial planning models.
-            </p>
+
+            <div class="flex flex-wrap items-center gap-2 text-xs">
+              <span class="px-3 py-1 rounded-lg bg-brand-surface text-slate-300 border border-brand-border font-semibold flex items-center">
+                <i class="fa-solid fa-user-gear text-[#6495ED] mr-1.5"></i>
+                Innovation Engineer Trainee
+              </span>
+              <span class="px-3 py-1 rounded-lg bg-[#6495ED]/15 text-[#93B7F5] border border-[#6495ED]/30 font-semibold flex items-center">
+                <i class="fa-regular fa-calendar-check text-[#6495ED] mr-1.5"></i>
+                20-Week Industry Programme
+              </span>
+            </div>
           </div>
 
-          <div class="p-6 rounded-2xl bg-brand-surface/70 border border-brand-border hover:border-[#6495ED]/60 transition-all group">
-            <div class="w-10 h-10 rounded-xl bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-pen-ruler"></i>
+          <!-- Main Heading & Role Description -->
+          <div class="space-y-4 max-w-4xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-white tracking-tight">
+              PRICE <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#6495ED] via-[#93B7F5] to-white">ProtoSem</span>
+            </h2>
+            <div class="text-base sm:text-lg font-semibold text-[#93B7F5] flex items-center space-x-2">
+              <span>20-Week Industry-Integrated Innovation Programme</span>
             </div>
-            <h4 class="text-base font-bold text-white mb-1.5">Design Systems & UI/UX</h4>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Exploring visual hierarchies, color theory, typography, and clean digital presentation workflows.
-            </p>
+            <div class="space-y-3 text-slate-300 text-sm sm:text-base leading-relaxed">
+              <p>
+                Selected for a 20-week industry-integrated innovation programme focused on solving real-world retail and commerce challenges through AI, analytics, intelligent systems, IoT, prototyping, and entrepreneurship.
+              </p>
+              <p>
+                Working with industry problem statements to explore, develop, and validate practical technology solutions beyond conventional classroom learning.
+              </p>
+            </div>
           </div>
 
-          <div class="p-6 rounded-2xl bg-brand-surface/70 border border-brand-border hover:border-[#6495ED]/60 transition-all group">
-            <div class="w-10 h-10 rounded-xl bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-laptop-code"></i>
+          <!-- Domain / Focus Tags (Programme Disciplines) -->
+          <div class="pt-4 space-y-3 border-t border-brand-border/60">
+            <div class="text-xs uppercase tracking-wider text-brand-textMuted font-bold flex items-center space-x-2">
+              <i class="fa-solid fa-layer-group text-[#6495ED]"></i>
+              <span>Core Programme Disciplines & Focus Areas</span>
             </div>
-            <h4 class="text-base font-bold text-white mb-1.5">Digital Presence & Tools</h4>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Leveraging modern web tools, spreadsheet modeling, and cloud collaboration to deliver high-impact results.
-            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+              
+              <div class="p-4 rounded-2xl bg-brand-surface/80 border border-brand-border/70 hover:border-[#6495ED]/60 transition-all group">
+                <div class="w-8 h-8 rounded-lg bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center mb-2.5 group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-shop text-sm"></i>
+                </div>
+                <div class="text-xs font-bold text-white leading-snug">Phygital Retail & Intelligent Commerce</div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-brand-surface/80 border border-brand-border/70 hover:border-[#6495ED]/60 transition-all group">
+                <div class="w-8 h-8 rounded-lg bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center mb-2.5 group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-brain text-sm"></i>
+                </div>
+                <div class="text-xs font-bold text-white leading-snug">AI & Analytics</div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-brand-surface/80 border border-brand-border/70 hover:border-[#6495ED]/60 transition-all group">
+                <div class="w-8 h-8 rounded-lg bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center mb-2.5 group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-network-wired text-sm"></i>
+                </div>
+                <div class="text-xs font-bold text-white leading-snug">Intelligent Systems & IoT</div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-brand-surface/80 border border-brand-border/70 hover:border-[#6495ED]/60 transition-all group">
+                <div class="w-8 h-8 rounded-lg bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center mb-2.5 group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-cube text-sm"></i>
+                </div>
+                <div class="text-xs font-bold text-white leading-snug">Prototyping</div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-brand-surface/80 border border-brand-border/70 hover:border-[#6495ED]/60 transition-all group">
+                <div class="w-8 h-8 rounded-lg bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center mb-2.5 group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-rocket text-sm"></i>
+                </div>
+                <div class="text-xs font-bold text-white leading-snug">Entrepreneurship</div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Subtle Programme Progress Indicator -->
+          <div class="pt-6 border-t border-brand-border/40">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-300">
+                20-Week Progression Framework
+              </span>
+              <div class="flex items-center space-x-4 text-xs font-semibold text-brand-textMuted">
+                <span class="text-[#6495ED]">Phase 01 (W01–05)</span>
+                <span>•</span>
+                <span>Phase 02 (W06–10)</span>
+                <span>•</span>
+                <span>Phase 03 (W11–15)</span>
+                <span>•</span>
+                <span>Phase 04 (W16–20)</span>
+              </div>
+            </div>
+            
+            <div class="relative w-full h-3 bg-brand-surface rounded-full overflow-hidden border border-brand-border flex items-center p-0.5">
+              <div class="h-full w-1/4 bg-gradient-to-r from-[#6495ED] to-[#93B7F5] rounded-full shadow-glow"></div>
+              <div class="absolute left-1/4 top-0 bottom-0 w-0.5 bg-brand-dark"></div>
+              <div class="absolute left-2/4 top-0 bottom-0 w-0.5 bg-brand-dark"></div>
+              <div class="absolute left-3/4 top-0 bottom-0 w-0.5 bg-brand-dark"></div>
+            </div>
+            
+            <div class="flex justify-between text-[11px] font-mono text-brand-textMuted mt-1.5 px-0.5">
+              <span>01</span>
+              <span>05</span>
+              <span>10</span>
+              <span>15</span>
+              <span>20</span>
+            </div>
           </div>
 
         </div>
       </div>
 
+      <!-- 20-WEEK JOURNEY CONTAINER -->
+      <div class="space-y-6">
+        
+        <!-- Header & Phase Navigation Tabs -->
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <h3 class="text-2xl sm:text-3xl font-display font-extrabold text-white">
+              The 20-Week <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#6495ED] to-[#93B7F5]">Journey Archive</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-brand-textMuted mt-1">
+              One Continuous Journey • Four Phases • Twenty Weeks • Future Field Note Stories
+            </p>
+          </div>
+
+          <!-- Phase Navigation Filter Buttons -->
+          <div class="flex items-center flex-wrap gap-1.5 p-1.5 rounded-2xl bg-brand-surface border border-brand-border" role="tablist">
+            <button onclick="filterPhase('all')" id="tab-all" class="phase-tab active px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all duration-200" role="tab" aria-selected="true">
+              ALL
+            </button>
+            <button onclick="filterPhase(1)" id="tab-1" class="phase-tab px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-300 hover:text-white transition-all duration-200" role="tab">
+              PHASE 01 (W01–05)
+            </button>
+            <button onclick="filterPhase(2)" id="tab-2" class="phase-tab px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-300 hover:text-white transition-all duration-200" role="tab">
+              PHASE 02 (W06–10)
+            </button>
+            <button onclick="filterPhase(3)" id="tab-3" class="phase-tab px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-300 hover:text-white transition-all duration-200" role="tab">
+              PHASE 03 (W11–15)
+            </button>
+            <button onclick="filterPhase(4)" id="tab-4" class="phase-tab px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-300 hover:text-white transition-all duration-200" role="tab">
+              PHASE 04 (W16–20)
+            </button>
+          </div>
+        </div>
+
+        <!-- 20-Week Cards Grid (Dynamically Rendered from Clean Data Architecture) -->
+        <div id="protoSemWeeksGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <!-- Rendered via JavaScript -->
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- LEARNING HORIZONS & CURRENT FOCUS -->
+    <div id="journey" class="bento-card p-8 md:p-10 rounded-3xl" data-aos="fade-up">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+        <div>
+          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#6495ED]/15 text-[#93B7F5] border border-[#6495ED]/30 text-xs font-bold uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-compass"></i>
+            <span>Roadmap</span>
+          </div>
+          <h3 class="text-2xl md:text-3xl font-display font-extrabold text-white">
+            Current Focus & Learning Horizons
+          </h3>
+        </div>
+        <span class="text-xs text-brand-textMuted font-medium">
+          Continuously leveling up skills in 2026
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-brand-surface/70 border border-brand-border hover:border-[#6495ED]/60 transition-all group">
+          <div class="w-10 h-10 rounded-xl bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-chart-pie"></i>
+          </div>
+          <h4 class="text-base font-bold text-white mb-1.5">Financial & Market Analysis</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Studying corporate valuation, economic cycles, risk management, and personal financial planning models.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-surface/70 border border-brand-border hover:border-[#6495ED]/60 transition-all group">
+          <div class="w-10 h-10 rounded-xl bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-pen-ruler"></i>
+          </div>
+          <h4 class="text-base font-bold text-white mb-1.5">Design Systems & UI/UX</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Exploring visual hierarchies, color theory, typography, and clean digital presentation workflows.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-surface/70 border border-brand-border hover:border-[#6495ED]/60 transition-all group">
+          <div class="w-10 h-10 rounded-xl bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+          <h4 class="text-base font-bold text-white mb-1.5">Applied Systems & Prototyping</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Engaged in PRICE ProtoSem innovation methodologies, intelligent commerce architectures, and IoT concepts.
+          </p>
+        </div>
+
+      </div>
     </div>
 
     <!-- CONTACT & CONNECT SECTION -->
@@ -513,7 +792,7 @@
         </h2>
 
         <p class="text-slate-300 text-sm md:text-base leading-relaxed">
-          Whether you have an internship opportunity, a project collaboration, or simply want to chat about finance, economics, or design, I'd love to connect with you!
+          Whether you have an internship opportunity, a project collaboration, or want to discuss finance, economics, ProtoSem innovation, or design, I'd love to connect!
         </p>
 
         <!-- Direct Contact Cards -->
@@ -574,7 +853,7 @@
       <div class="flex items-center space-x-2">
         <span class="font-display font-bold text-white text-sm">Neha R</span>
         <span>•</span>
-        <span>Portfolio & Showcase</span>
+        <span>PRICE ProtoSem Innovation Trainee</span>
       </div>
       <div>
         Designed & Deployed with <span class="text-[#6495ED] font-semibold">PortfolioWizard</span> ✨
@@ -588,7 +867,7 @@
     </div>
   </footer>
 
-  <!-- Scripts: Typed.js, Vanilla-tilt, AOS -->
+  <!-- Scripts: Typed.js, Vanilla-tilt, AOS, ProtoSem Data Architecture -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -604,13 +883,13 @@
     // Initialize Typed.js
     var typed = new Typed('#typed-text', {
       strings: [
+        'Innovation Engineer Trainee @ ProtoSem',
         'Finance & Economics Scholar',
         'B.Com Student @ KCLAS',
-        'Creative Designer & Crafter',
-        'Adaptable Collaborator'
+        'Creative Designer & Crafter'
       ],
-      typeSpeed: 50,
-      backSpeed: 30,
+      typeSpeed: 45,
+      backSpeed: 25,
       backDelay: 1800,
       loop: true
     });
@@ -626,6 +905,127 @@
         scale: 1.02
       });
     }
+
+    // PROTOSEM 20-WEEK DATA ARCHITECTURE (Readiness for future blogs)
+    const protoSemWeeks = [
+      { week: 1, phase: 1, phaseName: "Phase 01", slug: "week-01", status: "COMING SOON", label: "Field Notes in Progress" },
+      { week: 2, phase: 1, phaseName: "Phase 01", slug: "week-02", status: "COMING SOON", label: "Field Notes in Progress" },
+      { week: 3, phase: 1, phaseName: "Phase 01", slug: "week-03", status: "COMING SOON", label: "Field Notes in Progress" },
+      { week: 4, phase: 1, phaseName: "Phase 01", slug: "week-04", status: "COMING SOON", label: "Field Notes in Progress" },
+      { week: 5, phase: 1, phaseName: "Phase 01", slug: "week-05", status: "COMING SOON", label: "Field Notes in Progress" },
+      { week: 6, phase: 2, phaseName: "Phase 02", slug: "week-06", status: "COMING SOON", label: "Field Notes in Progress" },
+      { week: 7, phase: 2, phaseName: "Phase 02", slug: "week-07", status: "COMING SOON", label: "Field Notes in Progress" },
+      { week: 8, phase: 2, phaseName: "Phase 02", slug: "week-08", status: "COMING SOON", label: "Field Notes in Progress" },
+      { week: 9, phase: 2, phaseName: "Phase 02", slug: "week-09", status: "COMING SOON", label: "Field Notes in Progress" },
+      { week: 10, phase: 2, phaseName: "Phase 02", slug: "week-10", status: "COMING SOON", label: "Field Notes in Progress" },
+      { week: 11, phase: 3, phaseName: "Phase 03", slug: "week-11", status: "COMING SOON", label: "Field Notes in Progress" },
+      { week: 12, phase: 3, phaseName: "Phase 03", slug: "week-12", status: "COMING SOON", label: "Field Notes in Progress" },
+      { week: 13, phase: 3, phaseName: "Phase 03", slug: "week-13", status: "COMING SOON", label: "Field Notes in Progress" },
+      { week: 14, phase: 3, phaseName: "Phase 03", slug: "week-14", status: "COMING SOON", label: "Field Notes in Progress" },
+      { week: 15, phase: 3, phaseName: "Phase 03", slug: "week-15", status: "COMING SOON", label: "Field Notes in Progress" },
+      { week: 16, phase: 4, phaseName: "Phase 04", slug: "week-16", status: "COMING SOON", label: "Field Notes in Progress" },
+      { week: 17, phase: 4, phaseName: "Phase 04", slug: "week-17", status: "COMING SOON", label: "Field Notes in Progress" },
+      { week: 18, phase: 4, phaseName: "Phase 04", slug: "week-18", status: "COMING SOON", label: "Field Notes in Progress" },
+      { week: 19, phase: 4, phaseName: "Phase 04", slug: "week-19", status: "COMING SOON", label: "Field Notes in Progress" },
+      { week: 20, phase: 4, phaseName: "Phase 04", slug: "week-20", status: "COMING SOON", label: "Field Notes in Progress" }
+    ];
+
+    function formatWeekNumber(num) {
+      return num < 10 ? '0' + num : '' + num;
+    }
+
+    function renderProtoSemGrid(filterPhaseNum = 'all') {
+      const grid = document.getElementById('protoSemWeeksGrid');
+      if (!grid) return;
+
+      const filtered = filterPhaseNum === 'all' 
+        ? protoSemWeeks 
+        : protoSemWeeks.filter(w => w.phase === filterPhaseNum);
+
+      grid.innerHTML = filtered.map(w => {
+        const formattedWeek = formatWeekNumber(w.week);
+        return `
+          <a 
+            href="#protosem" 
+            onclick="openWeekModal(${w.week}, '${w.phaseName}'); return false;"
+            class="week-card p-5 rounded-2xl flex flex-col justify-between group cursor-pointer border border-[#6495ED]/20"
+            data-week="${w.week}"
+            data-phase="${w.phase}"
+            title="Explore Week ${formattedWeek} (Coming Soon)"
+          >
+            <div>
+              <!-- Top Card Meta -->
+              <div class="flex items-center justify-between mb-3 text-xs">
+                <span class="px-2.5 py-0.5 rounded-md bg-[#6495ED]/15 text-[#93B7F5] font-mono font-semibold text-[11px] border border-[#6495ED]/30">
+                  ${w.phaseName}
+                </span>
+                <span class="w-2 h-2 rounded-full bg-[#6495ED]/40 group-hover:bg-[#6495ED] group-hover:shadow-[0_0_8px_#6495ED] transition-all"></span>
+              </div>
+
+              <!-- Main Week Identifier -->
+              <div class="text-xl sm:text-2xl font-display font-black text-white group-hover:text-[#6495ED] transition-colors flex items-center justify-between">
+                <span>WEEK ${formattedWeek}</span>
+                <i class="fa-solid fa-arrow-right-long text-[#6495ED] text-sm opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+              </div>
+            </div>
+
+            <!-- Bottom Status Indicator -->
+            <div class="pt-4 mt-3 border-t border-brand-border/40 flex items-center justify-between text-[11px]">
+              <span class="text-brand-textMuted uppercase tracking-wider font-semibold group-hover:text-slate-200 transition-colors">
+                ${w.status}
+              </span>
+              <i class="fa-regular fa-bookmark text-brand-textMuted group-hover:text-[#6495ED] transition-colors"></i>
+            </div>
+          </a>
+        `;
+      }).join('');
+    }
+
+    function filterPhase(phase) {
+      document.querySelectorAll('.phase-tab').forEach(t => t.classList.remove('active', 'text-[#0B1F3A]'));
+      const activeBtn = phase === 'all' ? document.getElementById('tab-all') : document.getElementById('tab-' + phase);
+      if (activeBtn) {
+        activeBtn.classList.add('active');
+      }
+      renderProtoSemGrid(phase);
+    }
+
+    // Modal Interaction
+    function openWeekModal(weekNum, phaseName) {
+      const formatted = formatWeekNumber(weekNum);
+      document.getElementById('modalWeekBadge').textContent = 'W' + formatted;
+      document.getElementById('modalTitle').textContent = 'WEEK ' + formatted + ' Story';
+      document.getElementById('modalPhase').textContent = phaseName + ' • PRICE ProtoSem Archive';
+      
+      const modal = document.getElementById('weekModal');
+      const container = document.getElementById('modalContainer');
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      container.classList.remove('scale-95');
+    }
+
+    function closeWeekModal() {
+      const modal = document.getElementById('weekModal');
+      const container = document.getElementById('modalContainer');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      container.classList.add('scale-95');
+    }
+
+    // Close modal on click outside
+    document.getElementById('weekModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeWeekModal();
+      }
+    });
+
+    // Close modal on Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeWeekModal();
+      }
+    });
+
+    // Initial ProtoSem Render
+    renderProtoSemGrid('all');
 
     // Copy to clipboard helper
     function copyEmail(email) {
