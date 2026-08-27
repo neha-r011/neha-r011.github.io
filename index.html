@@ -3,48 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neha R | Finance, Economics, Design & PRICE ProtoSem Portfolio</title>
-  <meta name="description" content="Personal portfolio of Neha R – B.Com student and Innovation Engineer Trainee at PRICE ProtoSem, passionate about Finance, Economics, and Creative Design.">
-  
+  <title>Neha R | Portfolio & Creative Journey</title>
+  <meta name="description" content="Personal portfolio of Neha R - B.Com student at Kumaraguru College of Liberal Arts and Science, aspiring global scholar passionate about Finance, Economics, and Design.">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
-  <!-- AOS Animation CDN -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS (Animate on Scroll) CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Typed.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
   <script>
     tailwind.config = {
       darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            brand: {
-              dark: '#0B1F3A',
-              card: '#11294D',
-              cardHover: '#16335F',
-              accent: '#6495ED',
-              accentLight: '#93B7F5',
-              accentGlow: '#6495ED40',
-              border: '#1E3E6B',
-              textMuted: '#94A3B8',
-              surface: '#0F2444'
-            }
+            brandNavy: '#0B1F3A',
+            brandCream: '#F5EFEB',
+            brandDeepNavy: '#061120',
+            brandSurface: '#102A4E',
+            brandCard: '#0f2442',
+            brandAccent: '#38bdf8',
+            brandGold: '#E5C07B',
+            brandRose: '#F472B6'
           },
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            display: ['"Space Grotesk"', 'sans-serif']
+            mono: ['"JetBrains Mono"', 'monospace']
           },
           boxShadow: {
-            'glow': '0 0 35px -5px rgba(100, 149, 237, 0.35)',
-            'card-glow': '0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 0 20px -5px rgba(100, 149, 237, 0.15)',
-            'week-glow': '0 8px 25px -6px rgba(100, 149, 237, 0.25)',
+            'glow-navy': '0 0 35px -5px rgba(56, 189, 248, 0.18)',
+            'glow-card': '0 10px 30px -10px rgba(0, 0, 0, 0.5)',
+            'terminal': '0 20px 40px -15px rgba(11, 31, 58, 0.7)'
           }
         }
       }
@@ -53,793 +54,447 @@
 
   <style>
     body {
-      background-color: #0B1F3A;
-      color: #F8FAFC;
+      background-color: #061120;
+      color: #F5EFEB;
       font-family: 'Plus Jakarta Sans', sans-serif;
       overflow-x: hidden;
     }
-    
-    .gradient-mesh {
+
+    /* Ambient background mesh */
+    .bg-mesh {
       background-image: 
-        radial-gradient(at 10% 20%, rgba(100, 149, 237, 0.18) 0px, transparent 50%),
-        radial-gradient(at 90% 10%, rgba(30, 62, 107, 0.25) 0px, transparent 50%),
-        radial-gradient(at 50% 80%, rgba(100, 149, 237, 0.12) 0px, transparent 50%);
+        radial-gradient(at 0% 0%, rgba(11, 31, 58, 0.9) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(16, 42, 78, 0.8) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, rgba(6, 17, 32, 1) 0px, transparent 100%),
+        radial-gradient(at 80% 80%, rgba(14, 165, 233, 0.1) 0px, transparent 50%);
     }
 
     .bento-card {
-      background: linear-gradient(135deg, rgba(17, 41, 77, 0.85), rgba(15, 36, 68, 0.95));
-      border: 1px solid rgba(100, 149, 237, 0.2);
+      background: linear-gradient(135deg, rgba(16, 42, 78, 0.65) 0%, rgba(11, 31, 58, 0.85) 100%);
+      border: 1px solid rgba(245, 239, 235, 0.12);
       backdrop-filter: blur(12px);
       transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    
+
     .bento-card:hover {
-      border-color: rgba(100, 149, 237, 0.55);
+      border-color: rgba(245, 239, 235, 0.35);
       transform: translateY(-4px);
-      box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5), 0 0 25px -3px rgba(100, 149, 237, 0.3);
+      box-shadow: 0 15px 35px -10px rgba(56, 189, 248, 0.15);
     }
 
-    .glass-nav {
-      background: rgba(11, 31, 58, 0.82);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(100, 149, 237, 0.18);
+    .glass-pill {
+      background: rgba(245, 239, 235, 0.08);
+      border: 1px solid rgba(245, 239, 235, 0.15);
+      backdrop-filter: blur(8px);
     }
 
-    .shimmer-badge {
-      background: linear-gradient(90deg, rgba(100,149,237,0.15) 0%, rgba(147,183,245,0.3) 50%, rgba(100,149,237,0.15) 100%);
-      background-size: 200% 100%;
-      animation: shimmer 3s infinite linear;
+    .terminal-header {
+      background: #08162b;
+      border-bottom: 1px solid rgba(245, 239, 235, 0.1);
     }
 
-    @keyframes shimmer {
-      0% { background-position: 200% 0; }
-      100% { background-position: -200% 0; }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
     }
-
-    /* Custom 3D Tilt Card Styling */
-    .tilt-hero {
-      transform-style: preserve-3d;
-      perspective: 1000px;
+    ::-webkit-scrollbar-track {
+      background: #061120;
     }
-
-    .tilt-inner {
-      transform: translateZ(30px);
+    ::-webkit-scrollbar-thumb {
+      background: #102A4E;
+      border-radius: 4px;
     }
-
-    /* Week Card Styles */
-    .week-card {
-      background: linear-gradient(145deg, rgba(17, 41, 77, 0.9), rgba(11, 31, 58, 0.95));
-      border: 1px solid rgba(100, 149, 237, 0.22);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .week-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, rgba(100, 149, 237, 0.6), transparent);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .week-card:hover {
-      border-color: #6495ED;
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.6), 0 0 20px -3px rgba(100, 149, 237, 0.35);
-      background: linear-gradient(145deg, rgba(22, 51, 95, 0.95), rgba(15, 36, 68, 0.98));
-    }
-
-    .week-card:hover::before {
-      opacity: 1;
-    }
-
-    .phase-tab.active {
-      background-color: #6495ED;
-      color: #0B1F3A;
-      border-color: #6495ED;
-      box-shadow: 0 0 20px rgba(100, 149, 237, 0.4);
-    }
-
-    .timeline-node {
-      position: relative;
-    }
-    
-    .timeline-node::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      right: -12px;
-      width: 12px;
-      height: 2px;
-      background: rgba(100, 149, 237, 0.3);
+    ::-webkit-scrollbar-thumb:hover {
+      background: #38bdf8;
     }
   </style>
 </head>
-<body class="min-h-screen gradient-mesh selection:bg-[#6495ED] selection:text-[#0B1F3A]">
+<body class="bg-mesh min-h-screen flex flex-col justify-between selection:bg-brandCream selection:text-brandNavy">
 
-  <!-- Toast Notification for Copy / Modals -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-[#6495ED] text-[#0B1F3A] font-bold px-5 py-3 rounded-xl shadow-2xl flex items-center space-x-2">
-    <i class="fa-solid fa-circle-check"></i>
-    <span id="toast-message">Copied to clipboard!</span>
-  </div>
-
-  <!-- Story Placeholder Modal -->
-  <div id="weekModal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-md flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
-    <div class="bg-[#0F2444] border border-[#6495ED]/40 rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-2xl transform scale-95 transition-all duration-300" id="modalContainer">
-      <div class="flex items-center justify-between pb-4 border-b border-brand-border/60">
-        <div class="flex items-center space-x-3">
-          <div class="w-10 h-10 rounded-xl bg-[#6495ED]/20 text-[#6495ED] flex items-center justify-center font-bold font-display" id="modalWeekBadge">
-            W01
-          </div>
-          <div>
-            <h4 class="text-white font-display font-bold text-lg" id="modalTitle">Week 01 Story</h4>
-            <span class="text-xs text-[#93B7F5] font-semibold" id="modalPhase">Phase 01</span>
-          </div>
+  <!-- Top Navigation Bar -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-brandDeepNavy/80 border-b border-brandCream/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Logo / Name -->
+      <a href="#top" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-xl bg-brandNavy border border-brandCream/20 flex items-center justify-center font-bold text-brandCream group-hover:scale-105 transition-transform shadow-inner">
+          NR
         </div>
-        <button onclick="closeWeekModal()" class="w-8 h-8 rounded-lg bg-brand-surface hover:bg-[#6495ED] hover:text-[#0B1F3A] text-slate-300 transition-colors flex items-center justify-center">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-
-      <div class="py-6 space-y-4">
-        <div class="p-4 rounded-2xl bg-[#0B1F3A]/70 border border-[#6495ED]/20 flex items-start space-x-3">
-          <i class="fa-solid fa-feather-pointed text-[#6495ED] text-lg mt-0.5"></i>
-          <div>
-            <div class="text-sm font-bold text-white mb-1">Field Notes in Progress</div>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              This week's deep-dive industry insights, project reflections, and technical outcomes are currently being documented as part of the PRICE ProtoSem archive.
-            </p>
-          </div>
-        </div>
-        
-        <div class="flex items-center justify-between text-xs text-brand-textMuted px-1">
-          <span>Programme: PRICE ProtoSem (20 Weeks)</span>
-          <span class="text-[#6495ED] font-semibold">Coming Soon</span>
-        </div>
-      </div>
-
-      <div class="flex justify-end space-x-3 pt-2">
-        <button onclick="closeWeekModal()" class="px-5 py-2 rounded-xl bg-[#6495ED] text-[#0B1F3A] font-bold text-xs hover:bg-[#93B7F5] transition-all">
-          Understood
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Navigation Bar -->
-  <nav class="fixed top-0 left-0 right-0 z-40 glass-nav">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="#hero" class="flex items-center space-x-3 group">
-        <div class="w-10 h-10 rounded-xl bg-[#6495ED]/20 border border-[#6495ED]/40 flex items-center justify-center text-[#6495ED] font-display font-bold text-xl group-hover:scale-105 group-hover:bg-[#6495ED] group-hover:text-[#0B1F3A] transition-all">
-          N
-        </div>
-        <div class="flex flex-col">
-          <span class="font-display font-bold text-lg tracking-wide text-white group-hover:text-[#6495ED] transition-colors">Neha R</span>
-          <span class="text-xs text-brand-textMuted tracking-wider uppercase font-semibold">Portfolio & Showcase</span>
+        <div>
+          <span class="font-bold text-lg tracking-tight text-brandCream group-hover:text-brandAccent transition-colors">Neha R</span>
+          <span class="hidden sm:inline-block text-xs text-brandCream/60 ml-2 font-mono">portfolio.v2</span>
         </div>
       </a>
 
-      <!-- Desktop Nav Links -->
-      <div class="hidden lg:flex items-center space-x-7 text-sm font-medium">
-        <a href="#about" class="text-slate-300 hover:text-[#6495ED] transition-colors">About</a>
-        <a href="#skills" class="text-slate-300 hover:text-[#6495ED] transition-colors">Competencies</a>
-        <a href="#protosem" class="text-slate-300 hover:text-[#6495ED] transition-colors flex items-center space-x-1.5 font-semibold text-white">
-          <span class="w-2 h-2 rounded-full bg-[#6495ED] animate-pulse"></span>
-          <span>ProtoSem</span>
-        </a>
-        <a href="#journey" class="text-slate-300 hover:text-[#6495ED] transition-colors">Learning Journey</a>
-        <a href="#passions" class="text-slate-300 hover:text-[#6495ED] transition-colors">Creative Focus</a>
-        <a href="#contact" class="text-slate-300 hover:text-[#6495ED] transition-colors">Connect</a>
-      </div>
-
-      <!-- Action Buttons -->
-      <div class="flex items-center space-x-3">
-        <a href="resume.html" class="inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-[#6495ED]/15 text-[#6495ED] border border-[#6495ED]/40 hover:bg-[#6495ED] hover:text-[#0B1F3A] transition-all duration-300 text-sm font-semibold shadow-sm hover:shadow-glow">
-          <i class="fa-solid fa-file-lines text-xs"></i>
+      <!-- Nav Links & Actions -->
+      <nav class="flex items-center gap-3 sm:gap-6">
+        <a href="#about" class="text-sm font-medium text-brandCream/80 hover:text-brandCream transition-colors hidden md:block">About</a>
+        <a href="#milestones" class="text-sm font-medium text-brandCream/80 hover:text-brandCream transition-colors hidden md:block">Milestones</a>
+        <a href="#skills" class="text-sm font-medium text-brandCream/80 hover:text-brandCream transition-colors hidden md:block">Skills & Passions</a>
+        <a href="resume.html" class="flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-brandCream text-brandNavy hover:bg-white hover:shadow-lg hover:shadow-brandCream/10 transition-all duration-300 transform active:scale-95">
+          <i data-lucide="file-text" class="w-4 h-4"></i>
           <span>ATS Resume</span>
         </a>
-        <a href="#protosem" class="hidden sm:inline-flex items-center px-4 py-2 rounded-xl bg-[#6495ED] text-[#0B1F3A] hover:bg-[#93B7F5] transition-all duration-300 text-sm font-bold shadow-glow">
-          <span>ProtoSem Journey</span>
-        </a>
-      </div>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24 space-y-24">
+  <!-- Main Container -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12" id="top">
 
-    <!-- HERO SECTION (3D Floating Card Style) -->
-    <section id="hero" class="min-h-[75vh] flex flex-col justify-center items-center relative">
+    <!-- HERO SECTION: DEVELOPER TERMINAL + PROFILE INTRO -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-4 sm:pt-8" data-aos="fade-up" data-aos-duration="900">
       
-      <!-- Ambient Glow Blobs in Background -->
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#6495ED]/15 rounded-full blur-3xl pointer-events-none"></div>
-      
-      <!-- 3D Floating Hero Card Container -->
-      <div class="w-full max-w-4xl" data-aos="zoom-in" data-aos-duration="900">
-        <div id="hero3DCard" class="tilt-hero bento-card p-8 md:p-12 rounded-3xl relative overflow-hidden group shadow-card-glow cursor-pointer">
-          
-          <!-- Decorative Top Bar -->
-          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#6495ED] via-[#93B7F5] to-[#6495ED]"></div>
-
-          <div class="tilt-inner grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            
-            <!-- Avatar & Quick Badge Column -->
-            <div class="md:col-span-5 flex flex-col items-center text-center">
-              <div class="relative mb-4 group/avatar">
-                <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-[#6495ED] to-[#93B7F5] opacity-75 blur-md group-hover/avatar:opacity-100 transition duration-300"></div>
-                <img 
-                  id="user-avatar" 
-                  src="profile.jpg" 
-                  onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Neha+R&background=6495ED&color=0B1F3A&size=256&bold=true&font-size=0.45';" 
-                  alt="Neha R" 
-                  class="relative w-36 h-36 md:w-44 md:h-44 rounded-2xl object-cover border-2 border-white/20 shadow-2xl bg-[#0B1F3A]"
-                >
-                <div class="absolute bottom-2 right-2 w-5 h-5 bg-emerald-500 rounded-full border-2 border-[#0B1F3A]" title="Open to Opportunities"></div>
-              </div>
-
-              <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full shimmer-badge border border-[#6495ED]/30 text-xs font-semibold text-[#93B7F5] mt-1">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>PRICE ProtoSem Trainee</span>
-              </div>
-              
-              <div class="mt-4 flex items-center space-x-3 text-brand-textMuted">
-                <a href="https://github.com/neha-r011" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-brand-surface hover:bg-[#6495ED] hover:text-[#0B1F3A] transition-all" title="GitHub Profile">
-                  <i class="fa-brands fa-github text-lg"></i>
-                </a>
-                <button onclick="copyEmail('rneha.21017@gmail.com')" class="p-2 rounded-lg bg-brand-surface hover:bg-[#6495ED] hover:text-[#0B1F3A] transition-all" title="Copy Email">
-                  <i class="fa-solid fa-envelope text-lg"></i>
-                </button>
-                <a href="resume.html" class="p-2 rounded-lg bg-brand-surface hover:bg-[#6495ED] hover:text-[#0B1F3A] transition-all" title="ATS Resume">
-                  <i class="fa-solid fa-file-pdf text-lg"></i>
-                </a>
-              </div>
-            </div>
-
-            <!-- Content Details Column -->
-            <div class="md:col-span-7 space-y-5 text-left">
-              <div class="space-y-2">
-                <span class="text-xs uppercase tracking-widest text-[#6495ED] font-bold font-display">Welcome to my universe</span>
-                <h1 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
-                  Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#93B7F5] to-[#6495ED]">Neha R</span>
-                </h1>
-                <div class="text-lg md:text-xl font-medium text-slate-300 min-h-[32px] flex items-center">
-                  <span class="text-slate-400 mr-2">I am an aspiring</span>
-                  <span id="typed-text" class="text-[#6495ED] font-semibold"></span>
-                </div>
-              </div>
-
-              <p class="text-slate-300 text-sm md:text-base leading-relaxed">
-                Currently pursuing my <strong class="text-white">B.Com</strong> at <strong class="text-[#93B7F5]">Kumaraguru College of Liberal Arts and Science</strong> and selected as an <strong class="text-white">Innovation Engineer Trainee</strong> at <strong class="text-[#93B7F5]">PRICE ProtoSem</strong>. Bridging analytical insight in <strong class="text-white">Finance & Economics</strong> with <strong class="text-white">Applied Innovation, Creative Design, and Systems Prototyping</strong>.
-              </p>
-
-              <!-- Quick Highlights Badges -->
-              <div class="flex flex-wrap gap-2 pt-1">
-                <span class="px-3 py-1 text-xs rounded-lg bg-[#6495ED]/15 text-[#93B7F5] border border-[#6495ED]/30 font-medium">
-                  <i class="fa-solid fa-bolt mr-1.5 text-xs"></i>PRICE ProtoSem
-                </span>
-                <span class="px-3 py-1 text-xs rounded-lg bg-[#6495ED]/15 text-[#93B7F5] border border-[#6495ED]/30 font-medium">
-                  <i class="fa-solid fa-graduation-cap mr-1.5 text-xs"></i>B.Com @ KCLAS
-                </span>
-                <span class="px-3 py-1 text-xs rounded-lg bg-[#6495ED]/15 text-[#93B7F5] border border-[#6495ED]/30 font-medium">
-                  <i class="fa-solid fa-chart-line mr-1.5 text-xs"></i>Finance & Economics
-                </span>
-                <span class="px-3 py-1 text-xs rounded-lg bg-[#6495ED]/15 text-[#93B7F5] border border-[#6495ED]/30 font-medium">
-                  <i class="fa-solid fa-palette mr-1.5 text-xs"></i>Creative Design
-                </span>
-              </div>
-
-              <!-- CTA Row -->
-              <div class="pt-4 flex flex-wrap gap-3">
-                <a href="#protosem" class="px-5 py-2.5 rounded-xl bg-[#6495ED] text-[#0B1F3A] font-bold text-sm hover:bg-[#93B7F5] hover:shadow-glow transition-all duration-300 flex items-center space-x-2">
-                  <i class="fa-solid fa-compass text-xs"></i>
-                  <span>Explore ProtoSem (20 Weeks)</span>
-                </a>
-                <a href="resume.html" class="px-5 py-2.5 rounded-xl bg-brand-surface text-white border border-brand-border hover:border-[#6495ED] hover:text-[#6495ED] font-semibold text-sm transition-all duration-300 flex items-center space-x-2">
-                  <i class="fa-solid fa-print text-xs"></i>
-                  <span>Print ATS Resume</span>
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      
-    </section>
-
-    <!-- SECTION TITLE -->
-    <div id="about" class="text-center space-y-3 pt-8" data-aos="fade-up">
-      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#6495ED]/10 border border-[#6495ED]/30 text-xs font-bold text-[#6495ED] uppercase tracking-wider">
-        <i class="fa-solid fa-shapes"></i>
-        <span>Modular Showcase</span>
-      </div>
-      <h2 class="text-3xl md:text-4xl font-display font-extrabold text-white tracking-tight">
-        The Bento <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#6495ED] to-[#93B7F5]">Grid</span>
-      </h2>
-      <p class="text-brand-textMuted max-w-2xl mx-auto text-sm md:text-base">
-        A multi-dimensional view of my academic foundation, creative passions, adaptability, and vision for continuous growth.
-      </p>
-    </div>
-
-    <!-- BENTO GRID SECTION -->
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-      
-      <!-- BENTO CARD 1: Academic & Institution (Span 7) -->
-      <div class="md:col-span-7 bento-card p-8 rounded-3xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
-        <div>
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-12 h-12 rounded-2xl bg-[#6495ED]/15 border border-[#6495ED]/30 flex items-center justify-center text-[#6495ED] text-xl">
-              <i class="fa-solid fa-building-columns"></i>
-            </div>
-            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-brand-surface border border-brand-border text-brand-textMuted">
-              Current Degree
-            </span>
-          </div>
-
-          <h3 class="text-2xl font-display font-bold text-white mb-2">
-            Bachelor of Commerce (B.Com)
-          </h3>
-          <p class="text-[#93B7F5] font-medium text-base mb-4">
-            Kumaraguru College of Liberal Arts and Science (KCLAS)
-          </p>
-          <p class="text-slate-300 text-sm leading-relaxed mb-6">
-            Building a rigorous foundation in commercial law, corporate finance, micro/macro economics, financial accounting, and organizational dynamics. Equipped with the analytical acumen to interpret financial statements and understand broad market mechanisms.
-          </p>
+      <!-- Left Column: Quick Intro & Avatar -->
+      <div class="lg:col-span-5 flex flex-col items-start space-y-5">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono bg-brandSurface/80 border border-brandCream/20 text-brandCream/90">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>B.Com 2nd Year &bull; Scholar & Aspirant</span>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4 border-t border-brand-border/60">
-          <div class="bg-brand-surface/70 p-3 rounded-xl border border-brand-border/40">
-            <div class="text-xs text-brand-textMuted font-medium">Discipline</div>
-            <div class="text-sm font-bold text-white mt-0.5">Commerce & Finance</div>
+        <div class="flex items-center gap-5">
+          <div class="relative group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-brandCream/30 to-brandAccent/30 rounded-2xl blur opacity-70 group-hover:opacity-100 transition duration-500"></div>
+            <img 
+              id="user-avatar"
+              src="profile.jpg" 
+              onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Neha+R&background=0B1F3A&color=F5EFEB&size=256&bold=true';" 
+              alt="Neha R" 
+              class="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover border-2 border-brandCream/40 shadow-xl"
+            />
           </div>
-          <div class="bg-brand-surface/70 p-3 rounded-xl border border-brand-border/40">
-            <div class="text-xs text-brand-textMuted font-medium">Focus</div>
-            <div class="text-sm font-bold text-white mt-0.5">Economics & Analysis</div>
-          </div>
-          <div class="bg-brand-surface/70 p-3 rounded-xl border border-brand-border/40 col-span-2 sm:col-span-1">
-            <div class="text-xs text-brand-textMuted font-medium">Institution</div>
-            <div class="text-sm font-bold text-white mt-0.5">KCLAS</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- BENTO CARD 2: Dual Passion Engine (Span 5) -->
-      <div id="passions" class="md:col-span-5 bento-card p-8 rounded-3xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
-        <div>
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-12 h-12 rounded-2xl bg-[#6495ED]/15 border border-[#6495ED]/30 flex items-center justify-center text-[#6495ED] text-xl">
-              <i class="fa-solid fa-brain"></i>
-            </div>
-            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-[#6495ED]/15 text-[#93B7F5] border border-[#6495ED]/30">
-              Synergy
-            </span>
-          </div>
-
-          <h3 class="text-2xl font-display font-bold text-white mb-2">
-            The Analytical + Creative Blend
-          </h3>
-          <p class="text-slate-300 text-sm leading-relaxed mb-6">
-            I thrive at the intersection of numbers and visual expression. While economics trains my analytical mindset, creative arts and design empower me to turn data into intuitive, engaging stories.
-          </p>
-        </div>
-
-        <div class="space-y-3">
-          <div class="flex items-center justify-between p-3 rounded-xl bg-brand-surface/60 border border-brand-border/40">
-            <div class="flex items-center space-x-3">
-              <i class="fa-solid fa-coins text-[#6495ED]"></i>
-              <span class="text-sm font-semibold text-white">Finance & Economics</span>
-            </div>
-            <span class="text-xs text-[#93B7F5] font-medium">Analytical Core</span>
-          </div>
-          <div class="flex items-center justify-between p-3 rounded-xl bg-brand-surface/60 border border-brand-border/40">
-            <div class="flex items-center space-x-3">
-              <i class="fa-solid fa-wand-magic-sparkles text-[#6495ED]"></i>
-              <span class="text-sm font-semibold text-white">Creative Design & Crafts</span>
-            </div>
-            <span class="text-xs text-[#93B7F5] font-medium">Visual Instinct</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- BENTO CARD 3: Core Competencies Matrix (Span 6) -->
-      <div id="skills" class="md:col-span-6 bento-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="300">
-        <div class="flex items-center justify-between mb-6">
-          <div class="w-12 h-12 rounded-2xl bg-[#6495ED]/15 border border-[#6495ED]/30 flex items-center justify-center text-[#6495ED] text-xl">
-            <i class="fa-solid fa-bolt"></i>
-          </div>
-          <span class="text-xs font-semibold px-3 py-1 rounded-full bg-brand-surface border border-brand-border text-brand-textMuted">
-            Key Strengths
-          </span>
-        </div>
-
-        <h3 class="text-2xl font-display font-bold text-white mb-2">
-          Core Competencies & Soft Skills
-        </h3>
-        <p class="text-slate-300 text-sm leading-relaxed mb-6">
-          Proven strengths in adapting swiftly to dynamic environments, collaborating across teams, and thinking critically.
-        </p>
-
-        <!-- Skill Badges Grid -->
-        <div class="grid grid-cols-2 sm:grid-cols-2 gap-3">
-          <div class="p-3.5 rounded-xl bg-brand-surface/70 border border-brand-border hover:border-[#6495ED]/60 transition-colors">
-            <div class="flex items-center space-x-2.5 mb-1 text-white font-semibold text-sm">
-              <i class="fa-solid fa-arrows-spin text-[#6495ED]"></i>
-              <span>Adaptability</span>
-            </div>
-            <p class="text-xs text-brand-textMuted">Quick learner capable of excelling across diverse tasks and new domains.</p>
-          </div>
-
-          <div class="p-3.5 rounded-xl bg-brand-surface/70 border border-brand-border hover:border-[#6495ED]/60 transition-colors">
-            <div class="flex items-center space-x-2.5 mb-1 text-white font-semibold text-sm">
-              <i class="fa-solid fa-lightbulb text-[#6495ED]"></i>
-              <span>Creativity</span>
-            </div>
-            <p class="text-xs text-brand-textMuted">Innovative ideation with keen eye for aesthetics, craft, and presentations.</p>
-          </div>
-
-          <div class="p-3.5 rounded-xl bg-brand-surface/70 border border-brand-border hover:border-[#6495ED]/60 transition-colors">
-            <div class="flex items-center space-x-2.5 mb-1 text-white font-semibold text-sm">
-              <i class="fa-solid fa-users text-[#6495ED]"></i>
-              <span>Collaboration</span>
-            </div>
-            <p class="text-xs text-brand-textMuted">Strong interpersonal communicator and active team player in group goals.</p>
-          </div>
-
-          <div class="p-3.5 rounded-xl bg-brand-surface/70 border border-brand-border hover:border-[#6495ED]/60 transition-colors">
-            <div class="flex items-center space-x-2.5 mb-1 text-white font-semibold text-sm">
-              <i class="fa-solid fa-magnifying-glass-chart text-[#6495ED]"></i>
-              <span>Analytical Thinking</span>
-            </div>
-            <p class="text-xs text-brand-textMuted">Systematic problem decomposition and data-driven reasoning.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- BENTO CARD 4: Sports, Crafts & Energy (Span 6) -->
-      <div class="md:col-span-6 bento-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="400">
-        <div class="flex items-center justify-between mb-6">
-          <div class="w-12 h-12 rounded-2xl bg-[#6495ED]/15 border border-[#6495ED]/30 flex items-center justify-center text-[#6495ED] text-xl">
-            <i class="fa-solid fa-medal"></i>
-          </div>
-          <span class="text-xs font-semibold px-3 py-1 rounded-full bg-brand-surface border border-brand-border text-brand-textMuted">
-            Holistic Balance
-          </span>
-        </div>
-
-        <h3 class="text-2xl font-display font-bold text-white mb-2">
-          Sports, Crafts & Personal Drive
-        </h3>
-        <p class="text-slate-300 text-sm leading-relaxed mb-6">
-          Extracurricular pursuits cultivate resilience, spatial intuition, and disciplined execution.
-        </p>
-
-        <div class="space-y-4">
-          <!-- Crafts -->
-          <div class="p-4 rounded-2xl bg-brand-surface/70 border border-brand-border/60">
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-sm font-bold text-white flex items-center">
-                <i class="fa-solid fa-scissors mr-2 text-[#6495ED]"></i>
-                Creative Crafts & Hands-on Artistry
-              </span>
-              <span class="text-xs px-2 py-0.5 rounded bg-[#6495ED]/20 text-[#93B7F5]">Precision</span>
-            </div>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Designing custom handicrafts, visual layouts, and decorative artifacts requiring patience, color coordination, and attention to detail.
-            </p>
-          </div>
-
-          <!-- Sports -->
-          <div class="p-4 rounded-2xl bg-brand-surface/70 border border-brand-border/60">
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-sm font-bold text-white flex items-center">
-                <i class="fa-solid fa-volleyball mr-2 text-[#6495ED]"></i>
-                Sports & Athletics
-              </span>
-              <span class="text-xs px-2 py-0.5 rounded bg-[#6495ED]/20 text-[#93B7F5]">Leadership & Agility</span>
-            </div>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Active engagement in athletic games and team sports instilling stamina, quick on-field decision-making, and high camaraderie.
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- PROTOSEM DEDICATED SECTION -->
-    <section id="protosem" class="scroll-mt-28 space-y-12" data-aos="fade-up">
-      
-      <!-- PROTOSEM INTRO CARD -->
-      <div class="bento-card p-8 md:p-12 rounded-3xl relative overflow-hidden">
-        
-        <!-- Decorative Ambient Light -->
-        <div class="absolute -right-24 -top-24 w-96 h-96 bg-[#6495ED]/15 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#6495ED] to-transparent"></div>
-
-        <div class="relative z-10 space-y-8">
-          
-          <!-- Top Row: Section Label & Badges -->
-          <div class="flex flex-wrap items-center justify-between gap-4">
-            <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#6495ED]/15 text-[#93B7F5] border border-[#6495ED]/40 text-xs font-bold uppercase tracking-widest">
-              <i class="fa-solid fa-microchip text-xs"></i>
-              <span>PROTOSEM</span>
-            </div>
-
-            <div class="flex flex-wrap items-center gap-2 text-xs">
-              <span class="px-3 py-1 rounded-lg bg-brand-surface text-slate-300 border border-brand-border font-semibold flex items-center">
-                <i class="fa-solid fa-user-gear text-[#6495ED] mr-1.5"></i>
-                Innovation Engineer Trainee
-              </span>
-              <span class="px-3 py-1 rounded-lg bg-[#6495ED]/15 text-[#93B7F5] border border-[#6495ED]/30 font-semibold flex items-center">
-                <i class="fa-regular fa-calendar-check text-[#6495ED] mr-1.5"></i>
-                20-Week Industry Programme
-              </span>
-            </div>
-          </div>
-
-          <!-- Main Heading & Role Description -->
-          <div class="space-y-4 max-w-4xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-white tracking-tight">
-              PRICE <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#6495ED] via-[#93B7F5] to-white">ProtoSem</span>
-            </h2>
-            <div class="text-base sm:text-lg font-semibold text-[#93B7F5] flex items-center space-x-2">
-              <span>20-Week Industry-Integrated Innovation Programme</span>
-            </div>
-            <div class="space-y-3 text-slate-300 text-sm sm:text-base leading-relaxed">
-              <p>
-                Selected for a 20-week industry-integrated innovation programme focused on solving real-world retail and commerce challenges through AI, analytics, intelligent systems, IoT, prototyping, and entrepreneurship.
-              </p>
-              <p>
-                Working with industry problem statements to explore, develop, and validate practical technology solutions beyond conventional classroom learning.
-              </p>
-            </div>
-          </div>
-
-          <!-- Domain / Focus Tags (Programme Disciplines) -->
-          <div class="pt-4 space-y-3 border-t border-brand-border/60">
-            <div class="text-xs uppercase tracking-wider text-brand-textMuted font-bold flex items-center space-x-2">
-              <i class="fa-solid fa-layer-group text-[#6495ED]"></i>
-              <span>Core Programme Disciplines & Focus Areas</span>
-            </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
-              
-              <div class="p-4 rounded-2xl bg-brand-surface/80 border border-brand-border/70 hover:border-[#6495ED]/60 transition-all group">
-                <div class="w-8 h-8 rounded-lg bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center mb-2.5 group-hover:scale-110 transition-transform">
-                  <i class="fa-solid fa-shop text-sm"></i>
-                </div>
-                <div class="text-xs font-bold text-white leading-snug">Phygital Retail & Intelligent Commerce</div>
-              </div>
-
-              <div class="p-4 rounded-2xl bg-brand-surface/80 border border-brand-border/70 hover:border-[#6495ED]/60 transition-all group">
-                <div class="w-8 h-8 rounded-lg bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center mb-2.5 group-hover:scale-110 transition-transform">
-                  <i class="fa-solid fa-brain text-sm"></i>
-                </div>
-                <div class="text-xs font-bold text-white leading-snug">AI & Analytics</div>
-              </div>
-
-              <div class="p-4 rounded-2xl bg-brand-surface/80 border border-brand-border/70 hover:border-[#6495ED]/60 transition-all group">
-                <div class="w-8 h-8 rounded-lg bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center mb-2.5 group-hover:scale-110 transition-transform">
-                  <i class="fa-solid fa-network-wired text-sm"></i>
-                </div>
-                <div class="text-xs font-bold text-white leading-snug">Intelligent Systems & IoT</div>
-              </div>
-
-              <div class="p-4 rounded-2xl bg-brand-surface/80 border border-brand-border/70 hover:border-[#6495ED]/60 transition-all group">
-                <div class="w-8 h-8 rounded-lg bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center mb-2.5 group-hover:scale-110 transition-transform">
-                  <i class="fa-solid fa-cube text-sm"></i>
-                </div>
-                <div class="text-xs font-bold text-white leading-snug">Prototyping</div>
-              </div>
-
-              <div class="p-4 rounded-2xl bg-brand-surface/80 border border-brand-border/70 hover:border-[#6495ED]/60 transition-all group">
-                <div class="w-8 h-8 rounded-lg bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center mb-2.5 group-hover:scale-110 transition-transform">
-                  <i class="fa-solid fa-rocket text-sm"></i>
-                </div>
-                <div class="text-xs font-bold text-white leading-snug">Entrepreneurship</div>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Subtle Programme Progress Indicator -->
-          <div class="pt-6 border-t border-brand-border/40">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-              <span class="text-xs font-bold uppercase tracking-wider text-slate-300">
-                20-Week Progression Framework
-              </span>
-              <div class="flex items-center space-x-4 text-xs font-semibold text-brand-textMuted">
-                <span class="text-[#6495ED]">Phase 01 (W01–05)</span>
-                <span>•</span>
-                <span>Phase 02 (W06–10)</span>
-                <span>•</span>
-                <span>Phase 03 (W11–15)</span>
-                <span>•</span>
-                <span>Phase 04 (W16–20)</span>
-              </div>
-            </div>
-            
-            <div class="relative w-full h-3 bg-brand-surface rounded-full overflow-hidden border border-brand-border flex items-center p-0.5">
-              <div class="h-full w-1/4 bg-gradient-to-r from-[#6495ED] to-[#93B7F5] rounded-full shadow-glow"></div>
-              <div class="absolute left-1/4 top-0 bottom-0 w-0.5 bg-brand-dark"></div>
-              <div class="absolute left-2/4 top-0 bottom-0 w-0.5 bg-brand-dark"></div>
-              <div class="absolute left-3/4 top-0 bottom-0 w-0.5 bg-brand-dark"></div>
-            </div>
-            
-            <div class="flex justify-between text-[11px] font-mono text-brand-textMuted mt-1.5 px-0.5">
-              <span>01</span>
-              <span>05</span>
-              <span>10</span>
-              <span>15</span>
-              <span>20</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- 20-WEEK JOURNEY CONTAINER -->
-      <div class="space-y-6">
-        
-        <!-- Header & Phase Navigation Tabs -->
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
-            <h3 class="text-2xl sm:text-3xl font-display font-extrabold text-white">
-              The 20-Week <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#6495ED] to-[#93B7F5]">Journey Archive</span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-brandCream">
+              Neha R
+            </h1>
+            <p class="text-sm sm:text-base text-brandCream/70 mt-1 font-medium">
+              Commerce, Economics & Creative Design
+            </p>
+            <p class="text-xs text-brandCream/50 flex items-center gap-1 mt-1">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brandAccent"></i>
+              Kumaraguru College of Liberal Arts & Science
+            </p>
+          </div>
+        </div>
+
+        <p class="text-brandCream/80 text-sm sm:text-base leading-relaxed">
+          Blending the rigor of <span class="text-brandCream font-semibold border-b border-brandAccent/40">Financial & Economic analysis</span> with creative design thinking, resilience, and curiosity. Dedicated scholar preparing for global higher education.
+        </p>
+
+        <!-- Social & Quick Action Buttons -->
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="mailto:rneha.21017@gmail.com" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-brandNavy border border-brandCream/20 text-brandCream text-xs font-semibold hover:border-brandCream hover:bg-brandSurface transition-all">
+            <i data-lucide="mail" class="w-4 h-4 text-brandAccent"></i>
+            <span>rneha.21017@gmail.com</span>
+          </a>
+          <a href="https://github.com/neha-r011" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-brandNavy border border-brandCream/20 text-brandCream text-xs font-semibold hover:border-brandCream hover:bg-brandSurface transition-all">
+            <i data-lucide="github" class="w-4 h-4 text-brandCream"></i>
+            <span>neha-r011</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Developer Terminal -->
+      <div class="lg:col-span-7">
+        <div class="rounded-2xl overflow-hidden border border-brandCream/20 shadow-terminal bg-brandDeepNavy font-mono text-xs sm:text-sm">
+          <!-- Terminal Header Window Controls -->
+          <div class="terminal-header px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="w-3 h-3 rounded-full bg-rose-500/80"></div>
+              <div class="w-3 h-3 rounded-full bg-amber-500/80"></div>
+              <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+              <span class="text-xs text-brandCream/40 ml-2">bash &mdash; neha@scholar-node:~</span>
+            </div>
+            <div class="text-[11px] text-brandCream/40">utf-8</div>
+          </div>
+
+          <!-- Terminal Screen Body -->
+          <div class="p-5 space-y-4 min-h-[290px] text-brandCream/90">
+            <div>
+              <span class="text-emerald-400 font-bold">neha@kclas</span>:<span class="text-brandAccent">~</span>$ <span class="text-brandCream">cat profile.json</span>
+            </div>
+            
+            <div class="pl-3 border-l-2 border-brandSurface text-brandCream/80 space-y-1 text-xs sm:text-[13px] leading-relaxed">
+              <p><span class="text-brandGold">"name"</span>: <span class="text-emerald-300">"Neha R"</span>,</p>
+              <p><span class="text-brandGold">"education"</span>: <span class="text-emerald-300">"B.Com (2nd Year) @ KCLAS"</span>,</p>
+              <p><span class="text-brandGold">"key_honors"</span>: [</p>
+              <p class="pl-4 text-emerald-300">"Mahatma Gandhi Merit Scholarship 🏆",</p>
+              <p class="pl-4 text-emerald-300">"CMA Foundation Certified 📜",</p>
+              <p class="pl-4 text-emerald-300">"NPTEL Soft Skills Elite (Top 5%) 🏅"</p>
+              <p class="text-brandCream/70">],</p>
+              <p><span class="text-brandGold">"core_focus"</span>: <span class="text-emerald-300">["Finance", "Economics", "Design Thinking", "Global Higher Ed"]</span></p>
+            </div>
+
+            <div class="pt-2">
+              <span class="text-emerald-400 font-bold">neha@kclas</span>:<span class="text-brandAccent">~</span>$ <span class="text-brandCream">echo $MISSION_STATEMENT</span>
+              <div class="text-brandCream/90 mt-1 pl-3 text-xs sm:text-sm">
+                &gt; <span id="typed-mission"></span>
+              </div>
+            </div>
+
+            <!-- Interactive Terminal Prompt Trigger buttons -->
+            <div class="pt-2 border-t border-brandCream/10 flex flex-wrap gap-2 text-[11px]">
+              <button onclick="runTermCmd('goals')" class="px-2.5 py-1 rounded bg-brandSurface hover:bg-brandNavy border border-brandCream/20 text-brandCream/90 transition-colors">
+                $ run aspirations
+              </button>
+              <button onclick="runTermCmd('skills')" class="px-2.5 py-1 rounded bg-brandSurface hover:bg-brandNavy border border-brandCream/20 text-brandCream/90 transition-colors">
+                $ ls competencies
+              </button>
+              <button onclick="runTermCmd('contact')" class="px-2.5 py-1 rounded bg-brandSurface hover:bg-brandNavy border border-brandCream/20 text-brandCream/90 transition-colors">
+                $ ping contact
+              </button>
+            </div>
+            <div id="term-output" class="text-xs text-brandAccent font-mono pt-1"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENTO GRID SECTION: ACHIEVEMENTS, EDUCATION & PILLARS -->
+    <section id="milestones" class="space-y-6 pt-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-2" data-aos="fade-right">
+        <div>
+          <span class="text-xs font-mono text-brandAccent tracking-wider uppercase">Highlight Reel</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-brandCream">Academic & Milestone Bento</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-brandCream/60 max-w-md">
+          A showcase of merit, certified competencies, and interdisciplinary dedication.
+        </p>
+      </div>
+
+      <!-- Bento Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+        
+        <!-- Bento 1: Mahatma Gandhi Merit Scholarship (Col-span 7) -->
+        <div class="md:col-span-7 bento-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+          <div class="absolute -right-6 -bottom-6 w-36 h-36 bg-amber-500/10 rounded-full blur-2xl pointer-events-none"></div>
+          
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/15 border border-amber-500/30 text-amber-200">
+                <i data-lucide="award" class="w-3.5 h-3.5"></i>
+                Merit Honor
+              </span>
+              <span class="text-xs font-mono text-brandCream/50">Prestigious Award</span>
+            </div>
+            
+            <h3 class="text-xl sm:text-2xl font-bold text-brandCream">
+              Mahatma Gandhi Merit Scholarship
             </h3>
-            <p class="text-xs sm:text-sm text-brand-textMuted mt-1">
-              One Continuous Journey • Four Phases • Twenty Weeks • Future Field Note Stories
+            <p class="text-sm text-brandCream/80 leading-relaxed">
+              Awarded for outstanding academic consistency, dedication to excellence, and leadership potential at Kumaraguru College of Liberal Arts and Science.
             </p>
           </div>
 
-          <!-- Phase Navigation Filter Buttons -->
-          <div class="flex items-center flex-wrap gap-1.5 p-1.5 rounded-2xl bg-brand-surface border border-brand-border" role="tablist">
-            <button onclick="filterPhase('all')" id="tab-all" class="phase-tab active px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all duration-200" role="tab" aria-selected="true">
-              ALL
-            </button>
-            <button onclick="filterPhase(1)" id="tab-1" class="phase-tab px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-300 hover:text-white transition-all duration-200" role="tab">
-              PHASE 01 (W01–05)
-            </button>
-            <button onclick="filterPhase(2)" id="tab-2" class="phase-tab px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-300 hover:text-white transition-all duration-200" role="tab">
-              PHASE 02 (W06–10)
-            </button>
-            <button onclick="filterPhase(3)" id="tab-3" class="phase-tab px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-300 hover:text-white transition-all duration-200" role="tab">
-              PHASE 03 (W11–15)
-            </button>
-            <button onclick="filterPhase(4)" id="tab-4" class="phase-tab px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-300 hover:text-white transition-all duration-200" role="tab">
-              PHASE 04 (W16–20)
-            </button>
+          <div class="mt-6 pt-4 border-t border-brandCream/10 flex items-center gap-2 text-xs font-mono text-brandCream/70">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+            <span>Recognized for Institutional & Academic Merit</span>
           </div>
         </div>
 
-        <!-- 20-Week Cards Grid (Dynamically Rendered from Clean Data Architecture) -->
-        <div id="protoSemWeeksGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-          <!-- Rendered via JavaScript -->
+        <!-- Bento 2: CMA Foundation Exam (Col-span 5) -->
+        <div class="md:col-span-5 bento-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/15 border border-sky-500/30 text-sky-200">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+                Certification
+              </span>
+              <span class="text-xs font-mono text-brandCream/50">Finance Foundation</span>
+            </div>
+            
+            <h3 class="text-xl font-bold text-brandCream">
+              CMA Foundation Exam
+            </h3>
+            <p class="text-sm text-brandCream/80 leading-relaxed">
+              Successfully cleared the professional foundation benchmark by the Institute of Cost Accountants, reinforcing fundamental mastery of management accounting, commercial laws, and economic principles.
+            </p>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-brandCream/10 flex items-center gap-2 text-xs font-mono text-sky-300">
+            <i data-lucide="trending-up" class="w-4 h-4"></i>
+            <span>Cost & Management Accounting Track</span>
+          </div>
+        </div>
+
+        <!-- Bento 3: NPTEL Elite Top 5% Soft Skills (Col-span 5) -->
+        <div class="md:col-span-5 bento-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/15 border border-emerald-500/30 text-emerald-200">
+                <i data-lucide="star" class="w-3.5 h-3.5"></i>
+                Elite Certificate
+              </span>
+              <span class="text-xs font-mono text-emerald-300">Top 5% National Rank</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-brandCream">
+              NPTEL Soft Skill Mastery
+            </h3>
+            <p class="text-sm text-brandCream/80 leading-relaxed">
+              Achieved Top 5% standing in the national NPTEL examination on Soft Skill Development, demonstrating superior interpersonal dynamics, English communication, and executive presence.
+            </p>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-brandCream/10 flex items-center justify-between text-xs text-brandCream/70">
+            <span>IIT / IISc Initiative (NPTEL)</span>
+            <span class="font-bold text-emerald-400">Elite Badge</span>
+          </div>
+        </div>
+
+        <!-- Bento 4: Academic Institution (Col-span 7) -->
+        <div class="md:col-span-7 bento-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="400">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brandSurface border border-brandCream/20 text-brandCream">
+                <i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-brandAccent"></i>
+                Current Degree
+              </span>
+              <span class="text-xs font-mono text-brandCream/50">2024 &ndash; 2027</span>
+            </div>
+
+            <h3 class="text-xl sm:text-2xl font-bold text-brandCream">
+              Bachelor of Commerce (B.Com) &bull; 2nd Year
+            </h3>
+            <h4 class="text-sm font-semibold text-brandAccent">
+              Kumaraguru College of Liberal Arts and Science (KCLAS)
+            </h4>
+            <p class="text-sm text-brandCream/80 leading-relaxed">
+              Focusing on financial analysis, micro & macro economics, business law, corporate governance, and analytical problem-solving.
+            </p>
+          </div>
+
+          <div class="mt-4 pt-4 border-t border-brandCream/10 flex flex-wrap gap-2 text-xs">
+            <span class="px-2.5 py-1 rounded-lg glass-pill text-brandCream/90">Financial Accounting</span>
+            <span class="px-2.5 py-1 rounded-lg glass-pill text-brandCream/90">Managerial Economics</span>
+            <span class="px-2.5 py-1 rounded-lg glass-pill text-brandCream/90">Corporate Law</span>
+            <span class="px-2.5 py-1 rounded-lg glass-pill text-brandCream/90">Business Statistics</span>
+          </div>
         </div>
 
       </div>
-
     </section>
 
-    <!-- LEARNING HORIZONS & CURRENT FOCUS -->
-    <div id="journey" class="bento-card p-8 md:p-10 rounded-3xl" data-aos="fade-up">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+    <!-- SECTION: SKILLS & MULTI-DISCIPLINARY PASSIONS -->
+    <section id="skills" class="space-y-6 pt-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-2" data-aos="fade-right">
         <div>
-          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#6495ED]/15 text-[#93B7F5] border border-[#6495ED]/30 text-xs font-bold uppercase tracking-wider mb-2">
-            <i class="fa-solid fa-compass"></i>
-            <span>Roadmap</span>
-          </div>
-          <h3 class="text-2xl md:text-3xl font-display font-extrabold text-white">
-            Current Focus & Learning Horizons
-          </h3>
+          <span class="text-xs font-mono text-brandAccent tracking-wider uppercase">Capabilities</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-brandCream">Skills & Multi-Disciplinary Edge</h2>
         </div>
-        <span class="text-xs text-brand-textMuted font-medium">
-          Continuously leveling up skills in 2026
-        </span>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <div class="p-6 rounded-2xl bg-brand-surface/70 border border-brand-border hover:border-[#6495ED]/60 transition-all group">
-          <div class="w-10 h-10 rounded-xl bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-chart-pie"></i>
-          </div>
-          <h4 class="text-base font-bold text-white mb-1.5">Financial & Market Analysis</h4>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            Studying corporate valuation, economic cycles, risk management, and personal financial planning models.
-          </p>
-        </div>
-
-        <div class="p-6 rounded-2xl bg-brand-surface/70 border border-brand-border hover:border-[#6495ED]/60 transition-all group">
-          <div class="w-10 h-10 rounded-xl bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-pen-ruler"></i>
-          </div>
-          <h4 class="text-base font-bold text-white mb-1.5">Design Systems & UI/UX</h4>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            Exploring visual hierarchies, color theory, typography, and clean digital presentation workflows.
-          </p>
-        </div>
-
-        <div class="p-6 rounded-2xl bg-brand-surface/70 border border-brand-border hover:border-[#6495ED]/60 transition-all group">
-          <div class="w-10 h-10 rounded-xl bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-microchip"></i>
-          </div>
-          <h4 class="text-base font-bold text-white mb-1.5">Applied Systems & Prototyping</h4>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            Engaged in PRICE ProtoSem innovation methodologies, intelligent commerce architectures, and IoT concepts.
-          </p>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- CONTACT & CONNECT SECTION -->
-    <section id="contact" class="bento-card p-8 md:p-12 rounded-3xl relative overflow-hidden" data-aos="fade-up">
-      <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-[#6495ED]/10 rounded-full blur-3xl pointer-events-none"></div>
-
-      <div class="max-w-3xl mx-auto text-center space-y-6 relative z-10">
-        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#6495ED]/15 text-[#93B7F5] border border-[#6495ED]/30 text-xs font-bold uppercase tracking-wider">
-          <i class="fa-solid fa-paper-plane"></i>
-          <span>Let's Connect</span>
-        </div>
-
-        <h2 class="text-3xl md:text-4xl font-display font-extrabold text-white tracking-tight">
-          Ready to collaborate or discuss opportunities?
-        </h2>
-
-        <p class="text-slate-300 text-sm md:text-base leading-relaxed">
-          Whether you have an internship opportunity, a project collaboration, or want to discuss finance, economics, ProtoSem innovation, or design, I'd love to connect!
+        <p class="text-xs sm:text-sm text-brandCream/60 max-w-md">
+          A blend of strategic analytical aptitude and creative expression.
         </p>
+      </div>
 
-        <!-- Direct Contact Cards -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-          
-          <!-- Email Box -->
-          <div class="p-4 rounded-2xl bg-brand-surface border border-brand-border flex items-center justify-between group hover:border-[#6495ED] transition-all">
-            <div class="flex items-center space-x-3 text-left">
-              <div class="w-10 h-10 rounded-xl bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center">
-                <i class="fa-solid fa-envelope"></i>
-              </div>
-              <div>
-                <div class="text-xs text-brand-textMuted">Email</div>
-                <div class="text-sm font-semibold text-white truncate max-w-[170px] sm:max-w-[190px]">rneha.21017@gmail.com</div>
-              </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        
+        <!-- Card 1: Core Soft Skills & Strengths -->
+        <div class="bento-card rounded-2xl p-6 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+          <div class="space-y-4">
+            <div class="w-10 h-10 rounded-xl bg-brandNavy border border-brandCream/20 flex items-center justify-center text-brandAccent">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
             </div>
-            <button onclick="copyEmail('rneha.21017@gmail.com')" class="px-3 py-1.5 rounded-lg bg-[#6495ED]/20 hover:bg-[#6495ED] text-[#93B7F5] hover:text-[#0B1F3A] transition-all text-xs font-bold">
-              Copy
-            </button>
+            <h3 class="text-lg font-bold text-brandCream">Core Power Skills</h3>
+            <p class="text-xs text-brandCream/70 leading-relaxed">
+              Essential interpersonal and operational traits that fuel effective teamwork and high-pressure execution.
+            </p>
+            
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-3 py-1 rounded-lg text-xs font-medium bg-brandNavy border border-brandCream/20 text-brandCream">Creativity</span>
+              <span class="px-3 py-1 rounded-lg text-xs font-medium bg-brandNavy border border-brandCream/20 text-brandCream">Adaptability</span>
+              <span class="px-3 py-1 rounded-lg text-xs font-medium bg-brandNavy border border-brandCream/20 text-brandCream">Collaboration</span>
+              <span class="px-3 py-1 rounded-lg text-xs font-medium bg-brandNavy border border-brandCream/20 text-brandCream">Resilience</span>
+              <span class="px-3 py-1 rounded-lg text-xs font-medium bg-brandNavy border border-brandCream/20 text-brandCream">Determination</span>
+              <span class="px-3 py-1 rounded-lg text-xs font-medium bg-brandNavy border border-brandCream/20 text-brandCream">Fluent English</span>
+            </div>
           </div>
-
-          <!-- GitHub Box -->
-          <a href="https://github.com/neha-r011" target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl bg-brand-surface border border-brand-border flex items-center justify-between group hover:border-[#6495ED] transition-all">
-            <div class="flex items-center space-x-3 text-left">
-              <div class="w-10 h-10 rounded-xl bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center">
-                <i class="fa-brands fa-github"></i>
-              </div>
-              <div>
-                <div class="text-xs text-brand-textMuted">GitHub</div>
-                <div class="text-sm font-semibold text-white">@neha-r011</div>
-              </div>
-            </div>
-            <span class="text-xs text-[#93B7F5] group-hover:translate-x-1 transition-transform">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </span>
-          </a>
-
         </div>
 
-        <div class="pt-6 flex flex-wrap justify-center gap-4">
-          <a href="mailto:rneha.21017@gmail.com" class="px-6 py-3 rounded-xl bg-[#6495ED] text-[#0B1F3A] font-bold text-sm hover:bg-[#93B7F5] hover:shadow-glow transition-all duration-300 inline-flex items-center space-x-2">
-            <i class="fa-solid fa-envelope"></i>
-            <span>Send Direct Message</span>
+        <!-- Card 2: Domains & Analytical Interests -->
+        <div class="bento-card rounded-2xl p-6 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+          <div class="space-y-4">
+            <div class="w-10 h-10 rounded-xl bg-brandNavy border border-brandCream/20 flex items-center justify-center text-amber-300">
+              <i data-lucide="line-chart" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brandCream">Analytical Domains</h3>
+            <p class="text-xs text-brandCream/70 leading-relaxed">
+              Academic and industry verticals of keen interest and continuous exploration.
+            </p>
+            
+            <div class="space-y-2 pt-1 text-xs">
+              <div class="p-2.5 rounded-xl bg-brandNavy/60 border border-brandCream/10 flex items-center gap-2">
+                <i data-lucide="coins" class="w-4 h-4 text-brandGold"></i>
+                <span class="font-medium text-brandCream">Finance & Cost Accounting</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-brandNavy/60 border border-brandCream/10 flex items-center gap-2">
+                <i data-lucide="globe" class="w-4 h-4 text-sky-400"></i>
+                <span class="font-medium text-brandCream">Macro & Micro Economics</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-brandNavy/60 border border-brandCream/10 flex items-center gap-2">
+                <i data-lucide="palette" class="w-4 h-4 text-rose-400"></i>
+                <span class="font-medium text-brandCream">Design Thinking & Visual Aesthetics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Creative Pursuits & Lifestyle -->
+        <div class="bento-card rounded-2xl p-6 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+          <div class="space-y-4">
+            <div class="w-10 h-10 rounded-xl bg-brandNavy border border-brandCream/20 flex items-center justify-center text-rose-300">
+              <i data-lucide="compass" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brandCream">Creative Pursuits</h3>
+            <p class="text-xs text-brandCream/70 leading-relaxed">
+              Personal interests that nurture curiosity, lateral thinking, and balance.
+            </p>
+            
+            <div class="grid grid-cols-2 gap-2 pt-1 text-xs">
+              <div class="p-2 rounded-xl bg-brandNavy/60 border border-brandCream/10 text-center">
+                🎨 Arts & Crafts
+              </div>
+              <div class="p-2 rounded-xl bg-brandNavy/60 border border-brandCream/10 text-center">
+                ✍️ Writing
+              </div>
+              <div class="p-2 rounded-xl bg-brandNavy/60 border border-brandCream/10 text-center">
+                ⚽ Sports & Fitness
+              </div>
+              <div class="p-2 rounded-xl bg-brandNavy/60 border border-brandCream/10 text-center">
+                ✈️ Travel & Culture
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: GLOBAL ASPIRATIONS & FUTURE VISION -->
+    <section class="bento-card rounded-3xl p-8 sm:p-10 relative overflow-hidden border border-brandCream/20" data-aos="fade-up">
+      <div class="absolute -right-20 -top-20 w-64 h-64 bg-brandAccent/10 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+        <div class="md:col-span-8 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brandSurface border border-brandCream/20 text-brandCream">
+            <i data-lucide="plane-takeoff" class="w-3.5 h-3.5 text-brandAccent"></i>
+            <span>Future Horizon</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-brandCream">
+            Aspiring Global Higher Education
+          </h2>
+          <p class="text-sm text-brandCream/80 leading-relaxed">
+            Actively building a strong foundation in Commerce, Economic Theory, and Design Thinking to pursue advanced master’s studies abroad. Passionate about exploring global business environments, cross-cultural finance, and innovative economic systems.
+          </p>
+        </div>
+
+        <div class="md:col-span-4 flex flex-col sm:flex-row md:flex-col gap-3 justify-center">
+          <a href="resume.html" class="flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-brandCream text-brandNavy font-bold text-sm hover:bg-white shadow-lg shadow-brandCream/10 transition-all text-center">
+            <i data-lucide="download" class="w-4 h-4"></i>
+            <span>View & Print ATS Resume</span>
           </a>
-          <a href="resume.html" class="px-6 py-3 rounded-xl bg-brand-surface text-white border border-brand-border hover:border-[#6495ED] hover:text-[#6495ED] font-semibold text-sm transition-all duration-300 inline-flex items-center space-x-2">
-            <i class="fa-solid fa-file-lines"></i>
-            <span>View Full ATS Resume</span>
+          <a href="mailto:rneha.21017@gmail.com" class="flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-brandNavy border border-brandCream/20 text-brandCream font-semibold text-sm hover:border-brandCream transition-all text-center">
+            <i data-lucide="send" class="w-4 h-4 text-brandAccent"></i>
+            <span>Get in Touch</span>
           </a>
         </div>
       </div>
@@ -847,197 +502,60 @@
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="border-t border-brand-border/60 bg-[#08172C] py-8 text-center text-xs text-brand-textMuted">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center space-x-2">
-        <span class="font-display font-bold text-white text-sm">Neha R</span>
-        <span>•</span>
-        <span>PRICE ProtoSem Innovation Trainee</span>
+  <!-- Footer -->
+  <footer class="mt-16 border-t border-brandCream/10 bg-brandDeepNavy py-8 text-center text-xs text-brandCream/50 font-mono">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-brandAccent"></span>
+        <span>Crafted with precision &bull; Neha R &copy; 2026</span>
       </div>
-      <div>
-        Designed & Deployed with <span class="text-[#6495ED] font-semibold">PortfolioWizard</span> ✨
-      </div>
-      <div>
-        <a href="#hero" class="hover:text-[#6495ED] transition-colors flex items-center space-x-1">
-          <span>Back to top</span>
-          <i class="fa-solid fa-arrow-up text-xs"></i>
-        </a>
+      <div class="flex items-center gap-4 text-brandCream/70">
+        <a href="https://github.com/neha-r011" class="hover:text-brandCream transition-colors">GitHub</a>
+        <span>&bull;</span>
+        <a href="mailto:rneha.21017@gmail.com" class="hover:text-brandCream transition-colors">Email</a>
+        <span>&bull;</span>
+        <a href="resume.html" class="hover:text-brandCream transition-colors">ATS Resume</a>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts: Typed.js, Vanilla-tilt, AOS, ProtoSem Data Architecture -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
   <script>
-    // Initialize AOS
+    // Initialize AOS animations
     AOS.init({
       once: true,
-      duration: 750,
-      easing: 'ease-out-cubic'
+      duration: 800,
+      offset: 50
     });
 
-    // Initialize Typed.js
-    var typed = new Typed('#typed-text', {
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Initialize Typed.js for the Mission statement in terminal
+    new Typed('#typed-mission', {
       strings: [
-        'Innovation Engineer Trainee @ ProtoSem',
-        'Finance & Economics Scholar',
-        'B.Com Student @ KCLAS',
-        'Creative Designer & Crafter'
+        'Bridging analytical commerce with creative design thinking.',
+        'Recipient of Mahatma Gandhi Merit Scholarship.',
+        'Preparing for global higher education in Finance & Economics.',
+        'Driven by resilience, determination, and constant growth.'
       ],
-      typeSpeed: 45,
-      backSpeed: 25,
-      backDelay: 1800,
+      typeSpeed: 35,
+      backSpeed: 20,
+      backDelay: 2200,
       loop: true
     });
 
-    // Initialize Vanilla Tilt on 3D Hero Card
-    const heroCard = document.getElementById('hero3DCard');
-    if (heroCard && typeof VanillaTilt !== 'undefined') {
-      VanillaTilt.init(heroCard, {
-        max: 12,
-        speed: 400,
-        glare: true,
-        "max-glare": 0.25,
-        scale: 1.02
-      });
-    }
-
-    // PROTOSEM 20-WEEK DATA ARCHITECTURE (Readiness for future blogs)
-    const protoSemWeeks = [
-      { week: 1, phase: 1, phaseName: "Phase 01", slug: "week-01", status: "COMING SOON", label: "Field Notes in Progress" },
-      { week: 2, phase: 1, phaseName: "Phase 01", slug: "week-02", status: "COMING SOON", label: "Field Notes in Progress" },
-      { week: 3, phase: 1, phaseName: "Phase 01", slug: "week-03", status: "COMING SOON", label: "Field Notes in Progress" },
-      { week: 4, phase: 1, phaseName: "Phase 01", slug: "week-04", status: "COMING SOON", label: "Field Notes in Progress" },
-      { week: 5, phase: 1, phaseName: "Phase 01", slug: "week-05", status: "COMING SOON", label: "Field Notes in Progress" },
-      { week: 6, phase: 2, phaseName: "Phase 02", slug: "week-06", status: "COMING SOON", label: "Field Notes in Progress" },
-      { week: 7, phase: 2, phaseName: "Phase 02", slug: "week-07", status: "COMING SOON", label: "Field Notes in Progress" },
-      { week: 8, phase: 2, phaseName: "Phase 02", slug: "week-08", status: "COMING SOON", label: "Field Notes in Progress" },
-      { week: 9, phase: 2, phaseName: "Phase 02", slug: "week-09", status: "COMING SOON", label: "Field Notes in Progress" },
-      { week: 10, phase: 2, phaseName: "Phase 02", slug: "week-10", status: "COMING SOON", label: "Field Notes in Progress" },
-      { week: 11, phase: 3, phaseName: "Phase 03", slug: "week-11", status: "COMING SOON", label: "Field Notes in Progress" },
-      { week: 12, phase: 3, phaseName: "Phase 03", slug: "week-12", status: "COMING SOON", label: "Field Notes in Progress" },
-      { week: 13, phase: 3, phaseName: "Phase 03", slug: "week-13", status: "COMING SOON", label: "Field Notes in Progress" },
-      { week: 14, phase: 3, phaseName: "Phase 03", slug: "week-14", status: "COMING SOON", label: "Field Notes in Progress" },
-      { week: 15, phase: 3, phaseName: "Phase 03", slug: "week-15", status: "COMING SOON", label: "Field Notes in Progress" },
-      { week: 16, phase: 4, phaseName: "Phase 04", slug: "week-16", status: "COMING SOON", label: "Field Notes in Progress" },
-      { week: 17, phase: 4, phaseName: "Phase 04", slug: "week-17", status: "COMING SOON", label: "Field Notes in Progress" },
-      { week: 18, phase: 4, phaseName: "Phase 04", slug: "week-18", status: "COMING SOON", label: "Field Notes in Progress" },
-      { week: 19, phase: 4, phaseName: "Phase 04", slug: "week-19", status: "COMING SOON", label: "Field Notes in Progress" },
-      { week: 20, phase: 4, phaseName: "Phase 04", slug: "week-20", status: "COMING SOON", label: "Field Notes in Progress" }
-    ];
-
-    function formatWeekNumber(num) {
-      return num < 10 ? '0' + num : '' + num;
-    }
-
-    function renderProtoSemGrid(filterPhaseNum = 'all') {
-      const grid = document.getElementById('protoSemWeeksGrid');
-      if (!grid) return;
-
-      const filtered = filterPhaseNum === 'all' 
-        ? protoSemWeeks 
-        : protoSemWeeks.filter(w => w.phase === filterPhaseNum);
-
-      grid.innerHTML = filtered.map(w => {
-        const formattedWeek = formatWeekNumber(w.week);
-        return `
-          <a 
-            href="#protosem" 
-            onclick="openWeekModal(${w.week}, '${w.phaseName}'); return false;"
-            class="week-card p-5 rounded-2xl flex flex-col justify-between group cursor-pointer border border-[#6495ED]/20"
-            data-week="${w.week}"
-            data-phase="${w.phase}"
-            title="Explore Week ${formattedWeek} (Coming Soon)"
-          >
-            <div>
-              <!-- Top Card Meta -->
-              <div class="flex items-center justify-between mb-3 text-xs">
-                <span class="px-2.5 py-0.5 rounded-md bg-[#6495ED]/15 text-[#93B7F5] font-mono font-semibold text-[11px] border border-[#6495ED]/30">
-                  ${w.phaseName}
-                </span>
-                <span class="w-2 h-2 rounded-full bg-[#6495ED]/40 group-hover:bg-[#6495ED] group-hover:shadow-[0_0_8px_#6495ED] transition-all"></span>
-              </div>
-
-              <!-- Main Week Identifier -->
-              <div class="text-xl sm:text-2xl font-display font-black text-white group-hover:text-[#6495ED] transition-colors flex items-center justify-between">
-                <span>WEEK ${formattedWeek}</span>
-                <i class="fa-solid fa-arrow-right-long text-[#6495ED] text-sm opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
-              </div>
-            </div>
-
-            <!-- Bottom Status Indicator -->
-            <div class="pt-4 mt-3 border-t border-brand-border/40 flex items-center justify-between text-[11px]">
-              <span class="text-brand-textMuted uppercase tracking-wider font-semibold group-hover:text-slate-200 transition-colors">
-                ${w.status}
-              </span>
-              <i class="fa-regular fa-bookmark text-brand-textMuted group-hover:text-[#6495ED] transition-colors"></i>
-            </div>
-          </a>
-        `;
-      }).join('');
-    }
-
-    function filterPhase(phase) {
-      document.querySelectorAll('.phase-tab').forEach(t => t.classList.remove('active', 'text-[#0B1F3A]'));
-      const activeBtn = phase === 'all' ? document.getElementById('tab-all') : document.getElementById('tab-' + phase);
-      if (activeBtn) {
-        activeBtn.classList.add('active');
+    // Interactive Terminal mini-commands
+    function runTermCmd(cmd) {
+      const out = document.getElementById('term-output');
+      if (cmd === 'goals') {
+        out.innerHTML = '&gt; [Higher Education Abroad]: Preparing applications for international Masters programs in Finance & Global Economics.';
+      } else if (cmd === 'skills') {
+        out.innerHTML = '&gt; [Competencies]: Creativity, Adaptability, Collaboration, Determination, Financial Accounting, Design.';
+      } else if (cmd === 'contact') {
+        out.innerHTML = '&gt; [Mail]: rneha.21017@gmail.com | [GitHub]: github.com/neha-r011';
       }
-      renderProtoSemGrid(phase);
-    }
-
-    // Modal Interaction
-    function openWeekModal(weekNum, phaseName) {
-      const formatted = formatWeekNumber(weekNum);
-      document.getElementById('modalWeekBadge').textContent = 'W' + formatted;
-      document.getElementById('modalTitle').textContent = 'WEEK ' + formatted + ' Story';
-      document.getElementById('modalPhase').textContent = phaseName + ' • PRICE ProtoSem Archive';
-      
-      const modal = document.getElementById('weekModal');
-      const container = document.getElementById('modalContainer');
-      modal.classList.remove('opacity-0', 'pointer-events-none');
-      container.classList.remove('scale-95');
-    }
-
-    function closeWeekModal() {
-      const modal = document.getElementById('weekModal');
-      const container = document.getElementById('modalContainer');
-      modal.classList.add('opacity-0', 'pointer-events-none');
-      container.classList.add('scale-95');
-    }
-
-    // Close modal on click outside
-    document.getElementById('weekModal').addEventListener('click', function(e) {
-      if (e.target === this) {
-        closeWeekModal();
-      }
-    });
-
-    // Close modal on Escape
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        closeWeekModal();
-      }
-    });
-
-    // Initial ProtoSem Render
-    renderProtoSemGrid('all');
-
-    // Copy to clipboard helper
-    function copyEmail(email) {
-      navigator.clipboard.writeText(email).then(() => {
-        const toast = document.getElementById('toast');
-        const toastMsg = document.getElementById('toast-message');
-        toastMsg.textContent = 'Copied ' + email + ' to clipboard!';
-        toast.classList.remove('translate-y-20', 'opacity-0');
-        setTimeout(() => {
-          toast.classList.add('translate-y-20', 'opacity-0');
-        }, 2600);
-      });
     }
   </script>
 </body>
