@@ -568,7 +568,7 @@
           <div class="p-3 rounded-2xl bg-brand-navyDark/60 border border-brand-gold/30 relative">
             <div class="flex items-center justify-between text-xs font-bold text-brand-gold">
               <span>PHASE 01</span>
-              <span>W01 – W05</span>
+              <span>W00 – W05</span>
             </div>
             <div class="w-full bg-brand-navy h-1.5 rounded-full mt-2 overflow-hidden">
               <div class="bg-gradient-to-r from-brand-gold to-brand-goldLight h-full w-full"></div>
@@ -617,10 +617,10 @@
 
         <div class="flex flex-wrap items-center gap-2 p-1.5 rounded-2xl bg-brand-navyDark/80 border border-brand-cream/15" id="phase-filters">
           <button onclick="filterPhase('all')" class="phase-btn active px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all bg-brand-gold text-brand-navy shadow-sm" data-phase="all">
-            All (20 Weeks)
+            All (Weeks 00–20)
           </button>
           <button onclick="filterPhase('1')" class="phase-btn px-3.5 py-1.5 rounded-xl text-xs font-medium text-brand-cream/70 hover:text-brand-gold hover:bg-brand-navy transition-all" data-phase="1">
-            Phase 01 (01–05)
+            Phase 01 (00–05)
           </button>
           <button onclick="filterPhase('2')" class="phase-btn px-3.5 py-1.5 rounded-xl text-xs font-medium text-brand-cream/70 hover:text-brand-gold hover:bg-brand-navy transition-all" data-phase="2">
             Phase 02 (06–10)
@@ -727,6 +727,7 @@
     // Ready for future individual blog / case-study story routes
     // ------------------------------------------------------------------------
     const protoSemWeeks = [
+      { week: 0,  phase: 1, slug: "week-00", status: "Field Notes in Progress" },
       { week: 1,  phase: 1, slug: "week-01", status: "Field Notes in Progress" },
       { week: 2,  phase: 1, slug: "week-02", status: "Field Notes in Progress" },
       { week: 3,  phase: 1, slug: "week-03", status: "Field Notes in Progress" },
