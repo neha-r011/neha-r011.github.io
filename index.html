@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neha R | Finance, Economics & Creative Design Portfolio</title>
+  <meta name="description" content="Personal portfolio of Neha R – B.Com student passionate about Finance, Economics, and Creative Design.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- AOS Animation CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0B1F3A',
+              card: '#11294D',
+              cardHover: '#16335F',
+              accent: '#6495ED',
+              accentLight: '#93B7F5',
+              accentGlow: '#6495ED40',
+              border: '#1E3E6B',
+              textMuted: '#94A3B8',
+              surface: '#0F2444'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          },
+          boxShadow: {
+            'glow': '0 0 35px -5px rgba(100, 149, 237, 0.35)',
+            'card-glow': '0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 0 20px -5px rgba(100, 149, 237, 0.15)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0B1F3A;
+      color: #F8FAFC;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    
+    .gradient-mesh {
+      background-image: 
+        radial-gradient(at 10% 20%, rgba(100, 149, 237, 0.18) 0px, transparent 50%),
+        radial-gradient(at 90% 10%, rgba(30, 62, 107, 0.25) 0px, transparent 50%),
+        radial-gradient(at 50% 80%, rgba(100, 149, 237, 0.12) 0px, transparent 50%);
+    }
+
+    .bento-card {
+      background: linear-gradient(135deg, rgba(17, 41, 77, 0.85), rgba(15, 36, 68, 0.95));
+      border: 1px solid rgba(100, 149, 237, 0.2);
+      backdrop-filter: blur(12px);
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .bento-card:hover {
+      border-color: rgba(100, 149, 237, 0.55);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5), 0 0 25px -3px rgba(100, 149, 237, 0.3);
+    }
+
+    .glass-nav {
+      background: rgba(11, 31, 58, 0.82);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(100, 149, 237, 0.18);
+    }
+
+    .shimmer-badge {
+      background: linear-gradient(90deg, rgba(100,149,237,0.15) 0%, rgba(147,183,245,0.3) 50%, rgba(100,149,237,0.15) 100%);
+      background-size: 200% 100%;
+      animation: shimmer 3s infinite linear;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    /* Custom 3D Tilt Card Styling */
+    .tilt-hero {
+      transform-style: preserve-3d;
+      perspective: 1000px;
+    }
+
+    .tilt-inner {
+      transform: translateZ(30px);
+    }
+  </style>
+</head>
+<body class="min-h-screen gradient-mesh selection:bg-[#6495ED] selection:text-[#0B1F3A]">
+
+  <!-- Toast Notification for Copy -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-[#6495ED] text-[#0B1F3A] font-bold px-5 py-3 rounded-xl shadow-2xl flex items-center space-x-2">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="fixed top-0 left-0 right-0 z-40 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="#hero" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-xl bg-[#6495ED]/20 border border-[#6495ED]/40 flex items-center justify-center text-[#6495ED] font-display font-bold text-xl group-hover:scale-105 group-hover:bg-[#6495ED] group-hover:text-[#0B1F3A] transition-all">
+          N
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-lg tracking-wide text-white group-hover:text-[#6495ED] transition-colors">Neha R</span>
+          <span class="text-xs text-brand-textMuted tracking-wider uppercase font-semibold">Portfolio & Showcase</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="#about" class="text-slate-300 hover:text-[#6495ED] transition-colors">About</a>
+        <a href="#skills" class="text-slate-300 hover:text-[#6495ED] transition-colors">Competencies</a>
+        <a href="#journey" class="text-slate-300 hover:text-[#6495ED] transition-colors">Learning Journey</a>
+        <a href="#passions" class="text-slate-300 hover:text-[#6495ED] transition-colors">Creative Focus</a>
+        <a href="#contact" class="text-slate-300 hover:text-[#6495ED] transition-colors">Connect</a>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center space-x-3">
+        <a href="resume.html" class="inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-[#6495ED]/15 text-[#6495ED] border border-[#6495ED]/40 hover:bg-[#6495ED] hover:text-[#0B1F3A] transition-all duration-300 text-sm font-semibold shadow-sm hover:shadow-glow">
+          <i class="fa-solid fa-file-lines text-xs"></i>
+          <span>ATS Resume</span>
+        </a>
+        <a href="#contact" class="hidden sm:inline-flex items-center px-4 py-2 rounded-xl bg-[#6495ED] text-[#0B1F3A] hover:bg-[#93B7F5] transition-all duration-300 text-sm font-bold shadow-glow">
+          <span>Get in Touch</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24 space-y-24">
+
+    <!-- HERO SECTION (3D Floating Card Style) -->
+    <section id="hero" class="min-h-[75vh] flex flex-col justify-center items-center relative">
+      
+      <!-- Ambient Glow Blobs in Background -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#6495ED]/15 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <!-- 3D Floating Hero Card Container -->
+      <div class="w-full max-w-4xl" data-aos="zoom-in" data-aos-duration="900">
+        <div id="hero3DCard" class="tilt-hero bento-card p-8 md:p-12 rounded-3xl relative overflow-hidden group shadow-card-glow cursor-pointer">
+          
+          <!-- Decorative Top Bar -->
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#6495ED] via-[#93B7F5] to-[#6495ED]"></div>
+
+          <div class="tilt-inner grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            
+            <!-- Avatar & Quick Badge Column -->
+            <div class="md:col-span-5 flex flex-col items-center text-center">
+              <div class="relative mb-4 group/avatar">
+                <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-[#6495ED] to-[#93B7F5] opacity-75 blur-md group-hover/avatar:opacity-100 transition duration-300"></div>
+                <img 
+                  id="user-avatar" 
+                  src="profile.jpg" 
+                  onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Neha+R&background=6495ED&color=0B1F3A&size=256&bold=true&font-size=0.45';" 
+                  alt="Neha R" 
+                  class="relative w-36 h-36 md:w-44 md:h-44 rounded-2xl object-cover border-2 border-white/20 shadow-2xl bg-[#0B1F3A]"
+                >
+                <div class="absolute bottom-2 right-2 w-5 h-5 bg-emerald-500 rounded-full border-2 border-[#0B1F3A] title='Open to Opportunities'"></div>
+              </div>
+
+              <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full shimmer-badge border border-[#6495ED]/30 text-xs font-semibold text-[#93B7F5] mt-1">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Open to Internships & Projects</span>
+              </div>
+              
+              <div class="mt-4 flex items-center space-x-3 text-brand-textMuted">
+                <a href="https://github.com/neha-r011" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-brand-surface hover:bg-[#6495ED] hover:text-[#0B1F3A] transition-all" title="GitHub Profile">
+                  <i class="fa-brands fa-github text-lg"></i>
+                </a>
+                <button onclick="copyEmail('rneha.21017@gmail.com')" class="p-2 rounded-lg bg-brand-surface hover:bg-[#6495ED] hover:text-[#0B1F3A] transition-all" title="Copy Email">
+                  <i class="fa-solid fa-envelope text-lg"></i>
+                </button>
+                <a href="resume.html" class="p-2 rounded-lg bg-brand-surface hover:bg-[#6495ED] hover:text-[#0B1F3A] transition-all" title="ATS Resume">
+                  <i class="fa-solid fa-file-pdf text-lg"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Content Details Column -->
+            <div class="md:col-span-7 space-y-5 text-left">
+              <div class="space-y-2">
+                <span class="text-xs uppercase tracking-widest text-[#6495ED] font-bold font-display">Welcome to my universe</span>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
+                  Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#93B7F5] to-[#6495ED]">Neha R</span>
+                </h1>
+                <div class="text-lg md:text-xl font-medium text-slate-300 min-h-[32px] flex items-center">
+                  <span class="text-slate-400 mr-2">I am an aspiring</span>
+                  <span id="typed-text" class="text-[#6495ED] font-semibold"></span>
+                </div>
+              </div>
+
+              <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+                Currently pursuing my <strong class="text-white">B.Com</strong> at <strong class="text-[#93B7F5]">Kumaraguru College of Liberal Arts and Science</strong>. Bridging analytical insight in <strong class="text-white">Finance & Economics</strong> with a strong flair for <strong class="text-white">Creative Design, Crafts, and Collaborative Leadership</strong>.
+              </p>
+
+              <!-- Quick Highlights Badges -->
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="px-3 py-1 text-xs rounded-lg bg-[#6495ED]/15 text-[#93B7F5] border border-[#6495ED]/30 font-medium">
+                  <i class="fa-solid fa-graduation-cap mr-1.5 text-xs"></i>B.Com @ KCLAS
+                </span>
+                <span class="px-3 py-1 text-xs rounded-lg bg-[#6495ED]/15 text-[#93B7F5] border border-[#6495ED]/30 font-medium">
+                  <i class="fa-solid fa-chart-line mr-1.5 text-xs"></i>Finance & Economics
+                </span>
+                <span class="px-3 py-1 text-xs rounded-lg bg-[#6495ED]/15 text-[#93B7F5] border border-[#6495ED]/30 font-medium">
+                  <i class="fa-solid fa-palette mr-1.5 text-xs"></i>Creative Design & Crafts
+                </span>
+              </div>
+
+              <!-- CTA Row -->
+              <div class="pt-4 flex flex-wrap gap-3">
+                <a href="#about" class="px-5 py-2.5 rounded-xl bg-[#6495ED] text-[#0B1F3A] font-bold text-sm hover:bg-[#93B7F5] hover:shadow-glow transition-all duration-300 flex items-center space-x-2">
+                  <span>Explore Bento Portfolio</span>
+                  <i class="fa-solid fa-arrow-down text-xs"></i>
+                </a>
+                <a href="resume.html" class="px-5 py-2.5 rounded-xl bg-brand-surface text-white border border-brand-border hover:border-[#6495ED] hover:text-[#6495ED] font-semibold text-sm transition-all duration-300 flex items-center space-x-2">
+                  <i class="fa-solid fa-print text-xs"></i>
+                  <span>Print ATS Resume</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- SECTION TITLE -->
+    <div id="about" class="text-center space-y-3 pt-8" data-aos="fade-up">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#6495ED]/10 border border-[#6495ED]/30 text-xs font-bold text-[#6495ED] uppercase tracking-wider">
+        <i class="fa-solid fa-shapes"></i>
+        <span>Modular Showcase</span>
+      </div>
+      <h2 class="text-3xl md:text-4xl font-display font-extrabold text-white tracking-tight">
+        The Bento <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#6495ED] to-[#93B7F5]">Grid</span>
+      </h2>
+      <p class="text-brand-textMuted max-w-2xl mx-auto text-sm md:text-base">
+        A multi-dimensional view of my academic foundation, creative passions, adaptability, and vision for continuous growth.
+      </p>
+    </div>
+
+    <!-- BENTO GRID SECTION -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+      
+      <!-- BENTO CARD 1: Academic & Institution (Span 7) -->
+      <div class="md:col-span-7 bento-card p-8 rounded-3xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-12 h-12 rounded-2xl bg-[#6495ED]/15 border border-[#6495ED]/30 flex items-center justify-center text-[#6495ED] text-xl">
+              <i class="fa-solid fa-building-columns"></i>
+            </div>
+            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-brand-surface border border-brand-border text-brand-textMuted">
+              Current Degree
+            </span>
+          </div>
+
+          <h3 class="text-2xl font-display font-bold text-white mb-2">
+            Bachelor of Commerce (B.Com)
+          </h3>
+          <p class="text-[#93B7F5] font-medium text-base mb-4">
+            Kumaraguru College of Liberal Arts and Science (KCLAS)
+          </p>
+          <p class="text-slate-300 text-sm leading-relaxed mb-6">
+            Building a rigorous foundation in commercial law, corporate finance, micro/macro economics, financial accounting, and organizational dynamics. Equipped with the analytical acumen to interpret financial statements and understand broad market mechanisms.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4 border-t border-brand-border/60">
+          <div class="bg-brand-surface/70 p-3 rounded-xl border border-brand-border/40">
+            <div class="text-xs text-brand-textMuted font-medium">Discipline</div>
+            <div class="text-sm font-bold text-white mt-0.5">Commerce & Finance</div>
+          </div>
+          <div class="bg-brand-surface/70 p-3 rounded-xl border border-brand-border/40">
+            <div class="text-xs text-brand-textMuted font-medium">Focus</div>
+            <div class="text-sm font-bold text-white mt-0.5">Economics & Analysis</div>
+          </div>
+          <div class="bg-brand-surface/70 p-3 rounded-xl border border-brand-border/40 col-span-2 sm:col-span-1">
+            <div class="text-xs text-brand-textMuted font-medium">Institution</div>
+            <div class="text-sm font-bold text-white mt-0.5">KCLAS</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BENTO CARD 2: Dual Passion Engine (Span 5) -->
+      <div id="passions" class="md:col-span-5 bento-card p-8 rounded-3xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-12 h-12 rounded-2xl bg-[#6495ED]/15 border border-[#6495ED]/30 flex items-center justify-center text-[#6495ED] text-xl">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-[#6495ED]/15 text-[#93B7F5] border border-[#6495ED]/30">
+              Synergy
+            </span>
+          </div>
+
+          <h3 class="text-2xl font-display font-bold text-white mb-2">
+            The Analytical + Creative Blend
+          </h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-6">
+            I thrive at the intersection of numbers and visual expression. While economics trains my analytical mindset, creative arts and design empower me to turn data into intuitive, engaging stories.
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <div class="flex items-center justify-between p-3 rounded-xl bg-brand-surface/60 border border-brand-border/40">
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-coins text-[#6495ED]"></i>
+              <span class="text-sm font-semibold text-white">Finance & Economics</span>
+            </div>
+            <span class="text-xs text-[#93B7F5] font-medium">Analytical Core</span>
+          </div>
+          <div class="flex items-center justify-between p-3 rounded-xl bg-brand-surface/60 border border-brand-border/40">
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-wand-magic-sparkles text-[#6495ED]"></i>
+              <span class="text-sm font-semibold text-white">Creative Design & Crafts</span>
+            </div>
+            <span class="text-xs text-[#93B7F5] font-medium">Visual Instinct</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BENTO CARD 3: Core Competencies Matrix (Span 6) -->
+      <div id="skills" class="md:col-span-6 bento-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="300">
+        <div class="flex items-center justify-between mb-6">
+          <div class="w-12 h-12 rounded-2xl bg-[#6495ED]/15 border border-[#6495ED]/30 flex items-center justify-center text-[#6495ED] text-xl">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <span class="text-xs font-semibold px-3 py-1 rounded-full bg-brand-surface border border-brand-border text-brand-textMuted">
+            Key Strengths
+          </span>
+        </div>
+
+        <h3 class="text-2xl font-display font-bold text-white mb-2">
+          Core Competencies & Soft Skills
+        </h3>
+        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+          Proven strengths in adapting swiftly to dynamic environments, collaborating across teams, and thinking critically.
+        </p>
+
+        <!-- Skill Badges Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-2 gap-3">
+          <div class="p-3.5 rounded-xl bg-brand-surface/70 border border-brand-border hover:border-[#6495ED]/60 transition-colors">
+            <div class="flex items-center space-x-2.5 mb-1 text-white font-semibold text-sm">
+              <i class="fa-solid fa-arrows-spin text-[#6495ED]"></i>
+              <span>Adaptability</span>
+            </div>
+            <p class="text-xs text-brand-textMuted">Quick learner capable of excelling across diverse tasks and new domains.</p>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-brand-surface/70 border border-brand-border hover:border-[#6495ED]/60 transition-colors">
+            <div class="flex items-center space-x-2.5 mb-1 text-white font-semibold text-sm">
+              <i class="fa-solid fa-lightbulb text-[#6495ED]"></i>
+              <span>Creativity</span>
+            </div>
+            <p class="text-xs text-brand-textMuted">Innovative ideation with keen eye for aesthetics, craft, and presentations.</p>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-brand-surface/70 border border-brand-border hover:border-[#6495ED]/60 transition-colors">
+            <div class="flex items-center space-x-2.5 mb-1 text-white font-semibold text-sm">
+              <i class="fa-solid fa-users text-[#6495ED]"></i>
+              <span>Collaboration</span>
+            </div>
+            <p class="text-xs text-brand-textMuted">Strong interpersonal communicator and active team player in group goals.</p>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-brand-surface/70 border border-brand-border hover:border-[#6495ED]/60 transition-colors">
+            <div class="flex items-center space-x-2.5 mb-1 text-white font-semibold text-sm">
+              <i class="fa-solid fa-magnifying-glass-chart text-[#6495ED]"></i>
+              <span>Analytical Thinking</span>
+            </div>
+            <p class="text-xs text-brand-textMuted">Systematic problem decomposition and data-driven reasoning.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BENTO CARD 4: Sports, Crafts & Energy (Span 6) -->
+      <div class="md:col-span-6 bento-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="400">
+        <div class="flex items-center justify-between mb-6">
+          <div class="w-12 h-12 rounded-2xl bg-[#6495ED]/15 border border-[#6495ED]/30 flex items-center justify-center text-[#6495ED] text-xl">
+            <i class="fa-solid fa-medal"></i>
+          </div>
+          <span class="text-xs font-semibold px-3 py-1 rounded-full bg-brand-surface border border-brand-border text-brand-textMuted">
+            Holistic Balance
+          </span>
+        </div>
+
+        <h3 class="text-2xl font-display font-bold text-white mb-2">
+          Sports, Crafts & Personal Drive
+        </h3>
+        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+          Extracurricular pursuits cultivate resilience, spatial intuition, and disciplined execution.
+        </p>
+
+        <div class="space-y-4">
+          <!-- Crafts -->
+          <div class="p-4 rounded-2xl bg-brand-surface/70 border border-brand-border/60">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-sm font-bold text-white flex items-center">
+                <i class="fa-solid fa-scissors mr-2 text-[#6495ED]"></i>
+                Creative Crafts & Hands-on Artistry
+              </span>
+              <span class="text-xs px-2 py-0.5 rounded bg-[#6495ED]/20 text-[#93B7F5]">Precision</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Designing custom handicrafts, visual layouts, and decorative artifacts requiring patience, color coordination, and attention to detail.
+            </p>
+          </div>
+
+          <!-- Sports -->
+          <div class="p-4 rounded-2xl bg-brand-surface/70 border border-brand-border/60">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-sm font-bold text-white flex items-center">
+                <i class="fa-solid fa-volleyball mr-2 text-[#6495ED]"></i>
+                Sports & Athletics
+              </span>
+              <span class="text-xs px-2 py-0.5 rounded bg-[#6495ED]/20 text-[#93B7F5]">Leadership & Agility</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Active engagement in athletic games and team sports instilling stamina, quick on-field decision-making, and high camaraderie.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BENTO CARD 5: Current Focus & Learning Horizons (Span 12) -->
+      <div id="journey" class="md:col-span-12 bento-card p-8 md:p-10 rounded-3xl" data-aos="fade-up" data-aos-delay="500">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+          <div>
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#6495ED]/15 text-[#93B7F5] border border-[#6495ED]/30 text-xs font-bold uppercase tracking-wider mb-2">
+              <i class="fa-solid fa-compass"></i>
+              <span>Roadmap</span>
+            </div>
+            <h3 class="text-2xl md:text-3xl font-display font-extrabold text-white">
+              Current Focus & Learning Horizons
+            </h3>
+          </div>
+          <span class="text-xs text-brand-textMuted font-medium">
+            Continuously leveling up skills in 2026
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <div class="p-6 rounded-2xl bg-brand-surface/70 border border-brand-border hover:border-[#6495ED]/60 transition-all group">
+            <div class="w-10 h-10 rounded-xl bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <h4 class="text-base font-bold text-white mb-1.5">Financial & Market Analysis</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Studying corporate valuation, economic cycles, risk management, and personal financial planning models.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-brand-surface/70 border border-brand-border hover:border-[#6495ED]/60 transition-all group">
+            <div class="w-10 h-10 rounded-xl bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-pen-ruler"></i>
+            </div>
+            <h4 class="text-base font-bold text-white mb-1.5">Design Systems & UI/UX</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Exploring visual hierarchies, color theory, typography, and clean digital presentation workflows.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-brand-surface/70 border border-brand-border hover:border-[#6495ED]/60 transition-all group">
+            <div class="w-10 h-10 rounded-xl bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h4 class="text-base font-bold text-white mb-1.5">Digital Presence & Tools</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Leveraging modern web tools, spreadsheet modeling, and cloud collaboration to deliver high-impact results.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CONTACT & CONNECT SECTION -->
+    <section id="contact" class="bento-card p-8 md:p-12 rounded-3xl relative overflow-hidden" data-aos="fade-up">
+      <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-[#6495ED]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-3xl mx-auto text-center space-y-6 relative z-10">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#6495ED]/15 text-[#93B7F5] border border-[#6495ED]/30 text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span>Let's Connect</span>
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-display font-extrabold text-white tracking-tight">
+          Ready to collaborate or discuss opportunities?
+        </h2>
+
+        <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+          Whether you have an internship opportunity, a project collaboration, or simply want to chat about finance, economics, or design, I'd love to connect with you!
+        </p>
+
+        <!-- Direct Contact Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+          
+          <!-- Email Box -->
+          <div class="p-4 rounded-2xl bg-brand-surface border border-brand-border flex items-center justify-between group hover:border-[#6495ED] transition-all">
+            <div class="flex items-center space-x-3 text-left">
+              <div class="w-10 h-10 rounded-xl bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <div class="text-xs text-brand-textMuted">Email</div>
+                <div class="text-sm font-semibold text-white truncate max-w-[170px] sm:max-w-[190px]">rneha.21017@gmail.com</div>
+              </div>
+            </div>
+            <button onclick="copyEmail('rneha.21017@gmail.com')" class="px-3 py-1.5 rounded-lg bg-[#6495ED]/20 hover:bg-[#6495ED] text-[#93B7F5] hover:text-[#0B1F3A] transition-all text-xs font-bold">
+              Copy
+            </button>
+          </div>
+
+          <!-- GitHub Box -->
+          <a href="https://github.com/neha-r011" target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl bg-brand-surface border border-brand-border flex items-center justify-between group hover:border-[#6495ED] transition-all">
+            <div class="flex items-center space-x-3 text-left">
+              <div class="w-10 h-10 rounded-xl bg-[#6495ED]/15 text-[#6495ED] flex items-center justify-center">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div>
+                <div class="text-xs text-brand-textMuted">GitHub</div>
+                <div class="text-sm font-semibold text-white">@neha-r011</div>
+              </div>
+            </div>
+            <span class="text-xs text-[#93B7F5] group-hover:translate-x-1 transition-transform">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </span>
+          </a>
+
+        </div>
+
+        <div class="pt-6 flex flex-wrap justify-center gap-4">
+          <a href="mailto:rneha.21017@gmail.com" class="px-6 py-3 rounded-xl bg-[#6495ED] text-[#0B1F3A] font-bold text-sm hover:bg-[#93B7F5] hover:shadow-glow transition-all duration-300 inline-flex items-center space-x-2">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Send Direct Message</span>
+          </a>
+          <a href="resume.html" class="px-6 py-3 rounded-xl bg-brand-surface text-white border border-brand-border hover:border-[#6495ED] hover:text-[#6495ED] font-semibold text-sm transition-all duration-300 inline-flex items-center space-x-2">
+            <i class="fa-solid fa-file-lines"></i>
+            <span>View Full ATS Resume</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-brand-border/60 bg-[#08172C] py-8 text-center text-xs text-brand-textMuted">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-2">
+        <span class="font-display font-bold text-white text-sm">Neha R</span>
+        <span>•</span>
+        <span>Portfolio & Showcase</span>
+      </div>
+      <div>
+        Designed & Deployed with <span class="text-[#6495ED] font-semibold">PortfolioWizard</span> ✨
+      </div>
+      <div>
+        <a href="#hero" class="hover:text-[#6495ED] transition-colors flex items-center space-x-1">
+          <span>Back to top</span>
+          <i class="fa-solid fa-arrow-up text-xs"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Typed.js, Vanilla-tilt, AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      once: true,
+      duration: 750,
+      easing: 'ease-out-cubic'
+    });
+
+    // Initialize Typed.js
+    var typed = new Typed('#typed-text', {
+      strings: [
+        'Finance & Economics Scholar',
+        'B.Com Student @ KCLAS',
+        'Creative Designer & Crafter',
+        'Adaptable Collaborator'
+      ],
+      typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 1800,
+      loop: true
+    });
+
+    // Initialize Vanilla Tilt on 3D Hero Card
+    const heroCard = document.getElementById('hero3DCard');
+    if (heroCard && typeof VanillaTilt !== 'undefined') {
+      VanillaTilt.init(heroCard, {
+        max: 12,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.25,
+        scale: 1.02
+      });
+    }
+
+    // Copy to clipboard helper
+    function copyEmail(email) {
+      navigator.clipboard.writeText(email).then(() => {
+        const toast = document.getElementById('toast');
+        const toastMsg = document.getElementById('toast-message');
+        toastMsg.textContent = 'Copied ' + email + ' to clipboard!';
+        toast.classList.remove('translate-y-20', 'opacity-0');
+        setTimeout(() => {
+          toast.classList.add('translate-y-20', 'opacity-0');
+        }, 2600);
+      });
+    }
+  </script>
+</body>
+</html>
