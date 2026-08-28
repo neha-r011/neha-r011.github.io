@@ -608,6 +608,76 @@
         </div>
       </div>
 
+      <!-- FEATURED SPOTLIGHT: WEEK 00 FIELD NOTE -->
+      <div id="protosem-week-00" class="bento-card p-6 sm:p-8 md:p-10 rounded-3xl border border-brand-gold/40 relative overflow-hidden shadow-2xl space-y-6">
+        <div class="absolute -right-16 -top-16 w-64 h-64 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-brand-cream/10 pb-5">
+          <div class="flex items-center gap-3">
+            <span class="px-3.5 py-1 rounded-full bg-gradient-to-r from-brand-gold/25 to-brand-gold/10 border border-brand-gold/40 text-brand-gold font-bold text-xs uppercase tracking-wider flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+              Featured Note • Week 00
+            </span>
+            <span class="text-xs text-brand-cream/60 font-mono hidden sm:inline">/protosem/week-00</span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button onclick="openWeekModal(0)" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-xl bg-brand-gold/15 hover:bg-brand-gold/25 text-brand-gold border border-brand-gold/30 text-xs font-semibold transition-all hover:scale-105">
+              <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+              <span>Reading Mode</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Week 0 Article Header -->
+        <div class="space-y-2">
+          <h4 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-brand-cream leading-tight">
+            Week 0: Orientation, Team Immersion & Foundations
+          </h4>
+          <p class="text-xs sm:text-sm text-brand-gold/90 font-medium">
+            PRICE ProtoSem • Phase 01: Onboarding & Team Building
+          </p>
+        </div>
+
+        <!-- Week 0 Article Content -->
+        <div class="space-y-4 text-brand-cream/85 text-sm sm:text-base leading-relaxed font-light">
+          <p class="border-l-2 border-brand-gold/60 pl-4 py-0.5 text-brand-cream">
+            Week 0 of PRICE Protosem was all about getting started, connecting with our peers, and building a strong foundation for the journey ahead. We participated in the inauguration ceremony, team introductions, personality tests, storytelling, and the Marshmallow &amp; Spaghetti challenge.
+          </p>
+          <p class="pl-4">
+            These activities helped us understand our teammates’ strengths, personalities, creativity, communication, and teamwork, while bringing together students from diverse academic backgrounds.
+          </p>
+          <p class="pl-4 font-normal text-brand-goldLight/95">
+            A great beginning to an exciting 20-week journey of learning, collaboration, and solving real-world retail challenges! ✨
+          </p>
+        </div>
+
+        <!-- Activity Badges Pill Carousel -->
+        <div class="pt-4 border-t border-brand-cream/10 space-y-3">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-brand-cream/60">Key Immersion Activities &amp; Takeaways</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-brand-navyDark/70 border border-brand-cream/15 text-xs text-brand-cream/90">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-gold"></i> Inauguration Ceremony
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-brand-navyDark/70 border border-brand-cream/15 text-xs text-brand-cream/90">
+              <i data-lucide="users" class="w-3.5 h-3.5 text-brand-gold"></i> Team Introductions
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-brand-navyDark/70 border border-brand-cream/15 text-xs text-brand-cream/90">
+              <i data-lucide="smile" class="w-3.5 h-3.5 text-brand-gold"></i> Personality Tests
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-brand-navyDark/70 border border-brand-cream/15 text-xs text-brand-cream/90">
+              <i data-lucide="book-open" class="w-3.5 h-3.5 text-brand-gold"></i> Storytelling Sessions
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-brand-navyDark/70 border border-brand-gold/30 text-xs text-brand-gold font-medium">
+              <i data-lucide="layers" class="w-3.5 h-3.5 text-brand-gold"></i> Marshmallow &amp; Spaghetti Challenge
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-brand-navyDark/70 border border-brand-cream/15 text-xs text-brand-cream/90">
+              <i data-lucide="git-merge" class="w-3.5 h-3.5 text-brand-gold"></i> Cross-Disciplinary Synergy
+            </span>
+          </div>
+        </div>
+      </div>
+
       <!-- Phase Filter Navigation Tabs -->
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
         <div class="text-left">
@@ -677,6 +747,47 @@
 
   </main>
 
+  <!-- Interactive Modal for Week Field Notes -->
+  <div id="week-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-brand-navyDark/85 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" onclick="handleModalBackdropClick(event)">
+    <div class="bento-card w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl border border-brand-gold/40 shadow-2xl p-6 sm:p-8 space-y-6 relative transform scale-95 transition-transform duration-300 custom-scrollbar" id="week-modal-content">
+      
+      <!-- Modal Close Button -->
+      <button onclick="closeWeekModal()" class="absolute top-5 right-5 p-2 rounded-full bg-brand-cream/10 hover:bg-brand-cream/20 text-brand-cream transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="space-y-2 pr-8">
+        <div class="flex items-center gap-2">
+          <span id="modal-phase" class="text-[10px] font-bold tracking-widest uppercase text-brand-gold px-2.5 py-1 rounded-md bg-brand-gold/15 border border-brand-gold/30">
+            Phase 01
+          </span>
+          <span id="modal-slug" class="text-xs font-mono text-brand-cream/50">/protosem/week-00</span>
+        </div>
+        <h3 id="modal-title" class="text-2xl sm:text-3xl font-serif font-bold text-brand-cream">
+          Week 00 Field Note
+        </h3>
+      </div>
+
+      <!-- Modal Body -->
+      <div id="modal-body" class="space-y-4 text-sm sm:text-base text-brand-cream/85 leading-relaxed font-light border-t border-b border-brand-cream/10 py-5">
+        <!-- Content dynamically injected -->
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+        <div class="text-xs text-brand-gold flex items-center gap-1.5">
+          <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+          <span>PRICE ProtoSem Innovation Programme</span>
+        </div>
+        <button onclick="closeWeekModal()" class="px-5 py-2 rounded-xl bg-brand-gold text-brand-navy font-bold text-xs hover:bg-brand-goldLight transition-colors">
+          Close Field Note
+        </button>
+      </div>
+
+    </div>
+  </div>
+
   <!-- Toast Notification for ProtoSem Weeks -->
   <div id="protosem-toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
     <div class="p-4 rounded-2xl bg-brand-navyDark/95 border border-brand-gold/40 shadow-2xl backdrop-blur-md flex items-center gap-3 text-sm text-brand-cream">
@@ -727,27 +838,50 @@
     // Ready for future individual blog / case-study story routes
     // ------------------------------------------------------------------------
     const protoSemWeeks = [
-      { week: 0,  phase: 1, slug: "week-00", status: "Field Notes in Progress" },
-      { week: 1,  phase: 1, slug: "week-01", status: "Field Notes in Progress" },
-      { week: 2,  phase: 1, slug: "week-02", status: "Field Notes in Progress" },
-      { week: 3,  phase: 1, slug: "week-03", status: "Field Notes in Progress" },
-      { week: 4,  phase: 1, slug: "week-04", status: "Field Notes in Progress" },
-      { week: 5,  phase: 1, slug: "week-05", status: "Field Notes in Progress" },
-      { week: 6,  phase: 2, slug: "week-06", status: "Field Notes in Progress" },
-      { week: 7,  phase: 2, slug: "week-07", status: "Field Notes in Progress" },
-      { week: 8,  phase: 2, slug: "week-08", status: "Field Notes in Progress" },
-      { week: 9,  phase: 2, slug: "week-09", status: "Field Notes in Progress" },
-      { week: 10, phase: 2, slug: "week-10", status: "Field Notes in Progress" },
-      { week: 11, phase: 3, slug: "week-11", status: "Field Notes in Progress" },
-      { week: 12, phase: 3, slug: "week-12", status: "Field Notes in Progress" },
-      { week: 13, phase: 3, slug: "week-13", status: "Field Notes in Progress" },
-      { week: 14, phase: 3, slug: "week-14", status: "Field Notes in Progress" },
-      { week: 15, phase: 3, slug: "week-15", status: "Field Notes in Progress" },
-      { week: 16, phase: 4, slug: "week-16", status: "Field Notes in Progress" },
-      { week: 17, phase: 4, slug: "week-17", status: "Field Notes in Progress" },
-      { week: 18, phase: 4, slug: "week-18", status: "Field Notes in Progress" },
-      { week: 19, phase: 4, slug: "week-19", status: "Field Notes in Progress" },
-      { week: 20, phase: 4, slug: "week-20", status: "Field Notes in Progress" }
+      { 
+        week: 0,  
+        phase: 1, 
+        slug: "week-00", 
+        title: "Orientation, Team Immersion & Foundations",
+        status: "Field Note Published ✨", 
+        hasStory: true,
+        summary: "Inauguration, team introductions, personality tests, storytelling, and the Marshmallow & Spaghetti challenge.",
+        content: `
+          <p class="leading-relaxed"><strong>Week 0 of PRICE Protosem</strong> was all about getting started, connecting with our peers, and building a strong foundation for the journey ahead. We participated in the inauguration ceremony, team introductions, personality tests, storytelling, and the Marshmallow & Spaghetti challenge.</p>
+          <p class="leading-relaxed">These activities helped us understand our teammates’ strengths, personalities, creativity, communication, and teamwork, while bringing together students from diverse academic backgrounds.</p>
+          <p class="leading-relaxed font-normal text-brand-goldLight">A great beginning to an exciting 20-week journey of learning, collaboration, and solving real-world retail challenges! ✨</p>
+          <div class="mt-4 p-4 rounded-2xl bg-brand-navy/60 border border-brand-gold/20 space-y-2">
+            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Immersion Highlights</span>
+            <ul class="text-xs text-brand-cream/80 space-y-1 list-disc list-inside">
+              <li>Inauguration Ceremony &amp; Programme Orientation</li>
+              <li>Team Introductions &amp; Cross-Disciplinary Icebreakers</li>
+              <li>Personality Profiling &amp; Collaborative Strengths Mapping</li>
+              <li>Storytelling &amp; Creative Communication</li>
+              <li>Marshmallow &amp; Spaghetti Engineering Challenge</li>
+            </ul>
+          </div>
+        `
+      },
+      { week: 1,  phase: 1, slug: "week-01", status: "Field Notes in Progress", hasStory: false },
+      { week: 2,  phase: 1, slug: "week-02", status: "Field Notes in Progress", hasStory: false },
+      { week: 3,  phase: 1, slug: "week-03", status: "Field Notes in Progress", hasStory: false },
+      { week: 4,  phase: 1, slug: "week-04", status: "Field Notes in Progress", hasStory: false },
+      { week: 5,  phase: 1, slug: "week-05", status: "Field Notes in Progress", hasStory: false },
+      { week: 6,  phase: 2, slug: "week-06", status: "Field Notes in Progress", hasStory: false },
+      { week: 7,  phase: 2, slug: "week-07", status: "Field Notes in Progress", hasStory: false },
+      { week: 8,  phase: 2, slug: "week-08", status: "Field Notes in Progress", hasStory: false },
+      { week: 9,  phase: 2, slug: "week-09", status: "Field Notes in Progress", hasStory: false },
+      { week: 10, phase: 2, slug: "week-10", status: "Field Notes in Progress", hasStory: false },
+      { week: 11, phase: 3, slug: "week-11", status: "Field Notes in Progress", hasStory: false },
+      { week: 12, phase: 3, slug: "week-12", status: "Field Notes in Progress", hasStory: false },
+      { week: 13, phase: 3, slug: "week-13", status: "Field Notes in Progress", hasStory: false },
+      { week: 14, phase: 3, slug: "week-14", status: "Field Notes in Progress", hasStory: false },
+      { week: 15, phase: 3, slug: "week-15", status: "Field Notes in Progress", hasStory: false },
+      { week: 16, phase: 4, slug: "week-16", status: "Field Notes in Progress", hasStory: false },
+      { week: 17, phase: 4, slug: "week-17", status: "Field Notes in Progress", hasStory: false },
+      { week: 18, phase: 4, slug: "week-18", status: "Field Notes in Progress", hasStory: false },
+      { week: 19, phase: 4, slug: "week-19", status: "Field Notes in Progress", hasStory: false },
+      { week: 20, phase: 4, slug: "week-20", status: "Field Notes in Progress", hasStory: false }
     ];
 
     function renderProtoSemCards(filter = 'all') {
@@ -761,28 +895,37 @@
       container.innerHTML = filtered.map(item => {
         const padWeek = String(item.week).padStart(2, '0');
         const padPhase = String(item.phase).padStart(2, '0');
+        const isPublished = item.hasStory === true;
+
+        const cardBorder = isPublished 
+          ? 'border-brand-gold/60 bg-gradient-to-br from-brand-navyLight/80 to-brand-navy/90 shadow-lg shadow-brand-gold/10' 
+          : 'border-brand-cream/15';
+
+        const dotStyle = isPublished
+          ? 'bg-brand-gold shadow-md shadow-brand-gold/50 animate-pulse'
+          : 'bg-brand-gold/40 group-hover:bg-brand-gold group-hover:scale-125';
 
         return `
           <a href="#protosem-week-${padWeek}" 
-             onclick="openWeekStory(${item.week}); return false;"
-             class="week-card bento-card p-5 rounded-2xl border border-brand-cream/15 flex flex-col justify-between h-[155px] group relative overflow-hidden transition-all duration-300 hover:border-brand-gold/50 hover:-translate-y-1 block cursor-pointer">
+             onclick="handleWeekCardClick(${item.week}); return false;"
+             class="week-card bento-card p-5 rounded-2xl ${cardBorder} flex flex-col justify-between min-h-[155px] group relative overflow-hidden transition-all duration-300 hover:border-brand-gold hover:-translate-y-1 block cursor-pointer">
             
             <!-- Top Metadata -->
             <div class="flex items-center justify-between">
-              <span class="text-[10px] font-bold tracking-widest uppercase text-brand-gold/80 px-2 py-0.5 rounded-md bg-brand-navyDark/60 border border-brand-cream/10">
-                Phase ${padPhase}
+              <span class="text-[10px] font-bold tracking-widest uppercase ${isPublished ? 'text-brand-gold bg-brand-gold/15 border-brand-gold/30' : 'text-brand-gold/80 bg-brand-navyDark/60 border-brand-cream/10'} px-2 py-0.5 rounded-md border">
+                Phase ${padPhase} ${isPublished ? '• ACTIVE' : ''}
               </span>
-              <div class="w-2 h-2 rounded-full bg-brand-gold/50 group-hover:bg-brand-gold group-hover:scale-125 transition-all"></div>
+              <div class="w-2.5 h-2.5 rounded-full ${dotStyle} transition-all"></div>
             </div>
 
             <!-- Main Week Label -->
-            <div class="space-y-0.5">
+            <div class="space-y-1">
               <div class="text-2xl font-serif font-bold text-brand-cream group-hover:text-brand-gold transition-colors flex items-baseline justify-between">
                 <span>WEEK ${padWeek}</span>
-                <span class="text-xs font-mono font-normal text-brand-cream/30 group-hover:text-brand-gold/60 transition-colors">#${padWeek}</span>
+                <span class="text-xs font-mono font-normal ${isPublished ? 'text-brand-gold/70' : 'text-brand-cream/30'} group-hover:text-brand-gold/60 transition-colors">#${padWeek}</span>
               </div>
-              <div class="text-[11px] font-medium tracking-wide uppercase text-brand-cream/50 group-hover:text-brand-cream/80 transition-colors flex items-center gap-1.5">
-                <i data-lucide="file-clock" class="w-3 h-3 text-brand-gold/70"></i>
+              <div class="text-[11px] font-medium tracking-wide uppercase ${isPublished ? 'text-brand-gold font-semibold' : 'text-brand-cream/50'} group-hover:text-brand-cream/80 transition-colors flex items-center gap-1.5">
+                <i data-lucide="${isPublished ? 'sparkles' : 'file-clock'}" class="w-3.5 h-3.5 ${isPublished ? 'text-brand-gold' : 'text-brand-gold/70'}"></i>
                 <span>${item.status}</span>
               </div>
             </div>
@@ -790,7 +933,8 @@
             <!-- Bottom Indicator & Arrow -->
             <div class="flex items-center justify-between text-xs text-brand-cream/40 group-hover:text-brand-gold pt-2 border-t border-brand-cream/5">
               <span class="text-[10px] font-mono">/protosem/week-${padWeek}</span>
-              <div class="transform group-hover:translate-x-1 transition-transform">
+              <div class="transform group-hover:translate-x-1 transition-transform flex items-center gap-1">
+                <span class="text-[10px] uppercase font-semibold text-brand-gold opacity-0 group-hover:opacity-100 transition-opacity">${isPublished ? 'Read' : 'Note'}</span>
                 <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
               </div>
             </div>
@@ -816,8 +960,63 @@
       renderProtoSemCards(phaseVal);
     }
 
+    function handleWeekCardClick(weekNum) {
+      const item = protoSemWeeks.find(w => w.week === weekNum);
+      if (item && item.hasStory) {
+        openWeekModal(weekNum);
+      } else {
+        showWeekToast(weekNum);
+      }
+    }
+
+    function openWeekModal(weekNum) {
+      const item = protoSemWeeks.find(w => w.week === weekNum);
+      if (!item) return;
+
+      const padWeek = String(item.week).padStart(2, '0');
+      const padPhase = String(item.phase).padStart(2, '0');
+
+      document.getElementById('modal-phase').innerText = `Phase ${padPhase}`;
+      document.getElementById('modal-slug').innerText = `/protosem/week-${padWeek}`;
+      document.getElementById('modal-title').innerText = item.title || `Week ${padWeek} Field Note`;
+      document.getElementById('modal-body').innerHTML = item.content || `<p>${item.summary || 'Field notes in progress.'}</p>`;
+
+      const modal = document.getElementById('week-modal');
+      const content = document.getElementById('week-modal-content');
+      
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modal.classList.add('opacity-100', 'pointer-events-auto');
+      content.classList.remove('scale-95');
+      content.classList.add('scale-100');
+
+      lucide.createIcons();
+    }
+
+    function closeWeekModal() {
+      const modal = document.getElementById('week-modal');
+      const content = document.getElementById('week-modal-content');
+
+      modal.classList.remove('opacity-100', 'pointer-events-auto');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      content.classList.remove('scale-100');
+      content.classList.add('scale-95');
+    }
+
+    function handleModalBackdropClick(e) {
+      if (e.target.id === 'week-modal') {
+        closeWeekModal();
+      }
+    }
+
+    // Keyboard ESC listener to close modal
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeWeekModal();
+      }
+    });
+
     let toastTimeout;
-    function openWeekStory(weekNum) {
+    function showWeekToast(weekNum) {
       const padWeek = String(weekNum).padStart(2, '0');
       const toast = document.getElementById('protosem-toast');
       const title = document.getElementById('toast-title');
@@ -837,6 +1036,14 @@
         }, 3200);
       }
     }
+
+    // Auto check if hash points to week 0 or protosem
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.location.hash === '#protosem-week-00' || window.location.hash === '#week-00' || window.location.hash === '#week-0') {
+        const el = document.getElementById('protosem-week-00');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
 
     // Initial render of ProtoSem weeks
     renderProtoSemCards('all');
