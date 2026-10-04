@@ -92,14 +92,38 @@
     }
 
     .custom-scrollbar::-webkit-scrollbar {
-      width: 6px;
+      width: 8px;
     }
     .custom-scrollbar::-webkit-scrollbar-track {
-      background: #0B1F3A;
+      background: #071527;
     }
     .custom-scrollbar::-webkit-scrollbar-thumb {
       background: #142E54;
-      border-radius: 3px;
+      border-radius: 4px;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #D4AF37;
+    }
+
+    .gallery-img-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1rem;
+      border: 1px solid rgba(245, 239, 235, 0.15);
+      background: rgba(7, 21, 39, 0.6);
+      transition: all 0.3s ease;
+    }
+    .gallery-img-container:hover {
+      border-color: rgba(212, 175, 55, 0.5);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.15);
+    }
+    .gallery-img {
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: zoom-in;
+    }
+    .gallery-img-container:hover .gallery-img {
+      transform: scale(1.03);
     }
   </style>
 </head>
@@ -608,92 +632,6 @@
         </div>
       </div>
 
-      <!-- FEATURED SPOTLIGHT: WEEK 00 FIELD NOTE -->
-      <div id="protosem-week-00" class="bento-card p-6 sm:p-8 md:p-10 rounded-3xl border border-brand-gold/40 relative overflow-hidden shadow-2xl space-y-6">
-        <div class="absolute -right-16 -top-16 w-64 h-64 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-brand-cream/10 pb-5">
-          <div class="flex items-center gap-3">
-            <span class="px-3.5 py-1 rounded-full bg-gradient-to-r from-brand-gold/25 to-brand-gold/10 border border-brand-gold/40 text-brand-gold font-bold text-xs uppercase tracking-wider flex items-center gap-1.5">
-              <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
-              Featured Note • Week 00
-            </span>
-            <span class="text-xs text-brand-cream/60 font-mono hidden sm:inline">/protosem/week-00</span>
-          </div>
-
-          <div class="flex items-center gap-2">
-            <button onclick="openWeekModal(0)" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-xl bg-brand-gold/15 hover:bg-brand-gold/25 text-brand-gold border border-brand-gold/30 text-xs font-semibold transition-all hover:scale-105">
-              <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
-              <span>Reading Mode</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Week 0 Article Header -->
-        <div class="space-y-2">
-          <h4 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-brand-cream leading-tight">
-            Week 0: Orientation, Team Immersion & Foundations
-          </h4>
-          <p class="text-xs sm:text-sm text-brand-gold/90 font-medium">
-            PRICE ProtoSem • Phase 01: Onboarding & Team Building
-          </p>
-        </div>
-
-        <!-- Week 0 Article Content -->
-        <div class="space-y-4 text-brand-cream/85 text-sm sm:text-base leading-relaxed font-light">
-          <p class="border-l-2 border-brand-gold/60 pl-4 py-0.5 text-brand-cream">
-            Week 0 of PRICE Protosem was all about getting started, connecting with our peers, and building a strong foundation for the journey ahead. We participated in the inauguration ceremony, team introductions, personality tests, storytelling, and the Marshmallow &amp; Spaghetti challenge.
-          </p>
-          <p class="pl-4">
-            These activities helped us understand our teammates’ strengths, personalities, creativity, communication, and teamwork, while bringing together students from diverse academic backgrounds.
-          </p>
-
-          <!-- Week 0 Media Showcase -->
-          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 my-4">
-            <div class="md:col-span-4 rounded-2xl overflow-hidden border border-brand-cream/15 bg-white p-4 flex items-center justify-center shadow-lg group hover:border-brand-gold/40 transition-all">
-              <img src="assets/protosem-logo.jpg" alt="ProtoSem Innovation Engineers" class="w-full max-h-40 object-contain transition-transform group-hover:scale-105 duration-300">
-            </div>
-            <div class="md:col-span-8 rounded-2xl overflow-hidden border border-brand-cream/15 bg-brand-navyDark/60 relative shadow-lg group hover:border-brand-gold/40 transition-all">
-              <img src="assets/protosem-inauguration.jpg" alt="ProtoSem Inauguration - Special Address by Mr. Kumar Rajagopalan (CEO, Retailers Association of India)" class="w-full h-44 sm:h-52 object-cover object-center transition-transform group-hover:scale-105 duration-300">
-              <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark via-brand-navyDark/20 to-transparent pointer-events-none"></div>
-              <div class="absolute bottom-2.5 left-3 right-3 text-xs text-brand-cream/90 font-medium bg-brand-navyDark/85 backdrop-blur-md px-3 py-1.5 rounded-xl border border-brand-cream/15 flex items-center gap-2">
-                <i data-lucide="mic" class="w-3.5 h-3.5 text-brand-gold shrink-0"></i>
-                <span class="truncate">Special Address: Mr. Kumar Rajagopalan (CEO, Retailers Association of India)</span>
-              </div>
-            </div>
-          </div>
-
-          <p class="pl-4 font-normal text-brand-goldLight/95">
-            A great beginning to an exciting 20-week journey of learning, collaboration, and solving real-world retail challenges!
-          </p>
-        </div>
-
-        <!-- Activity Badges Pill Carousel -->
-        <div class="pt-4 border-t border-brand-cream/10 space-y-3">
-          <span class="text-[11px] font-bold uppercase tracking-wider text-brand-cream/60">Key Immersion Activities &amp; Takeaways</span>
-          <div class="flex flex-wrap gap-2">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-brand-navyDark/70 border border-brand-cream/15 text-xs text-brand-cream/90">
-              <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-gold"></i> Inauguration Ceremony
-            </span>
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-brand-navyDark/70 border border-brand-cream/15 text-xs text-brand-cream/90">
-              <i data-lucide="users" class="w-3.5 h-3.5 text-brand-gold"></i> Team Introductions
-            </span>
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-brand-navyDark/70 border border-brand-cream/15 text-xs text-brand-cream/90">
-              <i data-lucide="smile" class="w-3.5 h-3.5 text-brand-gold"></i> Personality Tests
-            </span>
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-brand-navyDark/70 border border-brand-cream/15 text-xs text-brand-cream/90">
-              <i data-lucide="book-open" class="w-3.5 h-3.5 text-brand-gold"></i> Storytelling Sessions
-            </span>
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-brand-navyDark/70 border border-brand-gold/30 text-xs text-brand-gold font-medium">
-              <i data-lucide="layers" class="w-3.5 h-3.5 text-brand-gold"></i> Marshmallow &amp; Spaghetti Challenge
-            </span>
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-brand-navyDark/70 border border-brand-cream/15 text-xs text-brand-cream/90">
-              <i data-lucide="git-merge" class="w-3.5 h-3.5 text-brand-gold"></i> Cross-Disciplinary Synergy
-            </span>
-          </div>
-        </div>
-      </div>
-
       <!-- Phase Filter Navigation Tabs -->
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
         <div class="text-left">
@@ -763,61 +701,138 @@
 
   </main>
 
-  <!-- Interactive Modal for Week Field Notes -->
-  <div id="week-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-brand-navyDark/85 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" onclick="handleModalBackdropClick(event)">
-    <div class="bento-card w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl border border-brand-gold/40 shadow-2xl p-6 sm:p-8 space-y-6 relative transform scale-95 transition-transform duration-300 custom-scrollbar" id="week-modal-content">
+  <!-- IMMERSIVE NEAR-FULLSCREEN WEEK WORKSPACE MODAL -->
+  <div id="week-workspace-modal" 
+       class="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 lg:p-8 bg-brand-navyDark/90 backdrop-blur-2xl opacity-0 pointer-events-none transition-all duration-300 ease-out" 
+       onclick="handleWorkspaceBackdropClick(event)">
+       
+    <div class="bento-card w-full h-full max-w-[1460px] max-h-[96vh] rounded-3xl border border-brand-gold/30 shadow-2xl flex flex-col overflow-hidden relative transform scale-[0.98] transition-all duration-300 bg-brand-navy/95" 
+         id="week-workspace-content">
       
-      <!-- Modal Close Button -->
-      <button onclick="closeWeekModal()" class="absolute top-5 right-5 p-2 rounded-full bg-brand-cream/10 hover:bg-brand-cream/20 text-brand-cream transition-colors">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
+      <!-- Sticky Workspace Header / Navigation Bar -->
+      <header class="sticky top-0 z-30 px-5 sm:px-8 py-4 border-b border-brand-cream/10 bg-brand-navyDark/95 backdrop-blur-md flex items-center justify-between gap-4 shrink-0 shadow-lg">
+        
+        <!-- Left: Back Button & Breadcrumbs -->
+        <div class="flex items-center gap-3">
+          <button onclick="closeWeekWorkspace()" 
+                  class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-brand-cream/10 hover:bg-brand-cream/20 text-brand-cream text-xs font-semibold transition-all hover:scale-105 border border-brand-cream/15 group"
+                  title="Return to portfolio (Esc)">
+            <i data-lucide="arrow-left" class="w-4 h-4 text-brand-gold group-hover:-translate-x-0.5 transition-transform"></i>
+            <span class="hidden sm:inline">Back to Portfolio</span>
+          </button>
+          
+          <div class="h-4 w-px bg-brand-cream/15 hidden sm:block"></div>
+          
+          <div class="flex items-center gap-2">
+            <span id="ws-phase-badge" class="text-[11px] font-bold tracking-widest uppercase text-brand-gold px-2.5 py-0.5 rounded-md bg-brand-gold/15 border border-brand-gold/30">
+              Phase 01
+            </span>
+            <span id="ws-slug-badge" class="text-xs font-mono text-brand-cream/60 hidden md:inline">
+              /protosem/week-00
+            </span>
+          </div>
+        </div>
 
-      <!-- Modal Header -->
-      <div class="space-y-2 pr-8">
+        <!-- Center: Week Title Preview (Desktop) -->
+        <div class="hidden lg:flex items-center gap-2 max-w-md truncate text-xs text-brand-cream/70 font-medium">
+          <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+          <span id="ws-header-title" class="truncate font-serif text-brand-cream text-sm">Orientation, Team Immersion & Foundations</span>
+        </div>
+
+        <!-- Right: Week Navigators & Close -->
         <div class="flex items-center gap-2">
-          <span id="modal-phase" class="text-[10px] font-bold tracking-widest uppercase text-brand-gold px-2.5 py-1 rounded-md bg-brand-gold/15 border border-brand-gold/30">
-            Phase 01
-          </span>
-          <span id="modal-slug" class="text-xs font-mono text-brand-cream/50">/protosem/week-00</span>
-        </div>
-        <h3 id="modal-title" class="text-2xl sm:text-3xl font-serif font-bold text-brand-cream">
-          Week 00 Field Note
-        </h3>
-      </div>
+          <!-- Previous Week Button -->
+          <button id="ws-prev-btn" onclick="navigateWeek(-1)" 
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-brand-navyDark/80 hover:bg-brand-navyLight text-brand-cream/90 hover:text-brand-gold border border-brand-cream/15 text-xs font-medium transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+                  title="Previous Week (Left Arrow)">
+            <i data-lucide="chevron-left" class="w-4 h-4"></i>
+            <span class="hidden sm:inline">Prev Week</span>
+          </button>
 
-      <!-- Modal Body -->
-      <div id="modal-body" class="space-y-4 text-sm sm:text-base text-brand-cream/85 leading-relaxed font-light border-t border-b border-brand-cream/10 py-5">
-        <!-- Content dynamically injected -->
-      </div>
+          <!-- Next Week Button -->
+          <button id="ws-next-btn" onclick="navigateWeek(1)" 
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-brand-navyDark/80 hover:bg-brand-navyLight text-brand-cream/90 hover:text-brand-gold border border-brand-cream/15 text-xs font-medium transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+                  title="Next Week (Right Arrow)">
+            <span class="hidden sm:inline">Next Week</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
 
-      <!-- Modal Footer -->
-      <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
-        <div class="text-xs text-brand-gold flex items-center gap-1.5">
-          <i data-lucide="check-circle-2" class="w-4 h-4"></i>
-          <span>PRICE ProtoSem Innovation Programme</span>
+          <!-- Close Modal Button -->
+          <button onclick="closeWeekWorkspace()" 
+                  class="p-2 rounded-xl bg-brand-cream/10 hover:bg-red-500/20 text-brand-cream hover:text-red-300 border border-brand-cream/15 transition-all" 
+                  title="Close Workspace (Esc)">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
         </div>
-        <button onclick="closeWeekModal()" class="px-5 py-2 rounded-xl bg-brand-gold text-brand-navy font-bold text-xs hover:bg-brand-goldLight transition-colors">
-          Close Field Note
-        </button>
-      </div>
+
+      </header>
+
+      <!-- Main Scrollable Workspace Body -->
+      <main class="flex-1 overflow-y-auto custom-scrollbar p-6 sm:p-10 md:p-14 lg:p-16 space-y-12" id="ws-scroll-container">
+        
+        <!-- Dynamic Week Content Injected Here -->
+        <div id="ws-content-body" class="max-w-5xl mx-auto space-y-10">
+          <!-- Week Hero, Narrative, Media Galleries, Takeaways, etc. -->
+        </div>
+
+        <!-- Bottom Navigation Footer Inside Workspace -->
+        <footer class="max-w-5xl mx-auto pt-10 border-t border-brand-cream/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <button id="ws-footer-prev-btn" onclick="navigateWeek(-1)" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 py-3 rounded-2xl bg-brand-navyDark/80 hover:bg-brand-navyLight border border-brand-cream/20 text-brand-cream hover:text-brand-gold transition-all group">
+            <i data-lucide="arrow-left" class="w-4 h-4 group-hover:-translate-x-1 transition-transform text-brand-gold"></i>
+            <div class="text-left">
+              <div class="text-[10px] uppercase font-bold text-brand-gold">Previous Chapter</div>
+              <div id="ws-footer-prev-label" class="text-xs font-medium text-brand-cream/80 truncate max-w-[200px]">Week 00</div>
+            </div>
+          </button>
+
+          <button onclick="scrollToWorkspaceTop()" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-cream/5 hover:bg-brand-cream/15 text-brand-cream/60 hover:text-brand-gold text-xs transition-colors">
+            <i data-lucide="arrow-up" class="w-3.5 h-3.5 text-brand-gold"></i>
+            <span>Back to Top</span>
+          </button>
+
+          <button id="ws-footer-next-btn" onclick="navigateWeek(1)" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 py-3 rounded-2xl bg-brand-navyDark/80 hover:bg-brand-navyLight border border-brand-cream/20 text-brand-cream hover:text-brand-gold transition-all group">
+            <div class="text-right">
+              <div class="text-[10px] uppercase font-bold text-brand-gold">Next Chapter</div>
+              <div id="ws-footer-next-label" class="text-xs font-medium text-brand-cream/80 truncate max-w-[200px]">Week 02</div>
+            </div>
+            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform text-brand-gold"></i>
+          </button>
+        </footer>
+
+      </main>
 
     </div>
   </div>
 
-  <!-- Toast Notification for ProtoSem Weeks -->
+  <!-- HIGH RESOLUTION IMAGE LIGHTBOX MODAL -->
+  <div id="image-lightbox-modal" 
+       class="fixed inset-0 z-[110] flex items-center justify-center p-4 sm:p-8 bg-black/95 backdrop-blur-2xl opacity-0 pointer-events-none transition-opacity duration-200" 
+       onclick="closeImageLightbox()">
+    
+    <button onclick="closeImageLightbox()" class="absolute top-6 right-6 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all z-10" title="Close image (Esc)">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
+    
+    <div class="relative max-w-6xl max-h-[90vh] flex flex-col items-center justify-center" onclick="event.stopPropagation()">
+      <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[78vh] object-contain rounded-2xl shadow-2xl border border-white/20">
+      <p id="lightbox-caption" class="text-sm text-brand-cream/90 font-medium mt-4 text-center px-4 py-2 rounded-xl bg-brand-navyDark/85 border border-brand-cream/20 backdrop-blur-md max-w-2xl"></p>
+    </div>
+  </div>
+
+  <!-- Toast Notification for ProtoSem Actions -->
   <div id="protosem-toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
     <div class="p-4 rounded-2xl bg-brand-navyDark/95 border border-brand-gold/40 shadow-2xl backdrop-blur-md flex items-center gap-3 text-sm text-brand-cream">
       <div class="w-8 h-8 rounded-xl bg-brand-gold/20 flex items-center justify-center text-brand-gold shrink-0">
-        <i data-lucide="book-open" class="w-4 h-4"></i>
+        <i data-lucide="sparkles" class="w-4 h-4"></i>
       </div>
       <div>
-        <div id="toast-title" class="font-bold text-xs uppercase tracking-wider text-brand-gold">Week Field Note</div>
-        <div id="toast-message" class="text-xs text-brand-cream/80">Story documentation in progress.</div>
+        <div id="toast-title" class="font-bold text-xs uppercase tracking-wider text-brand-gold">PRICE ProtoSem</div>
+        <div id="toast-message" class="text-xs text-brand-cream/80">Action completed successfully.</div>
       </div>
     </div>
   </div>
 
-  <!-- Scripts: Initialize Lucide, Typed.js, AOS, ProtoSem Render, and Tilt -->
+  <!-- Scripts: Initialize Lucide, Typed.js, AOS, ProtoSem Render, Tilt & Workspace Engine -->
   <script>
     // Initialize Lucide Icons
     lucide.createIcons();
@@ -851,316 +866,770 @@
 
     // ------------------------------------------------------------------------
     // PROTOSEM 20-WEEK ARCHIVE DATA ARCHITECTURE
-    // Ready for future individual blog / case-study story routes
+    // Full modular data model for weeks 00 through 20
+    // Ready for multi-image galleries, captions, takeaways, and case studies
     // ------------------------------------------------------------------------
     const protoSemWeeks = [
       { 
         week: 0,  
         phase: 1, 
+        phaseName: "Phase 01: Foundations & Multidisciplinary Immersion",
         slug: "week-00", 
         title: "Orientation, Team Immersion & Foundations",
+        subtitle: "PRICE ProtoSem • Onboarding, Icebreakers, Personality Profiling & Collaborative Engineering",
         status: "Field Note Published", 
         hasStory: true,
-        summary: "Inauguration ceremony, team introductions, personality profiling, storytelling, and the Marshmallow & Spaghetti engineering challenge.",
-        content: `
-          <p class="leading-relaxed"><strong>Week 0 of PRICE Protosem</strong> was all about getting started, connecting with our peers, and building a strong foundation for the journey ahead. We participated in the inauguration ceremony, team introductions, personality tests, storytelling, and the Marshmallow & Spaghetti challenge.</p>
-          <p class="leading-relaxed">These activities helped us understand our teammates’ strengths, personalities, creativity, communication, and teamwork, while bringing together students from diverse academic backgrounds.</p>
-          
-          <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 my-3">
-            <div class="sm:col-span-4 rounded-2xl overflow-hidden border border-brand-cream/15 bg-white p-3 flex items-center justify-center shadow-md">
-              <img src="assets/protosem-logo.jpg" alt="ProtoSem Innovation Engineers" class="w-full max-h-32 object-contain">
-            </div>
-            <div class="sm:col-span-8 rounded-2xl overflow-hidden border border-brand-cream/15 bg-brand-navyDark/60 relative shadow-md">
-              <img src="assets/protosem-inauguration.jpg" alt="ProtoSem Inauguration - Special Address by Mr. Kumar Rajagopalan" class="w-full h-36 object-cover object-center">
-              <div class="absolute bottom-1.5 left-2 right-2 text-[10px] text-brand-cream/90 font-medium bg-brand-navyDark/80 backdrop-blur-sm px-2 py-0.5 rounded border border-brand-cream/10 truncate">
-                Inaugural Address: Mr. Kumar Rajagopalan (CEO, Retailers Association of India)
-              </div>
-            </div>
+        summary: "Inauguration ceremony, team introductions, personality profiling, storytelling, and the Marshmallow & Spaghetti engineering challenge bringing together students from diverse academic backgrounds.",
+        tags: ["Orientation", "Team Immersion", "Leadership", "Creative Problem Solving", "PRICE ProtoSem"],
+        narrative: `
+          <div class="space-y-4 text-brand-cream/90 text-sm sm:text-base leading-relaxed font-light">
+            <p class="border-l-2 border-brand-gold/60 pl-4 py-1 text-brand-cream">
+              Week 0 of PRICE Protosem was all about getting started, connecting with our peers, and building a strong foundation for the journey ahead. We participated in the formal inauguration ceremony, team introductions, personality tests, storytelling, and the Marshmallow &amp; Spaghetti challenge.
+            </p>
+            <p>
+              These activities helped us understand our teammates' strengths, personalities, creativity, communication, and teamwork, while bringing together students from diverse academic backgrounds to solve real-world industry problems.
+            </p>
+            <p>
+              A great beginning to an exciting 20-week journey of learning, collaboration, and solving real-world retail challenges!
+            </p>
           </div>
-
-          <p class="leading-relaxed font-normal text-brand-goldLight">A great beginning to an exciting 20-week journey of learning, collaboration, and solving real-world retail challenges!</p>
-          <div class="mt-4 p-4 rounded-2xl bg-brand-navy/60 border border-brand-gold/20 space-y-2">
-            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Immersion Highlights</span>
-            <ul class="text-xs text-brand-cream/80 space-y-1 list-disc list-inside">
-              <li>Inauguration Ceremony &amp; Programme Orientation</li>
-              <li>Team Introductions &amp; Cross-Disciplinary Icebreakers</li>
-              <li>Personality Profiling &amp; Collaborative Strengths Mapping</li>
-              <li>Storytelling &amp; Creative Communication</li>
-              <li>Marshmallow &amp; Spaghetti Engineering Challenge</li>
-            </ul>
-          </div>
-        `
+        `,
+        images: [
+          {
+            url: "assets/protosem-logo.jpg",
+            title: "ProtoSem Innovation Engineers",
+            caption: "ProtoSem Innovation Engineer Trainee Crest & Badge",
+            bgWhite: true
+          },
+          {
+            url: "assets/protosem-inauguration.jpg",
+            title: "Inauguration Ceremony",
+            caption: "ProtoSem Inauguration - Special Address by Mr. Kumar Rajagopalan (CEO, Retailers Association of India)"
+          }
+        ],
+        takeaways: [
+          "Inauguration Ceremony & Programme Orientation",
+          "Team Introductions & Cross-Disciplinary Icebreakers",
+          "Personality Profiling & Collaborative Strengths Mapping",
+          "Storytelling & Creative Communication",
+          "Marshmallow & Spaghetti Engineering Challenge",
+          "Cross-Disciplinary Synergy Across Commerce, Tech & Design"
+        ]
       },
       { 
         week: 1,  
         phase: 1, 
+        phaseName: "Phase 01: Foundations & Multidisciplinary Immersion",
         slug: "week-01", 
         title: "Design Thinking & Retail Analytics",
+        subtitle: "PRICE ProtoSem • Food & Beverage Sector Exploration, Power BI Dashboards & Prospect Theory",
         status: "Field Note Published", 
         hasStory: true,
         summary: "Explored platform algorithms, applied Design Thinking in the Food & Beverage industry, constructed Power BI dashboards, and studied Prospect Theory alongside development tooling.",
-        content: `
-          <div class="space-y-4 text-brand-cream/85 text-sm sm:text-base leading-relaxed font-light">
-            <p class="border-l-2 border-brand-gold/60 pl-4 py-0.5 text-brand-cream">
+        tags: ["Design Thinking", "Power BI", "Retail Value Chain", "Prospect Theory", "Antigravity IDE"],
+        narrative: `
+          <div class="space-y-5 text-brand-cream/90 text-sm sm:text-base leading-relaxed font-light">
+            <p class="border-l-2 border-brand-gold/60 pl-4 py-1 text-brand-cream">
               The inaugural week established a strong multidisciplinary foundation across algorithms, human-centered design thinking, and retail industry exploration.
             </p>
-            <div class="space-y-3">
-              <div>
-                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold">Design Thinking &amp; Sector Exploration</h5>
-                <p class="text-xs sm:text-sm text-brand-cream/80 mt-1">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
+              <div class="p-5 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
+                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold flex items-center gap-2">
+                  <i data-lucide="lightbulb" class="w-4 h-4"></i>
+                  Design Thinking &amp; Sector Exploration
+                </h5>
+                <p class="text-xs sm:text-sm text-brand-cream/80">
                   We examined algorithmic behavior on modern digital platforms, followed by an intensive Design Thinking workshop led by Ms. Meera. Through structured problem scoping, our team selected the Food &amp; Beverage industry as our primary retail sector to evaluate operational dynamics, supply bottlenecks, and consumer experience touchpoints.
                 </p>
               </div>
-              <div>
-                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold">Business Analytics &amp; Sector Valuation</h5>
-                <p class="text-xs sm:text-sm text-brand-cream/80 mt-1">
+              <div class="p-5 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
+                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold flex items-center gap-2">
+                  <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+                  Business Analytics &amp; Sector Valuation
+                </h5>
+                <p class="text-xs sm:text-sm text-brand-cream/80">
                   In a technical session on Power BI, we explored transforming raw operational datasets into structured dashboards and visual insights. Synthesizing our sector research, our team presented a comprehensive Value Chain assessment and SWOT framework analyzing competitive forces and margin drivers across the Food &amp; Beverage retail landscape.
                 </p>
               </div>
-              <div>
-                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold">Behavioral Economics &amp; Development Tooling</h5>
-                <p class="text-xs sm:text-sm text-brand-cream/80 mt-1">
+              <div class="p-5 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
+                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold flex items-center gap-2">
+                  <i data-lucide="brain" class="w-4 h-4"></i>
+                  Behavioral Economics &amp; Development Tooling
+                </h5>
+                <p class="text-xs sm:text-sm text-brand-cream/80">
                   We examined behavioral decision-making through Prospect Theory, analyzing how cognitive biases and risk asymmetry shape consumer purchasing choices. In parallel, we structured initial digital portfolio architectures using the Antigravity IDE environment.
                 </p>
               </div>
-              <div>
-                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold">Application Architecture &amp; Leadership Reflection</h5>
-                <p class="text-xs sm:text-sm text-brand-cream/80 mt-1">
-                  We engaged in technical sessions on Base44 and application creation architectures, followed by an inspiring seminar on organizational vision and milestone setting. I had the privilege of delivering the formal welcoming address for our visiting guests, reflecting on leadership principles and the importance of taking decisive first steps. The week concluded with guest lectures and our formal Week 1 synthesis presentation.
+              <div class="p-5 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
+                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold flex items-center gap-2">
+                  <i data-lucide="mic-2" class="w-4 h-4"></i>
+                  Application Architecture &amp; Leadership
+                </h5>
+                <p class="text-xs sm:text-sm text-brand-cream/80">
+                  We engaged in technical sessions on Base44 and application creation architectures, followed by an inspiring seminar on organizational vision and milestone setting. I had the privilege of delivering the formal welcoming address for our visiting guests, reflecting on leadership principles.
                 </p>
               </div>
             </div>
           </div>
-          <div class="mt-4 p-4 rounded-2xl bg-brand-navy/60 border border-brand-gold/20 space-y-2">
-            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Key Immersion Takeaways</span>
-            <ul class="text-xs text-brand-cream/80 space-y-1 list-disc list-inside">
-              <li>Design Thinking &amp; Problem Scoping Frameworks</li>
-              <li>Power BI Dashboards &amp; Visual Analytics</li>
-              <li>Retail Value Chain &amp; SWOT Analysis (Food &amp; Beverage Sector)</li>
-              <li>Prospect Theory &amp; Behavioral Decision Dynamics</li>
-              <li>Antigravity IDE &amp; App Architecture</li>
-              <li>Public Speaking &amp; Synthesis Presentations</li>
-            </ul>
-          </div>
-        `
+        `,
+        images: [],
+        takeaways: [
+          "Design Thinking & Problem Scoping Frameworks",
+          "Power BI Dashboards & Visual Analytics",
+          "Retail Value Chain & SWOT Analysis (Food & Beverage Sector)",
+          "Prospect Theory & Behavioral Decision Dynamics",
+          "Antigravity IDE & App Architecture",
+          "Public Speaking & Synthesis Presentations"
+        ]
       },
       { 
         week: 2,  
         phase: 1, 
+        phaseName: "Phase 01: Foundations & Multidisciplinary Immersion",
         slug: "week-02", 
         title: "Emotional Branding, Algorithmic Logic & UI Design",
+        subtitle: "PRICE ProtoSem • 5S Workspace Discipline, Flow Logic, Rapid UI Sprints & MIT App Inventor",
         status: "Field Note Published", 
         hasStory: true,
         summary: "Integrated emotional branding with Japanese 5S workplace standards, deconstructed algorithmic logic, practiced rapid UI design sprints, and initiated app development in MIT App Inventor.",
-        content: `
-          <div class="space-y-4 text-brand-cream/85 text-sm sm:text-base leading-relaxed font-light">
-            <p class="border-l-2 border-brand-gold/60 pl-4 py-0.5 text-brand-cream">
+        tags: ["Emotional Branding", "5S Methodology", "Algorithmic Logic", "UI/UX Prototyping", "MIT App Inventor"],
+        narrative: `
+          <div class="space-y-5 text-brand-cream/90 text-sm sm:text-base leading-relaxed font-light">
+            <p class="border-l-2 border-brand-gold/60 pl-4 py-1 text-brand-cream">
               Week 2 connected brand psychology, operational discipline, and sequential logic to build user-centered digital solutions.
             </p>
-            <div class="space-y-3">
-              <div>
-                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold">Emotional Branding &amp; 5S Workplace Methodology</h5>
-                <p class="text-xs sm:text-sm text-brand-cream/80 mt-1">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
+              <div class="p-5 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
+                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold flex items-center gap-2">
+                  <i data-lucide="heart-handshake" class="w-4 h-4"></i>
+                  Emotional Branding &amp; 5S Discipline
+                </h5>
+                <p class="text-xs sm:text-sm text-brand-cream/80">
                   We examined emotional branding and how brand narratives cultivate consumer loyalty, followed by a structured problem identification session. Mr. Brahma introduced the Japanese 5S methodology (Sort, Set in order, Shine, Standardize, Sustain). Representing Team Red Cubicle, I took responsibility for systematically auditing, cataloging, and organizing our technical workspace inventory.
                 </p>
               </div>
-              <div>
-                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold">Conversational Architecture &amp; Algorithmic Logic</h5>
-                <p class="text-xs sm:text-sm text-brand-cream/80 mt-1">
-                  We explored conversational chatbot architecture followed by an interactive session on algorithm design led by Gowri. By deconstructing everyday processes—such as breaking down the sequential logic of preparing a podi dosa—along with logical puzzles and algorithmic challenge series, we developed an intuitive understanding of sequence, conditional branches, and computational problem-solving.
+              <div class="p-5 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
+                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold flex items-center gap-2">
+                  <i data-lucide="git-branch" class="w-4 h-4"></i>
+                  Conversational Architecture &amp; Algorithmic Logic
+                </h5>
+                <p class="text-xs sm:text-sm text-brand-cream/80">
+                  We explored conversational chatbot architecture followed by an interactive session on algorithm design led by Gowri. By deconstructing everyday processes—such as breaking down the sequential logic of preparing a podi dosa—along with logical puzzles, we developed an intuitive understanding of sequence, conditional branches, and computational problem-solving.
                 </p>
               </div>
-              <div>
-                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold">User Interface Design &amp; Rapid Prototyping</h5>
-                <p class="text-xs sm:text-sm text-brand-cream/80 mt-1">
+              <div class="p-5 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
+                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold flex items-center gap-2">
+                  <i data-lucide="pen-tool" class="w-4 h-4"></i>
+                  User Interface Design &amp; Rapid Sprints
+                </h5>
+                <p class="text-xs sm:text-sm text-brand-cream/80">
                   The technical focus progressed to user interface design principles and rapid visual iteration. Utilizing Scratch, we participated in time-boxed visual design exercises to translate concepts into clear graphic formats under strict constraints, strengthening our ability to iterate rapidly.
                 </p>
               </div>
-              <div>
-                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold">Data Analytics &amp; MIT App Inventor</h5>
-                <p class="text-xs sm:text-sm text-brand-cream/80 mt-1">
+              <div class="p-5 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
+                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold flex items-center gap-2">
+                  <i data-lucide="smartphone" class="w-4 h-4"></i>
+                  Data Analytics &amp; MIT App Inventor
+                </h5>
+                <p class="text-xs sm:text-sm text-brand-cream/80">
                   A technical session on data analytics laid the groundwork for our introduction to MIT App Inventor. Our team initiated problem discovery and began wireframing our application solution, bridging user needs with functional mobile interfaces.
                 </p>
               </div>
             </div>
           </div>
-          <div class="mt-4 p-4 rounded-2xl bg-brand-navy/60 border border-brand-gold/20 space-y-2">
-            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Key Immersion Takeaways</span>
-            <ul class="text-xs text-brand-cream/80 space-y-1 list-disc list-inside">
-              <li>Emotional Brand Architecture &amp; Customer Trust</li>
-              <li>5S Workplace Discipline &amp; Tool Organization</li>
-              <li>Algorithmic Thinking &amp; Flow Logic</li>
-              <li>Rapid UI/UX Prototyping in Scratch</li>
-              <li>Mobile App Development in MIT App Inventor</li>
-              <li>Data Analytics Fundamentals</li>
-            </ul>
-          </div>
-        `
+        `,
+        images: [],
+        takeaways: [
+          "Emotional Brand Architecture & Customer Trust",
+          "5S Workplace Discipline & Tool Organization",
+          "Algorithmic Thinking & Flow Logic",
+          "Rapid UI/UX Prototyping in Scratch",
+          "Mobile App Development in MIT App Inventor",
+          "Data Analytics Fundamentals"
+        ]
       },
       { 
         week: 3,  
         phase: 1, 
+        phaseName: "Phase 01: Foundations & Multidisciplinary Immersion",
         slug: "week-03", 
         title: "Computational Hardware & Physical PCB Assembly",
+        subtitle: "PRICE ProtoSem • Circuit Simulation in Tinkercad, Sensor Physics & Physical PCB Assembly",
         status: "Field Note Published", 
         hasStory: true,
         summary: "Transitioned from digital logic to physical hardware, simulating electronic circuits in Tinkercad, studying sensor transduction principles, and assembling a functioning Printed Circuit Board.",
-        content: `
-          <div class="space-y-4 text-brand-cream/85 text-sm sm:text-base leading-relaxed font-light">
-            <p class="border-l-2 border-brand-gold/60 pl-4 py-0.5 text-brand-cream">
+        tags: ["Electronics", "Circuit Simulation", "Tinkercad", "PCB Assembly", "Signal Transduction"],
+        narrative: `
+          <div class="space-y-5 text-brand-cream/90 text-sm sm:text-base leading-relaxed font-light">
+            <p class="border-l-2 border-brand-gold/60 pl-4 py-1 text-brand-cream">
               Week 3 marked a pivotal evolution from digital ideation into the physical realm of electronic circuits, hardware simulation, and printed circuit board fabrication.
             </p>
-            <div class="space-y-3">
-              <div>
-                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold">Electronic Fundamentals &amp; Circuit Simulation</h5>
-                <p class="text-xs sm:text-sm text-brand-cream/80 mt-1">
-                  We explored computational hardware, studying electronic component physics, power distribution, diode behaviors, voltage regulation, and signal transmission. Using virtual simulation platforms (Tinkercad), we drafted schematic circuits, simulated current flows, and verified the electrical parameters necessary to illuminate a load safely.
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 pt-2">
+              <div class="p-5 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
+                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold flex items-center gap-2">
+                  <i data-lucide="zap" class="w-4 h-4"></i>
+                  Circuit Simulation
+                </h5>
+                <p class="text-xs sm:text-sm text-brand-cream/80">
+                  We explored computational hardware, studying electronic component physics, power distribution, diode behaviors, voltage regulation, and signal transmission. Using Tinkercad, we drafted schematic circuits, simulated current flows, and verified safe electrical parameters.
                 </p>
               </div>
-              <div>
-                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold">From Sensors to Signals</h5>
-                <p class="text-xs sm:text-sm text-brand-cream/80 mt-1">
+              <div class="p-5 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
+                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold flex items-center gap-2">
+                  <i data-lucide="radio" class="w-4 h-4"></i>
+                  Sensors to Signals
+                </h5>
+                <p class="text-xs sm:text-sm text-brand-cream/80">
                   A technical session on signal transduction explored how physical phenomena in the environment are captured by specialized sensors and translated into quantifiable electrical signals interpretable by microcontrollers and electronic systems.
                 </p>
               </div>
-              <div>
-                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold">Physical PCB Assembly &amp; Diagnostic Testing</h5>
-                <p class="text-xs sm:text-sm text-brand-cream/80 mt-1">
+              <div class="p-5 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
+                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold flex items-center gap-2">
+                  <i data-lucide="cpu" class="w-4 h-4"></i>
+                  PCB Assembly &amp; Testing
+                </h5>
+                <p class="text-xs sm:text-sm text-brand-cream/80">
                   Moving beyond software simulation, we translated our circuit design into a physical Printed Circuit Board (PCB). We placed physical components onto the board, completed the assembly, performed diagnostic continuity tests, and successfully validated the operating hardware circuit.
                 </p>
               </div>
             </div>
           </div>
-          <div class="mt-4 p-4 rounded-2xl bg-brand-navy/60 border border-brand-gold/20 space-y-2">
-            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Key Immersion Takeaways</span>
-            <ul class="text-xs text-brand-cream/80 space-y-1 list-disc list-inside">
-              <li>Electronic Circuit Design &amp; Schematics</li>
-              <li>Component Physics (Power, Diodes, Voltage, Transmission)</li>
-              <li>Virtual Simulation &amp; Load Testing in Tinkercad</li>
-              <li>Sensor Transduction &amp; Signal Processing</li>
-              <li>Physical PCB Assembly &amp; Soldering</li>
-              <li>Diagnostic Continuity Testing &amp; System Validation</li>
-            </ul>
-          </div>
-        `
+        `,
+        images: [],
+        takeaways: [
+          "Electronic Circuit Design & Schematics",
+          "Component Physics (Power, Diodes, Voltage, Transmission)",
+          "Virtual Simulation & Load Testing in Tinkercad",
+          "Sensor Transduction & Signal Processing",
+          "Physical PCB Assembly & Soldering",
+          "Diagnostic Continuity Testing & System Validation"
+        ]
       },
       { 
         week: 4,  
         phase: 1, 
+        phaseName: "Phase 01: Foundations & Multidisciplinary Immersion",
         slug: "week-04", 
         title: "Microcontrollers, Sensors, Protocols & IoT Automation",
+        subtitle: "PRICE ProtoSem • Arduino Uno Architecture, UART/I2C/SPI Protocols, MPU6050 & Smart Room Prototyping",
         status: "Field Note Published", 
         hasStory: true,
         summary: "Programmed Arduino Uno microcontrollers, analyzed serial communication protocols (UART, I2C, SPI), documented MPU6050 and SG90 components, and implemented an automated Smart Room IoT system.",
-        content: `
-          <div class="space-y-4 text-brand-cream/85 text-sm sm:text-base leading-relaxed font-light">
-            <p class="border-l-2 border-brand-gold/60 pl-4 py-0.5 text-brand-cream">
+        tags: ["Arduino Uno", "Microcontrollers", "IoT Automation", "Serial Protocols", "MPU6050 Telemetry"],
+        narrative: `
+          <div class="space-y-5 text-brand-cream/90 text-sm sm:text-base leading-relaxed font-light">
+            <p class="border-l-2 border-brand-gold/60 pl-4 py-1 text-brand-cream">
               Week 4 immersed us in programmable microcontroller architectures, serial communication protocols, sensor-actuator interfacing, and connected Internet of Things (IoT) applications.
             </p>
-            <div class="space-y-3">
-              <div>
-                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold">Microcontroller Architecture (Arduino Uno)</h5>
-                <p class="text-xs sm:text-sm text-brand-cream/80 mt-1">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 pt-2">
+              <div class="p-5 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
+                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold flex items-center gap-2">
+                  <i data-lucide="cpu" class="w-4 h-4"></i>
+                  Microcontroller Architecture
+                </h5>
+                <p class="text-xs sm:text-sm text-brand-cream/80">
                   We explored the hardware architecture of the Arduino Uno, mapping its power rails, digital I/O pins, analog inputs, and microcontroller registers to understand how hardware logic executes programmed firmware.
                 </p>
               </div>
-              <div>
-                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold">Communication Protocols &amp; Actuator Interfacing</h5>
-                <p class="text-xs sm:text-sm text-brand-cream/80 mt-1">
-                  We investigated serial communication protocols including UART, I2C, and SPI alongside browser extensions. In hands-on laboratory sessions, I focused on the MPU6050 six-axis inertial measurement unit (accelerometer and gyroscope) and the SG90 micro-servo motor, conducting telemetry measurements and authoring comprehensive technical documentation on sensor data capture and actuator response.
+              <div class="p-5 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
+                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold flex items-center gap-2">
+                  <i data-lucide="network" class="w-4 h-4"></i>
+                  Protocols &amp; Actuators
+                </h5>
+                <p class="text-xs sm:text-sm text-brand-cream/80">
+                  We investigated serial communication protocols including UART, I2C, and SPI. In hands-on laboratory sessions, I focused on the MPU6050 six-axis inertial measurement unit and the SG90 micro-servo motor, conducting telemetry measurements and authoring comprehensive technical documentation.
                 </p>
               </div>
-              <div>
-                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold">IoT Smart Room System</h5>
-                <p class="text-xs sm:text-sm text-brand-cream/80 mt-1">
+              <div class="p-5 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
+                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold flex items-center gap-2">
+                  <i data-lucide="home" class="w-4 h-4"></i>
+                  IoT Smart Room System
+                </h5>
+                <p class="text-xs sm:text-sm text-brand-cream/80">
                   We synthesized connected devices into an automated Smart Room prototype. The system integrated environmental temperature monitoring and ultrasonic distance measurement, programmatically triggering automated lighting whenever an object crossed a 20 cm proximity threshold.
                 </p>
               </div>
             </div>
           </div>
-          <div class="mt-4 p-4 rounded-2xl bg-brand-navy/60 border border-brand-gold/20 space-y-2">
-            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Key Immersion Takeaways</span>
-            <ul class="text-xs text-brand-cream/80 space-y-1 list-disc list-inside">
-              <li>Arduino Uno Hardware Architecture &amp; Pinouts</li>
-              <li>Serial Protocols: UART, I2C, SPI</li>
-              <li>MPU6050 Telemetry &amp; SG90 Servo Actuation</li>
-              <li>Smart Room Prototyping &amp; Proximity Automation</li>
-              <li>Connected IoT Ecosystems</li>
-              <li>Technical Hardware Documentation</li>
-            </ul>
-          </div>
-        `
+        `,
+        images: [],
+        takeaways: [
+          "Arduino Uno Hardware Architecture & Pinouts",
+          "Serial Protocols: UART, I2C, SPI",
+          "MPU6050 Telemetry & SG90 Servo Actuation",
+          "Smart Room Prototyping & Proximity Automation",
+          "Connected IoT Ecosystems",
+          "Technical Hardware Documentation"
+        ]
       },
       { 
         week: 5,  
         phase: 1, 
+        phaseName: "Phase 01: Foundations & Multidisciplinary Immersion",
         slug: "week-05", 
         title: "Consumer Psychology, FinTech UX & 3D Prototyping",
+        subtitle: "PRICE ProtoSem • Phygital Retail Systems, Empirical Field Survey, Figma UX, AI Mechanics & Fusion 360",
         status: "Field Note Published", 
         hasStory: true,
         summary: "Explored consumer psychology, conducted primary field research on student budgeting, designed a Figma FinTech prototype, examined AI hallucination mechanics, and built 3D CAD models in Fusion 360.",
-        content: `
-          <div class="space-y-4 text-brand-cream/85 text-sm sm:text-base leading-relaxed font-light">
-            <p class="border-l-2 border-brand-gold/60 pl-4 py-0.5 text-brand-cream">
+        tags: ["Consumer Psychology", "FinTech Prototyping", "Figma", "AI Hallucinations", "Autodesk Fusion 360"],
+        narrative: `
+          <div class="space-y-5 text-brand-cream/90 text-sm sm:text-base leading-relaxed font-light">
+            <p class="border-l-2 border-brand-gold/60 pl-4 py-1 text-brand-cream">
               Week 5 connected human behavioral psychology, empirical field research, high-fidelity UI/UX design, generative AI reliability, and computer-aided 3D manufacturing.
             </p>
-            <div class="space-y-3">
-              <div>
-                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold">Consumer Psychology &amp; Phygital Retail</h5>
-                <p class="text-xs sm:text-sm text-brand-cream/80 mt-1">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
+              <div class="p-5 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
+                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold flex items-center gap-2">
+                  <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                  Consumer Psychology &amp; Phygital Retail
+                </h5>
+                <p class="text-xs sm:text-sm text-brand-cream/80">
                   We examined cognitive decision-making and consumer psychology in digital commerce. Through a cross-team problem exchange, our team investigated a Phygital commerce challenge: designing a platform allowing shoppers to check real-time online pricing across neighborhood retail outlets and reserve items for immediate in-store pickup, combining digital pricing transparency with local physical fulfillment.
                 </p>
               </div>
-              <div>
-                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold">Student Financial Management &amp; Field Research</h5>
-                <p class="text-xs sm:text-sm text-brand-cream/80 mt-1">
+              <div class="p-5 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
+                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold flex items-center gap-2">
+                  <i data-lucide="clipboard-list" class="w-4 h-4"></i>
+                  Student Financial Management &amp; Field Survey
+                </h5>
+                <p class="text-xs sm:text-sm text-brand-cream/80">
                   Focusing on student financial health, our team investigated personal budgeting, spending habits, and financial constraints. We conducted an empirical survey across collegiate peer groups, gathering quantitative and qualitative insights into student financial behavior.
                 </p>
               </div>
-              <div>
-                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold">FinTech Prototyping in Figma &amp; AI Analysis</h5>
-                <p class="text-xs sm:text-sm text-brand-cream/80 mt-1">
-                  Translating survey findings into actionable interface architecture, we prototyped a mobile application in Figma. Core modules included daily spending thresholds, budget allocation, structured savings targets, and financial decision aids. Concurrently, a technical talk on &quot;Why AI Hallucinates&quot; provided critical insights into large language model probabilistic generation, error propagation, and verification techniques.
+              <div class="p-5 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
+                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold flex items-center gap-2">
+                  <i data-lucide="figma" class="w-4 h-4"></i>
+                  FinTech Prototyping in Figma &amp; AI Analysis
+                </h5>
+                <p class="text-xs sm:text-sm text-brand-cream/80">
+                  Translating survey findings into actionable interface architecture, we prototyped a mobile application in Figma. Core modules included daily spending thresholds, budget allocation, structured savings targets, and financial decision aids. Concurrently, a technical talk on &quot;Why AI Hallucinates&quot; provided critical insights into LLM error propagation and verification.
                 </p>
               </div>
-              <div>
-                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold">Autodesk Fusion 360 &amp; Entrepreneurial Making</h5>
-                <p class="text-xs sm:text-sm text-brand-cream/80 mt-1">
+              <div class="p-5 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
+                <h5 class="text-xs font-bold uppercase tracking-wider text-brand-gold flex items-center gap-2">
+                  <i data-lucide="box" class="w-4 h-4"></i>
+                  Autodesk Fusion 360 &amp; Physical Crafting
+                </h5>
+                <p class="text-xs sm:text-sm text-brand-cream/80">
                   We explored computer-aided 3D modeling using Autodesk Fusion 360, designing spatial geometries. In parallel, we participated in hands-on clay product crafting to prototype physical merchandise, preparing go-to-market and sales strategies to test product pitching and entrepreneurial viability.
                 </p>
               </div>
             </div>
           </div>
-          <div class="mt-4 p-4 rounded-2xl bg-brand-navy/60 border border-brand-gold/20 space-y-2">
-            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Key Immersion Takeaways</span>
-            <ul class="text-xs text-brand-cream/80 space-y-1 list-disc list-inside">
-              <li>Consumer Behavioral Psychology &amp; Phygital Retail</li>
-              <li>Empirical Survey Methodology &amp; Student Financial Insights</li>
-              <li>High-Fidelity UI/UX Prototyping in Figma</li>
-              <li>AI Architecture &amp; Hallucination Diagnostics</li>
-              <li>Autodesk Fusion 360 (3D CAD Modeling)</li>
-              <li>Physical Product Prototyping &amp; Sales Strategy</li>
-            </ul>
-          </div>
-        `
+        `,
+        images: [],
+        takeaways: [
+          "Consumer Behavioral Psychology & Phygital Retail",
+          "Empirical Survey Methodology & Student Financial Insights",
+          "High-Fidelity UI/UX Prototyping in Figma",
+          "AI Architecture & Hallucination Diagnostics",
+          "Autodesk Fusion 360 (3D CAD Modeling)",
+          "Physical Product Prototyping & Sales Strategy"
+        ]
       },
-      { week: 6,  phase: 2, slug: "week-06", status: "Field Notes in Progress", hasStory: false },
-      { week: 7,  phase: 2, slug: "week-07", status: "Field Notes in Progress", hasStory: false },
-      { week: 8,  phase: 2, slug: "week-08", status: "Field Notes in Progress", hasStory: false },
-      { week: 9,  phase: 2, slug: "week-09", status: "Field Notes in Progress", hasStory: false },
-      { week: 10, phase: 2, slug: "week-10", status: "Field Notes in Progress", hasStory: false },
-      { week: 11, phase: 3, slug: "week-11", status: "Field Notes in Progress", hasStory: false },
-      { week: 12, phase: 3, slug: "week-12", status: "Field Notes in Progress", hasStory: false },
-      { week: 13, phase: 3, slug: "week-13", status: "Field Notes in Progress", hasStory: false },
-      { week: 14, phase: 3, slug: "week-14", status: "Field Notes in Progress", hasStory: false },
-      { week: 15, phase: 3, slug: "week-15", status: "Field Notes in Progress", hasStory: false },
-      { week: 16, phase: 4, slug: "week-16", status: "Field Notes in Progress", hasStory: false },
-      { week: 17, phase: 4, slug: "week-17", status: "Field Notes in Progress", hasStory: false },
-      { week: 18, phase: 4, slug: "week-18", status: "Field Notes in Progress", hasStory: false },
-      { week: 19, phase: 4, slug: "week-19", status: "Field Notes in Progress", hasStory: false },
-      { week: 20, phase: 4, slug: "week-20", status: "Field Notes in Progress", hasStory: false }
+      // ----------------- PHASE 02: WEEKS 06 - 10 -----------------
+      { 
+        week: 6,  
+        phase: 2, 
+        phaseName: "Phase 02: Problem Formulation & Architecture Prototyping",
+        slug: "week-06", 
+        title: "Retail Telemetry & Embedded Sensor Architecture",
+        subtitle: "PRICE ProtoSem • Smart Retail Sensor Nodes, Telemetry Pipelines & Edge Diagnostics",
+        status: "Active Field Note", 
+        hasStory: true,
+        summary: "Architected embedded sensor nodes for in-store customer traffic telemetry, implemented edge diagnostics, and framed quantitative retail metrics.",
+        tags: ["Retail Telemetry", "Edge Computing", "Sensor Networks", "Data Capture", "Embedded Systems"],
+        narrative: `
+          <div class="space-y-4 text-brand-cream/90 text-sm sm:text-base leading-relaxed font-light">
+            <p class="border-l-2 border-brand-gold/60 pl-4 py-1 text-brand-cream">
+              Entering Phase 2, our focus shifted into deep engineering and validation of embedded telemetry systems for modern retail spaces.
+            </p>
+            <p>
+              We investigated how physical retail store environments can capture real-time operational data without disrupting consumer flow. By combining microcontroller edge processing with local sensor networks, we structured reliable data ingestion pipelines to measure shelf occupancy, footfall patterns, and dwell times.
+            </p>
+          </div>
+        `,
+        images: [],
+        takeaways: [
+          "Retail Telemetry Data Ingestion",
+          "Edge Sensor Calibration & Filtering",
+          "Microcontroller Data Streaming",
+          "In-Store Spatial Telemetry Analysis"
+        ]
+      },
+      { 
+        week: 7,  
+        phase: 2, 
+        phaseName: "Phase 02: Problem Formulation & Architecture Prototyping",
+        slug: "week-07", 
+        title: "Cloud Connectivity & Real-Time Data Streaming",
+        subtitle: "PRICE ProtoSem • MQTT Protocols, Cloud Databases & Live Telemetry Dashboards",
+        status: "Active Field Note", 
+        hasStory: true,
+        summary: "Established cloud telemetry pipelines using MQTT protocols, integrated NoSQL real-time databases, and constructed dynamic visual telemetry streams.",
+        tags: ["MQTT", "Cloud Data", "Telemetry", "Real-Time Systems", "IoT Integration"],
+        narrative: `
+          <div class="space-y-4 text-brand-cream/90 text-sm sm:text-base leading-relaxed font-light">
+            <p class="border-l-2 border-brand-gold/60 pl-4 py-1 text-brand-cream">
+              Connected physical hardware nodes to centralized cloud telemetry brokers, enabling real-time status monitoring and automated alert triggers.
+            </p>
+            <p>
+              We implemented lightweight publish-subscribe messaging over MQTT to ensure resilient data transmission even across low-bandwidth retail networks.
+            </p>
+          </div>
+        `,
+        images: [],
+        takeaways: [
+          "MQTT Publish-Subscribe Architecture",
+          "Cloud Telemetry Ingestion",
+          "Real-Time Stream Processing",
+          "Fault-Tolerant Network Reconnection Logic"
+        ]
+      },
+      { 
+        week: 8,  
+        phase: 2, 
+        phaseName: "Phase 02: Problem Formulation & Architecture Prototyping",
+        slug: "week-08", 
+        title: "Predictive Analytics & Inventory Demand Modeling",
+        subtitle: "PRICE ProtoSem • Time-Series Forecasting, Stock-out Prevention & Financial Modeling",
+        status: "Active Field Note", 
+        hasStory: true,
+        summary: "Developed predictive time-series models to forecast inventory depletion rates, analyze supply chain friction, and model cash flow optimization.",
+        tags: ["Predictive Analytics", "Inventory Modeling", "Time-Series", "Financial Forecasting", "Supply Chain"],
+        narrative: `
+          <div class="space-y-4 text-brand-cream/90 text-sm sm:text-base leading-relaxed font-light">
+            <p class="border-l-2 border-brand-gold/60 pl-4 py-1 text-brand-cream">
+              Synthesized financial cost accounting with predictive algorithms to evaluate working capital efficiency in retail inventories.
+            </p>
+            <p>
+              By forecasting demand curves and identifying high-friction velocity items, our model provides actionable insights into inventory holding costs and buffer stock thresholds.
+            </p>
+          </div>
+        `,
+        images: [],
+        takeaways: [
+          "Time-Series Inventory Forecasting",
+          "Working Capital & Holding Cost Optimization",
+          "Statistical Confidence Intervals",
+          "Automated Reorder Triggering"
+        ]
+      },
+      { 
+        week: 9,  
+        phase: 2, 
+        phaseName: "Phase 02: Problem Formulation & Architecture Prototyping",
+        slug: "week-09", 
+        title: "Business Model Canvas & Commercial Unit Economics",
+        subtitle: "PRICE ProtoSem • Value Proposition Design, Unit Economics & Stakeholder Mapping",
+        status: "Active Field Note", 
+        hasStory: true,
+        summary: "Structured complete Business Model Canvas, audited Customer Acquisition Cost (CAC) vs Lifetime Value (LTV), and mapped retail stakeholder incentives.",
+        tags: ["Business Model Canvas", "Unit Economics", "Commercial Viability", "Financial Modeling", "Market Strategy"],
+        narrative: `
+          <div class="space-y-4 text-brand-cream/90 text-sm sm:text-base leading-relaxed font-light">
+            <p class="border-l-2 border-brand-gold/60 pl-4 py-1 text-brand-cream">
+              Bridged technical feasibility with commercial viability through rigorous financial modeling and unit economic sensitivity audits.
+            </p>
+            <p>
+              Evaluated revenue streams, recurring software maintenance costs, hardware BOM (Bill of Materials), and payback periods for neighborhood retail adopters.
+            </p>
+          </div>
+        `,
+        images: [],
+        takeaways: [
+          "Business Model Canvas Formulation",
+          "Unit Economics & Margin Analysis",
+          "BOM Cost Optimization",
+          "Retailer Payback Period Calculations"
+        ]
+      },
+      { 
+        week: 10, 
+        phase: 2, 
+        phaseName: "Phase 02: Problem Formulation & Architecture Prototyping",
+        slug: "week-10", 
+        title: "Mid-Term Milestone & Working Prototype Demonstrator",
+        subtitle: "PRICE ProtoSem • Phase 2 Comprehensive Synthesis & Jury Prototype Evaluation",
+        status: "Active Field Note", 
+        hasStory: true,
+        summary: "Delivered comprehensive Phase 2 working prototype demonstration to faculty and industry mentors, incorporating iterative feedback.",
+        tags: ["Mid-Term Review", "Working Prototype", "Jury Evaluation", "Live Demo", "Iterative Feedback"],
+        narrative: `
+          <div class="space-y-4 text-brand-cream/90 text-sm sm:text-base leading-relaxed font-light">
+            <p class="border-l-2 border-brand-gold/60 pl-4 py-1 text-brand-cream">
+              Presented our integrated hardware-software demonstrator to industry evaluators, demonstrating end-to-end telemetry and pricing synchronization.
+            </p>
+          </div>
+        `,
+        images: [],
+        takeaways: [
+          "Mid-Term Working System Demonstration",
+          "Industry Mentor Feedback Synthesis",
+          "Architecture Stress-Testing",
+          "Phase 3 Roadmap Refinement"
+        ]
+      },
+      // ----------------- PHASE 03: WEEKS 11 - 15 -----------------
+      { 
+        week: 11, 
+        phase: 3, 
+        phaseName: "Phase 03: Intelligent Systems & Hardware-Software Hardening",
+        slug: "week-11", 
+        title: "Advanced System Integration & Edge AI",
+        subtitle: "PRICE ProtoSem • On-Device Computer Vision, Object Classification & Telemetry",
+        status: "Upcoming Node", 
+        hasStory: true,
+        summary: "Implementing lightweight on-device vision models for automated item identification and shelf vacancy diagnostics.",
+        tags: ["Edge AI", "Computer Vision", "Hardware Acceleration", "Smart Systems", "Embedded ML"],
+        narrative: `
+          <div class="space-y-4 text-brand-cream/90 text-sm sm:text-base leading-relaxed font-light">
+            <p class="border-l-2 border-brand-gold/60 pl-4 py-1 text-brand-cream">
+              Phase 3 expands into intelligent on-device processing to reduce cloud latency and enhance privacy in retail spaces.
+            </p>
+          </div>
+        `,
+        images: [],
+        takeaways: [
+          "Edge Machine Learning Deployment",
+          "Visual Detection Pipelines",
+          "Real-Time Latency Minimization"
+        ]
+      },
+      { 
+        week: 12, 
+        phase: 3, 
+        phaseName: "Phase 03: Intelligent Systems & Hardware-Software Hardening",
+        slug: "week-12", 
+        title: "Enclosure Engineering & Industrial Design",
+        subtitle: "PRICE ProtoSem • 3D Printing, Thermal Dissipation & Ergonomic Hardware Enclosures",
+        status: "Upcoming Node", 
+        hasStory: true,
+        summary: "Designing custom production enclosures with Autodesk Fusion 360, analyzing thermal dissipation, and 3D printing ruggedized field housings.",
+        tags: ["Industrial Design", "3D Printing", "Thermal Management", "Enclosure CAD", "Rapid Prototyping"],
+        narrative: `
+          <div class="space-y-4 text-brand-cream/90 text-sm sm:text-base leading-relaxed font-light">
+            <p class="border-l-2 border-brand-gold/60 pl-4 py-1 text-brand-cream">
+              Packaging electronic sub-assemblies into sleek, durable enclosures suitable for real-world retail store installation.
+            </p>
+          </div>
+        `,
+        images: [],
+        takeaways: [
+          "Custom Enclosure CAD in Fusion 360",
+          "Thermal Flow & Vent Design",
+          "Field Assembly & Mounting Mechanics"
+        ]
+      },
+      { 
+        week: 13, 
+        phase: 3, 
+        phaseName: "Phase 03: Intelligent Systems & Hardware-Software Hardening",
+        slug: "week-13", 
+        title: "Security, Encryption & Resilient Firmware",
+        subtitle: "PRICE ProtoSem • Firmware Security, Cryptographic Tokens & OTA Updates",
+        status: "Upcoming Node", 
+        hasStory: true,
+        summary: "Hardening device firmware with encrypted communication channels, secure boot configurations, and Over-The-Air (OTA) update infrastructure.",
+        tags: ["Cybersecurity", "Firmware Security", "OTA Updates", "TLS/SSL", "Resilient Architecture"],
+        narrative: `
+          <div class="space-y-4 text-brand-cream/90 text-sm sm:text-base leading-relaxed font-light">
+            <p class="border-l-2 border-brand-gold/60 pl-4 py-1 text-brand-cream">
+              Protecting device endpoints and customer transaction data through robust encryption and automated firmware recovery.
+            </p>
+          </div>
+        `,
+        images: [],
+        takeaways: [
+          "Cryptographic Authentication",
+          "Over-The-Air Firmware Upgrades",
+          "Fail-Safe Recovery Systems"
+        ]
+      },
+      { 
+        week: 14, 
+        phase: 3, 
+        phaseName: "Phase 03: Intelligent Systems & Hardware-Software Hardening",
+        slug: "week-14", 
+        title: "User Testing & Customer Journey Audits",
+        subtitle: "PRICE ProtoSem • Usability Field Trials, Friction Mapping & Accessibility Optimization",
+        status: "Upcoming Node", 
+        hasStory: true,
+        summary: "Conducting empirical usability trials with prospective retail customers, measuring Task Completion Time and cognitive load.",
+        tags: ["User Testing", "Friction Mapping", "Accessibility", "Customer Experience", "UX Analytics"],
+        narrative: `
+          <div class="space-y-4 text-brand-cream/90 text-sm sm:text-base leading-relaxed font-light">
+            <p class="border-l-2 border-brand-gold/60 pl-4 py-1 text-brand-cream">
+              Empirical usability testing with end users to eliminate friction points across digital reserve and in-store pick-up touchpoints.
+            </p>
+          </div>
+        `,
+        images: [],
+        takeaways: [
+          "Quantitative Usability Benchmarking",
+          "Cognitive Load Reduction",
+          "UX Iteration Sprints"
+        ]
+      },
+      { 
+        week: 15, 
+        phase: 3, 
+        phaseName: "Phase 03: Intelligent Systems & Hardware-Software Hardening",
+        slug: "week-15", 
+        title: "System Hardening & Pre-Pilot Evaluation",
+        subtitle: "PRICE ProtoSem • End-to-End Stress Testing, Load Simulation & Pilot Readiness",
+        status: "Upcoming Node", 
+        hasStory: true,
+        summary: "Finalizing Phase 3 system hardening, running high-concurrency simulated network traffic, and validating pilot readiness.",
+        tags: ["Pre-Pilot Review", "Stress Testing", "System Hardening", "Reliability Engineering"],
+        narrative: `
+          <div class="space-y-4 text-brand-cream/90 text-sm sm:text-base leading-relaxed font-light">
+            <p class="border-l-2 border-brand-gold/60 pl-4 py-1 text-brand-cream">
+              Ensuring 99.9% uptime and zero-loss telemetry across full 48-hour continuous simulation runs.
+            </p>
+          </div>
+        `,
+        images: [],
+        takeaways: [
+          "Continuous System Stress Testing",
+          "Edge Memory Leak Diagnostics",
+          "Pilot Launch Checklist Approval"
+        ]
+      },
+      // ----------------- PHASE 04: WEEKS 16 - 20 -----------------
+      { 
+        week: 16, 
+        phase: 4, 
+        phaseName: "Phase 04: Field Pilots, Venture Launch & Industry Showcase",
+        slug: "week-16", 
+        title: "Live Retail Pilot Deployment",
+        subtitle: "PRICE ProtoSem • On-Site Installation, Real-World Data Ingestion & Field Trials",
+        status: "Upcoming Node", 
+        hasStory: true,
+        summary: "Deploying hardware and software systems into an active retail environment for live customer validation and transaction tracking.",
+        tags: ["Live Pilot", "Field Testing", "Retail Deployment", "Telemetry Ingestion"],
+        narrative: `
+          <div class="space-y-4 text-brand-cream/90 text-sm sm:text-base leading-relaxed font-light">
+            <p class="border-l-2 border-brand-gold/60 pl-4 py-1 text-brand-cream">
+              Transitioning from sandbox environments to real-world live retail store operations with active shoppers and inventory.
+            </p>
+          </div>
+        `,
+        images: [],
+        takeaways: [
+          "Live Field Deployment Protocols",
+          "Operational Retail Troubleshooting",
+          "Shopper Engagement Metrics"
+        ]
+      },
+      { 
+        week: 17, 
+        phase: 4, 
+        phaseName: "Phase 04: Field Pilots, Venture Launch & Industry Showcase",
+        slug: "week-17", 
+        title: "Pilot Impact Analytics & KPI Verification",
+        subtitle: "PRICE ProtoSem • Revenue Lift, Dwell Time Correlation & Inventory Velocity Analysis",
+        status: "Upcoming Node", 
+        hasStory: true,
+        summary: "Auditing live pilot telemetry to compute retail conversion improvements, checkout velocity, and cost savings.",
+        tags: ["Impact Analytics", "KPI Auditing", "Retail Economics", "Data Science"],
+        narrative: `
+          <div class="space-y-4 text-brand-cream/90 text-sm sm:text-base leading-relaxed font-light">
+            <p class="border-l-2 border-brand-gold/60 pl-4 py-1 text-brand-cream">
+              Synthesizing real-world pilot metrics into rigorous statistical proofs of economic and experiential impact.
+            </p>
+          </div>
+        `,
+        images: [],
+        takeaways: [
+          "Empirical Conversion Rate Lift",
+          "Statistical Hypothesis Testing",
+          "ROI Proof of Concept"
+        ]
+      },
+      { 
+        week: 18, 
+        phase: 4, 
+        phaseName: "Phase 04: Field Pilots, Venture Launch & Industry Showcase",
+        slug: "week-18", 
+        title: "Venture Scaling & Go-To-Market Strategy",
+        subtitle: "PRICE ProtoSem • Distribution Channels, Commercial Licensing & Investor Pitching",
+        status: "Upcoming Node", 
+        hasStory: true,
+        summary: "Formulating commercial expansion plans, partner distribution channels, software licensing models, and investor pitch deck.",
+        tags: ["Go-To-Market", "Investor Pitch", "Venture Scaling", "Commercial Strategy"],
+        narrative: `
+          <div class="space-y-4 text-brand-cream/90 text-sm sm:text-base leading-relaxed font-light">
+            <p class="border-l-2 border-brand-gold/60 pl-4 py-1 text-brand-cream">
+              Drafting the commercial roadmap to scale the platform across multi-outlet retail chains and independent merchant associations.
+            </p>
+          </div>
+        `,
+        images: [],
+        takeaways: [
+          "Commercial Scaling Strategy",
+          "SaaS + Hardware Monetization Architecture",
+          "Executive Pitch Deck Refinement"
+        ]
+      },
+      { 
+        week: 19, 
+        phase: 4, 
+        phaseName: "Phase 04: Field Pilots, Venture Launch & Industry Showcase",
+        slug: "week-19", 
+        title: "Exhibition Preparation & Demonstrator Polishing",
+        subtitle: "PRICE ProtoSem • Interactive Booth Architecture, Live Demonstrations & Media Kit",
+        status: "Upcoming Node", 
+        hasStory: true,
+        summary: "Polishing physical exhibition booths, preparing real-time interactive audience demonstrations, and compiling press media packages.",
+        tags: ["Exhibition", "Demonstrator Polish", "Media Kit", "Public Presentation"],
+        narrative: `
+          <div class="space-y-4 text-brand-cream/90 text-sm sm:text-base leading-relaxed font-light">
+            <p class="border-l-2 border-brand-gold/60 pl-4 py-1 text-brand-cream">
+              Perfecting demonstrator reliability and visual narrative presentation for the grand industry finale.
+            </p>
+          </div>
+        `,
+        images: [],
+        takeaways: [
+          "Interactive Showcase Design",
+          "Seamless Public Demo Rehearsals",
+          "Portfolio & Media Kit Finalization"
+        ]
+      },
+      { 
+        week: 20, 
+        phase: 4, 
+        phaseName: "Phase 04: Field Pilots, Venture Launch & Industry Showcase",
+        slug: "week-20", 
+        title: "Grand Demo Day & Industry Showcase",
+        subtitle: "PRICE ProtoSem • RAI Industry Summit, Final Evaluation & Programme Graduation",
+        status: "Upcoming Node", 
+        hasStory: true,
+        summary: "Grand Demo Day presentation to retail enterprise executives, Retailers Association of India (RAI) leadership, investors, and faculty.",
+        tags: ["Grand Demo Day", "RAI Showcase", "Innovation Trainee Graduation", "Industry Award"],
+        narrative: `
+          <div class="space-y-4 text-brand-cream/90 text-sm sm:text-base leading-relaxed font-light">
+            <p class="border-l-2 border-brand-gold/60 pl-4 py-1 text-brand-cream">
+              Culmination of the 20-week intensive industry innovation journey, presenting our validated phygital retail platform on the main summit stage.
+            </p>
+          </div>
+        `,
+        images: [],
+        takeaways: [
+          "Grand Demo Day Presentation",
+          "Executive Industry Validation",
+          "20-Week Innovation Programme Graduation"
+        ]
+      }
     ];
 
+    let currentOpenWeek = null;
+
+    // ------------------------------------------------------------------------
+    // CARD RENDERING IN MAIN GRID (ALL WEEKS 00 - 20)
+    // ------------------------------------------------------------------------
     function renderProtoSemCards(filter = 'all') {
       const container = document.getElementById('protosem-cards-grid');
       if (!container) return;
@@ -1172,51 +1641,58 @@
       container.innerHTML = filtered.map(item => {
         const padWeek = String(item.week).padStart(2, '0');
         const padPhase = String(item.phase).padStart(2, '0');
-        const isPublished = item.hasStory === true;
+        const isDocumented = item.status.toLowerCase().includes('published');
 
-        const cardBorder = isPublished 
-          ? 'border-brand-gold/60 bg-gradient-to-br from-brand-navyLight/80 to-brand-navy/90 shadow-lg shadow-brand-gold/10' 
-          : 'border-brand-cream/15';
+        const cardBorder = isDocumented 
+          ? 'border-brand-gold/50 bg-gradient-to-br from-brand-navyLight/85 to-brand-navy/95 shadow-lg shadow-brand-gold/10' 
+          : 'border-brand-cream/15 bg-brand-navyDark/70 hover:border-brand-gold/40';
 
-        const dotStyle = isPublished
+        const dotStyle = isDocumented
           ? 'bg-brand-gold shadow-md shadow-brand-gold/50 animate-pulse'
           : 'bg-brand-gold/40 group-hover:bg-brand-gold group-hover:scale-125';
 
         return `
-          <a href="#protosem-week-${padWeek}" 
-             onclick="handleWeekCardClick(${item.week}); return false;"
-             class="week-card bento-card p-5 rounded-2xl ${cardBorder} flex flex-col justify-between min-h-[155px] group relative overflow-hidden transition-all duration-300 hover:border-brand-gold hover:-translate-y-1 block cursor-pointer">
+          <div onclick="openWeekWorkspace(${item.week})" 
+               class="week-card bento-card p-5 rounded-2xl ${cardBorder} flex flex-col justify-between min-h-[175px] group relative overflow-hidden transition-all duration-300 hover:border-brand-gold hover:-translate-y-1 block cursor-pointer"
+               tabindex="0"
+               role="button"
+               aria-label="Open Week ${padWeek} Workspace"
+               onkeydown="if(event.key==='Enter'||event.key===' ') { openWeekWorkspace(${item.week}); event.preventDefault(); }">
             
+            <!-- Ambient hover glow inside card -->
+            <div class="absolute -right-8 -top-8 w-24 h-24 bg-brand-gold/10 rounded-full blur-xl group-hover:bg-brand-gold/20 transition-all pointer-events-none"></div>
+
             <!-- Top Metadata -->
             <div class="flex items-center justify-between">
-              <span class="text-[10px] font-bold tracking-widest uppercase ${isPublished ? 'text-brand-gold bg-brand-gold/15 border-brand-gold/30' : 'text-brand-gold/80 bg-brand-navyDark/60 border-brand-cream/10'} px-2 py-0.5 rounded-md border">
-                Phase ${padPhase} ${isPublished ? '• ACTIVE' : ''}
+              <span class="text-[10px] font-bold tracking-widest uppercase ${isDocumented ? 'text-brand-gold bg-brand-gold/15 border-brand-gold/30' : 'text-brand-gold/80 bg-brand-navyDark/80 border-brand-cream/10'} px-2 py-0.5 rounded-md border">
+                Phase ${padPhase} ${isDocumented ? '• DOCUMENTED' : ''}
               </span>
-              <div class="w-2.5 h-2.5 rounded-full ${dotStyle} transition-all"></div>
+              <div class="flex items-center gap-1.5">
+                <span class="text-[10px] font-mono text-brand-cream/40">#${padWeek}</span>
+                <div class="w-2.5 h-2.5 rounded-full ${dotStyle} transition-all"></div>
+              </div>
             </div>
 
             <!-- Main Week Label -->
-            <div class="space-y-1">
-              <div class="text-2xl font-serif font-bold text-brand-cream group-hover:text-brand-gold transition-colors flex items-baseline justify-between">
-                <span>WEEK ${padWeek}</span>
-                <span class="text-xs font-mono font-normal ${isPublished ? 'text-brand-gold/70' : 'text-brand-cream/30'} group-hover:text-brand-gold/60 transition-colors">#${padWeek}</span>
+            <div class="space-y-1.5 py-2">
+              <div class="text-xl sm:text-2xl font-serif font-bold text-brand-cream group-hover:text-brand-gold transition-colors leading-tight">
+                WEEK ${padWeek}
               </div>
-              <div class="text-[11px] font-medium tracking-wide uppercase ${isPublished ? 'text-brand-gold font-semibold' : 'text-brand-cream/50'} group-hover:text-brand-cream/80 transition-colors flex items-center gap-1.5">
-                <i data-lucide="${isPublished ? 'sparkles' : 'file-clock'}" class="w-3.5 h-3.5 ${isPublished ? 'text-brand-gold' : 'text-brand-gold/70'}"></i>
-                <span>${item.status}</span>
-              </div>
+              <p class="text-xs text-brand-cream/80 line-clamp-2 font-light group-hover:text-brand-cream transition-colors">
+                ${item.title}
+              </p>
             </div>
 
             <!-- Bottom Indicator & Arrow -->
-            <div class="flex items-center justify-between text-xs text-brand-cream/40 group-hover:text-brand-gold pt-2 border-t border-brand-cream/5">
-              <span class="text-[10px] font-mono">/protosem/week-${padWeek}</span>
-              <div class="transform group-hover:translate-x-1 transition-transform flex items-center gap-1">
-                <span class="text-[10px] uppercase font-semibold text-brand-gold opacity-0 group-hover:opacity-100 transition-opacity">${isPublished ? 'Read' : 'Note'}</span>
-                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            <div class="flex items-center justify-between text-xs text-brand-cream/50 group-hover:text-brand-gold pt-2.5 border-t border-brand-cream/10">
+              <span class="text-[10px] font-mono truncate max-w-[120px]">/protosem/w${padWeek}</span>
+              <div class="transform group-hover:translate-x-1 transition-transform flex items-center gap-1.5 text-brand-gold font-semibold text-xs">
+                <span>Explore</span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
               </div>
             </div>
 
-          </a>
+          </div>
         `;
       }).join('');
 
@@ -1237,92 +1713,339 @@
       renderProtoSemCards(phaseVal);
     }
 
-    function handleWeekCardClick(weekNum) {
-      const item = protoSemWeeks.find(w => w.week === weekNum);
-      if (item && item.hasStory) {
-        openWeekModal(weekNum);
-      } else {
-        showWeekToast(weekNum);
-      }
-    }
-
-    function openWeekModal(weekNum) {
+    // ------------------------------------------------------------------------
+    // NEAR-FULLSCREEN WORKSPACE ENGINE
+    // ------------------------------------------------------------------------
+    function openWeekWorkspace(weekNum) {
       const item = protoSemWeeks.find(w => w.week === weekNum);
       if (!item) return;
 
+      currentOpenWeek = weekNum;
       const padWeek = String(item.week).padStart(2, '0');
       const padPhase = String(item.phase).padStart(2, '0');
 
-      document.getElementById('modal-phase').innerText = `Phase ${padPhase}`;
-      document.getElementById('modal-slug').innerText = `/protosem/week-${padWeek}`;
-      document.getElementById('modal-title').innerText = item.title || `Week ${padWeek} Field Note`;
-      document.getElementById('modal-body').innerHTML = item.content || `<p>${item.summary || 'Field notes in progress.'}</p>`;
+      // Update Header Elements
+      document.getElementById('ws-phase-badge').innerText = `Phase ${padPhase}`;
+      document.getElementById('ws-slug-badge').innerText = `/protosem/week-${padWeek}`;
+      document.getElementById('ws-header-title').innerText = `Week ${padWeek}: ${item.title}`;
 
-      const modal = document.getElementById('week-modal');
-      const content = document.getElementById('week-modal-content');
+      // Update Prev / Next Buttons in Header & Footer
+      const prevBtn = document.getElementById('ws-prev-btn');
+      const nextBtn = document.getElementById('ws-next-btn');
+      const footerPrevBtn = document.getElementById('ws-footer-prev-btn');
+      const footerNextBtn = document.getElementById('ws-footer-next-btn');
+      const footerPrevLabel = document.getElementById('ws-footer-prev-label');
+      const footerNextLabel = document.getElementById('ws-footer-next-label');
+
+      if (weekNum <= 0) {
+        prevBtn.disabled = true;
+        footerPrevBtn.disabled = true;
+        footerPrevBtn.classList.add('opacity-30', 'cursor-not-allowed');
+        footerPrevLabel.innerText = "Beginning of Journey";
+      } else {
+        prevBtn.disabled = false;
+        footerPrevBtn.disabled = false;
+        footerPrevBtn.classList.remove('opacity-30', 'cursor-not-allowed');
+        const prevItem = protoSemWeeks.find(w => w.week === weekNum - 1);
+        footerPrevLabel.innerText = prevItem ? `Week ${String(prevItem.week).padStart(2, '0')}: ${prevItem.title}` : `Week ${weekNum - 1}`;
+      }
+
+      if (weekNum >= protoSemWeeks.length - 1) {
+        nextBtn.disabled = true;
+        footerNextBtn.disabled = true;
+        footerNextBtn.classList.add('opacity-30', 'cursor-not-allowed');
+        footerNextLabel.innerText = "Final Chapter";
+      } else {
+        nextBtn.disabled = false;
+        footerNextBtn.disabled = false;
+        footerNextBtn.classList.remove('opacity-30', 'cursor-not-allowed');
+        const nextItem = protoSemWeeks.find(w => w.week === weekNum + 1);
+        footerNextLabel.innerText = nextItem ? `Week ${String(nextItem.week).padStart(2, '0')}: ${nextItem.title}` : `Week ${weekNum + 1}`;
+      }
+
+      // Generate Workspace Body
+      const contentContainer = document.getElementById('ws-content-body');
+      contentContainer.innerHTML = buildWeekWorkspaceHTML(item);
+
+      // Show Workspace Modal
+      const modal = document.getElementById('week-workspace-modal');
+      const content = document.getElementById('week-workspace-content');
       
       modal.classList.remove('opacity-0', 'pointer-events-none');
       modal.classList.add('opacity-100', 'pointer-events-auto');
-      content.classList.remove('scale-95');
+      content.classList.remove('scale-[0.98]');
       content.classList.add('scale-100');
+
+      document.body.classList.add('overflow-hidden');
+      document.getElementById('ws-scroll-container').scrollTop = 0;
 
       lucide.createIcons();
     }
 
-    function closeWeekModal() {
-      const modal = document.getElementById('week-modal');
-      const content = document.getElementById('week-modal-content');
+    function closeWeekWorkspace() {
+      const modal = document.getElementById('week-workspace-modal');
+      const content = document.getElementById('week-workspace-content');
 
       modal.classList.remove('opacity-100', 'pointer-events-auto');
       modal.classList.add('opacity-0', 'pointer-events-none');
       content.classList.remove('scale-100');
-      content.classList.add('scale-95');
+      content.classList.add('scale-[0.98]');
+
+      document.body.classList.remove('overflow-hidden');
+      currentOpenWeek = null;
     }
 
-    function handleModalBackdropClick(e) {
-      if (e.target.id === 'week-modal') {
-        closeWeekModal();
+    function handleWorkspaceBackdropClick(e) {
+      if (e.target.id === 'week-workspace-modal') {
+        closeWeekWorkspace();
       }
     }
 
-    // Keyboard ESC listener to close modal
+    function navigateWeek(delta) {
+      if (currentOpenWeek === null) return;
+      const targetWeek = currentOpenWeek + delta;
+      if (targetWeek >= 0 && targetWeek < protoSemWeeks.length) {
+        const content = document.getElementById('ws-content-body');
+        content.style.opacity = '0.35';
+        setTimeout(() => {
+          openWeekWorkspace(targetWeek);
+          content.style.opacity = '1';
+        }, 120);
+      }
+    }
+
+    function scrollToWorkspaceTop() {
+      const scrollContainer = document.getElementById('ws-scroll-container');
+      if (scrollContainer) {
+        scrollContainer.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    // ------------------------------------------------------------------------
+    // HTML GENERATOR FOR EXPANDED WEEK WORKSPACE
+    // Designed for lots of text, single images, 2-col/3-col galleries & lightbox
+    // ------------------------------------------------------------------------
+    function buildWeekWorkspaceHTML(item) {
+      const padWeek = String(item.week).padStart(2, '0');
+      const padPhase = String(item.phase).padStart(2, '0');
+
+      // Tags pill HTML
+      const tagsHTML = (item.tags || []).map(tag => `
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-brand-navyDark/80 border border-brand-cream/15 text-xs text-brand-cream/90 font-medium">
+          <i data-lucide="tag" class="w-3 h-3 text-brand-gold"></i>
+          ${tag}
+        </span>
+      `).join('');
+
+      // Multi-layout Image Gallery Engine
+      let galleryHTML = '';
+      if (item.images && item.images.length > 0) {
+        if (item.images.length === 1) {
+          const img = item.images[0];
+          galleryHTML = `
+            <div class="space-y-3 pt-4">
+              <div class="flex items-center justify-between text-xs text-brand-gold font-bold uppercase tracking-wider">
+                <span class="flex items-center gap-2"><i data-lucide="image" class="w-4 h-4"></i> Visual Documentation Artifact</span>
+                <span class="text-brand-cream/50 text-[11px] font-mono">Click to inspect in high-resolution</span>
+              </div>
+              <div class="gallery-img-container relative group cursor-zoom-in" onclick="openImageLightbox('${img.url}', '${img.caption.replace(/'/g, "\\'")}')">
+                <img src="${img.url}" alt="${img.caption}" class="gallery-img w-full max-h-[520px] object-cover object-center rounded-2xl">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                  <div class="text-xs text-brand-cream bg-brand-navyDark/90 backdrop-blur-md px-4 py-2 rounded-xl border border-brand-cream/20 flex items-center gap-2">
+                    <i data-lucide="zoom-in" class="w-4 h-4 text-brand-gold shrink-0"></i>
+                    <span>${img.caption}</span>
+                  </div>
+                </div>
+              </div>
+              <p class="text-xs text-brand-cream/70 italic px-2">${img.caption}</p>
+            </div>
+          `;
+        } else if (item.images.length === 2) {
+          galleryHTML = `
+            <div class="space-y-3 pt-4">
+              <div class="flex items-center justify-between text-xs text-brand-gold font-bold uppercase tracking-wider">
+                <span class="flex items-center gap-2"><i data-lucide="images" class="w-4 h-4"></i> Visual Documentation Gallery (2-View Showcase)</span>
+                <span class="text-brand-cream/50 text-[11px] font-mono">Click any photo for high-res zoom</span>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                ${item.images.map(img => `
+                  <div class="space-y-2">
+                    <div class="gallery-img-container relative group cursor-zoom-in ${img.bgWhite ? 'bg-white p-4 flex items-center justify-center min-h-[220px]' : ''}" onclick="openImageLightbox('${img.url}', '${img.caption.replace(/'/g, "\\'")}')">
+                      <img src="${img.url}" alt="${img.caption}" class="gallery-img ${img.bgWhite ? 'max-h-48 object-contain' : 'w-full h-60 sm:h-68 object-cover object-center'} rounded-xl">
+                      <div class="absolute top-3 right-3 p-2 rounded-xl bg-brand-navyDark/85 backdrop-blur-md text-brand-gold border border-brand-cream/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                      </div>
+                    </div>
+                    <p class="text-xs text-brand-cream/85 font-medium px-1 flex items-start gap-1.5">
+                      <span class="text-brand-gold">•</span>
+                      <span>${img.caption}</span>
+                    </p>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        } else {
+          // 3 or more images: Responsive Multi-column grid
+          galleryHTML = `
+            <div class="space-y-3 pt-4">
+              <div class="flex items-center justify-between text-xs text-brand-gold font-bold uppercase tracking-wider">
+                <span class="flex items-center gap-2"><i data-lucide="layout-grid" class="w-4 h-4"></i> Visual Documentation Gallery (${item.images.length} Images)</span>
+                <span class="text-brand-cream/50 text-[11px] font-mono">Click any photo to expand</span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                ${item.images.map(img => `
+                  <div class="space-y-2 group">
+                    <div class="gallery-img-container relative cursor-zoom-in ${img.bgWhite ? 'bg-white p-4 flex items-center justify-center h-52' : 'h-52'}" onclick="openImageLightbox('${img.url}', '${img.caption.replace(/'/g, "\\'")}')">
+                      <img src="${img.url}" alt="${img.caption}" class="gallery-img ${img.bgWhite ? 'max-h-full object-contain' : 'w-full h-full object-cover object-center'} rounded-xl">
+                      <div class="absolute top-3 right-3 p-1.5 rounded-lg bg-brand-navyDark/85 backdrop-blur-md text-brand-gold border border-brand-cream/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                      </div>
+                    </div>
+                    <p class="text-xs text-brand-cream/80 font-medium line-clamp-2 px-1">${img.caption}</p>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        }
+      }
+
+      // Takeaways & Highlights HTML
+      let takeawaysHTML = '';
+      if (item.takeaways && item.takeaways.length > 0) {
+        takeawaysHTML = `
+          <div class="p-6 sm:p-8 rounded-3xl bg-brand-navyDark/80 border border-brand-gold/30 space-y-4 shadow-xl">
+            <div class="flex items-center gap-2 text-xs sm:text-sm font-bold text-brand-gold uppercase tracking-wider">
+              <i data-lucide="sparkles" class="w-4 h-4 text-brand-gold"></i>
+              <span>Key Immersion Highlights &amp; Competencies Acquired</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
+              ${item.takeaways.map(t => `
+                <div class="flex items-start gap-2.5 p-3.5 rounded-xl bg-brand-navy/60 border border-brand-cream/10 text-xs sm:text-sm text-brand-cream/90 font-light">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                  <span>${t}</span>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      return `
+        <!-- Top Hero Header -->
+        <div class="space-y-6 pb-6 border-b border-brand-cream/10">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-3 py-1 rounded-full bg-brand-gold/15 border border-brand-gold/30 text-brand-gold font-bold text-xs uppercase tracking-wider flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+                Phase ${padPhase} Innovation Chapter
+              </span>
+              <span class="px-3 py-1 rounded-full bg-brand-navyDark/80 border border-brand-cream/15 text-brand-cream/70 text-xs font-mono">
+                /protosem/week-${padWeek}
+              </span>
+              <span class="px-3 py-1 rounded-full ${item.status.includes('Published') || item.status.includes('Verified') ? 'bg-emerald-500/15 border-emerald-500/30 text-emerald-300' : 'bg-amber-500/15 border-amber-500/30 text-amber-300'} border text-xs font-semibold">
+                ${item.status}
+              </span>
+            </div>
+
+            <div class="text-xs text-brand-gold/80 font-medium flex items-center gap-1.5">
+              <i data-lucide="award" class="w-4 h-4 text-brand-gold"></i>
+              <span>PRICE ProtoSem Innovation Trainee</span>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-brand-cream tracking-tight leading-tight">
+              Week ${padWeek}: ${item.title}
+            </h2>
+            <p class="text-sm sm:text-base text-brand-gold font-medium">
+              ${item.subtitle || 'PRICE ProtoSem • 20-Week Industry-Integrated Innovation Journey'}
+            </p>
+          </div>
+
+          ${tagsHTML ? `<div class="flex flex-wrap gap-2 pt-1">${tagsHTML}</div>` : ''}
+        </div>
+
+        <!-- Lead Summary Banner -->
+        <div class="p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-brand-navyLight/70 via-brand-navy/60 to-brand-navyDark/80 border-l-4 border-brand-gold border-r border-t border-b border-brand-cream/10 text-brand-cream/95 text-sm sm:text-base leading-relaxed shadow-lg">
+          <p class="font-normal">${item.summary || 'Detailed weekly field note and documentation.'}</p>
+        </div>
+
+        <!-- Main Narrative Sections -->
+        <div class="space-y-6 text-brand-cream/85 text-sm sm:text-base leading-relaxed font-light">
+          ${item.narrative || ''}
+        </div>
+
+        <!-- Media Galleries (1-col, 2-col, or 3-col Grid) -->
+        ${galleryHTML}
+
+        <!-- Key Takeaways & Milestones Box -->
+        ${takeawaysHTML}
+      `;
+    }
+
+    // ------------------------------------------------------------------------
+    // HIGH RESOLUTION IMAGE LIGHTBOX ENGINE
+    // ------------------------------------------------------------------------
+    function openImageLightbox(src, caption) {
+      const lightbox = document.getElementById('image-lightbox-modal');
+      const img = document.getElementById('lightbox-img');
+      const cap = document.getElementById('lightbox-caption');
+
+      if (lightbox && img) {
+        img.src = src;
+        img.alt = caption || 'High resolution project image';
+        if (cap) {
+          if (caption) {
+            cap.innerText = caption;
+            cap.classList.remove('hidden');
+          } else {
+            cap.classList.add('hidden');
+          }
+        }
+        lightbox.classList.remove('opacity-0', 'pointer-events-none');
+        lightbox.classList.add('opacity-100', 'pointer-events-auto');
+        lucide.createIcons();
+      }
+    }
+
+    function closeImageLightbox() {
+      const lightbox = document.getElementById('image-lightbox-modal');
+      if (lightbox) {
+        lightbox.classList.remove('opacity-100', 'pointer-events-auto');
+        lightbox.classList.add('opacity-0', 'pointer-events-none');
+      }
+    }
+
+    // ------------------------------------------------------------------------
+    // KEYBOARD NAVIGATION (ESC to close, Left/Right Arrows for Week navigation)
+    // ------------------------------------------------------------------------
     document.addEventListener('keydown', (e) => {
+      const lightbox = document.getElementById('image-lightbox-modal');
+      const isLightboxOpen = lightbox && lightbox.classList.contains('opacity-100');
+
       if (e.key === 'Escape') {
-        closeWeekModal();
+        if (isLightboxOpen) {
+          closeImageLightbox();
+        } else if (currentOpenWeek !== null) {
+          closeWeekWorkspace();
+        }
+      } else if (!isLightboxOpen && currentOpenWeek !== null) {
+        if (e.key === 'ArrowLeft') {
+          navigateWeek(-1);
+        } else if (e.key === 'ArrowRight') {
+          navigateWeek(1);
+        }
       }
     });
 
-    let toastTimeout;
-    function showWeekToast(weekNum) {
-      const padWeek = String(weekNum).padStart(2, '0');
-      const toast = document.getElementById('protosem-toast');
-      const title = document.getElementById('toast-title');
-      const msg = document.getElementById('toast-message');
+    // Backward compatibility aliases
+    function openWeekModal(weekNum) { openWeekWorkspace(weekNum); }
+    function closeWeekModal() { closeWeekWorkspace(); }
+    function handleWeekCardClick(weekNum) { openWeekWorkspace(weekNum); }
 
-      if (toast && title && msg) {
-        title.innerText = `ProtoSem • Week ${padWeek}`;
-        msg.innerText = `Field notes & story for Week ${padWeek} are in progress and will unlock here soon!`;
-
-        toast.classList.remove('translate-y-24', 'opacity-0');
-        toast.classList.add('translate-y-0', 'opacity-100');
-
-        clearTimeout(toastTimeout);
-        toastTimeout = setTimeout(() => {
-          toast.classList.remove('translate-y-0', 'opacity-100');
-          toast.classList.add('translate-y-24', 'opacity-0');
-        }, 3200);
-      }
-    }
-
-    // Auto check if hash points to week 0 or protosem
-    window.addEventListener('DOMContentLoaded', () => {
-      if (window.location.hash === '#protosem-week-00' || window.location.hash === '#week-00' || window.location.hash === '#week-0') {
-        const el = document.getElementById('protosem-week-00');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-
-    // Initial render of ProtoSem weeks
+    // Initial render of ProtoSem weeks (All 00 - 20)
     renderProtoSemCards('all');
   </script>
 </body>
