@@ -1273,55 +1273,98 @@
             <div id="week6-content-lasercutting" class="space-y-10 transition-opacity duration-300">
               
               <!-- Section 1: Lab Safety & Safety Rules -->
-              <div class="space-y-4">
-                <div class="flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-wider border-b border-brand-cream/10 pb-2">
-                  <i data-lucide="shield-alert" class="w-4 h-4"></i>
-                  <span>1. Lab Safety &amp; Safety Rules</span>
+              <div class="space-y-6">
+                <div class="flex items-center justify-between border-b border-brand-cream/10 pb-2">
+                  <div class="flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-wider">
+                    <i data-lucide="shield-alert" class="w-4 h-4"></i>
+                    <span>1. Lab Safety &amp; Safety Rules</span>
+                  </div>
+                  <span class="text-xs px-2.5 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 font-mono">FORGE DFab #2 Protocols</span>
                 </div>
+
                 <p class="text-xs sm:text-sm text-brand-cream/80 leading-relaxed">
-                  The following safety protocols and precautions were strictly followed during the laser cutting operation:
+                  Strict laboratory safety standards and laser cutter operation protocols were adhered to throughout the digital fabrication session. All operators must review the machine specifications, wear required personal protective equipment (PPE), and follow authorized materials guidelines:
                 </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                <!-- Safety Images Showcase (Images 1 & 2) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  
+                  <!-- Image 1: Machine Specifications Card -->
+                  <div class="space-y-2 group">
+                    <div class="gallery-img-container relative group cursor-zoom-in bg-brand-navyDark/90 p-2.5 rounded-2xl border border-brand-cream/15 hover:border-brand-gold/50 transition-all shadow-lg" onclick="openImageLightbox('assets/week06-laser-machine-specs.png', 'Laser Cutter Specifications: Model 1490 CO2 Laser (150W, 1300x900mm working area, Forge DFab #2)')">
+                      <div class="relative overflow-hidden rounded-xl bg-white p-2 flex items-center justify-center min-h-[220px]">
+                        <img src="assets/week06-laser-machine-specs.png" alt="Laser Cutter Model 1490 Specifications" class="gallery-img max-h-60 w-auto object-contain rounded-lg">
+                        <div class="absolute top-3 right-3 p-2 rounded-xl bg-brand-navyDark/85 backdrop-blur-md text-brand-gold border border-brand-cream/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                          <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="text-xs text-brand-cream/85 font-medium px-1 flex items-start gap-1.5">
+                      <span class="text-brand-gold font-bold">•</span>
+                      <span><strong>Machine Specifications Card:</strong> FORGE FWDInction DFab #2 — Model 1490 CO₂ Laser Cutter (150W Power, 1300×900mm bed area, 1000W machine power, 0.1mm accuracy).</span>
+                    </p>
+                  </div>
+
+                  <!-- Image 2: Safety Rules & Precautions Matrix -->
+                  <div class="space-y-2 group">
+                    <div class="gallery-img-container relative group cursor-zoom-in bg-brand-navyDark/90 p-2.5 rounded-2xl border border-brand-cream/15 hover:border-brand-gold/50 transition-all shadow-lg" onclick="openImageLightbox('assets/week06-laser-safety-rules.png', 'Laser Cutter Rules & Safety: Safety Precautions, Do\'s, Don\'ts, Authorized Materials & Banned Toxic Polymers (Forge)')">
+                      <div class="relative overflow-hidden rounded-xl bg-white p-2 flex items-center justify-center min-h-[220px]">
+                        <img src="assets/week06-laser-safety-rules.png" alt="Laser Cutter Rules & Safety Matrix" class="gallery-img max-h-60 w-auto object-contain rounded-lg">
+                        <div class="absolute top-3 right-3 p-2 rounded-xl bg-brand-navyDark/85 backdrop-blur-md text-brand-gold border border-brand-cream/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                          <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="text-xs text-brand-cream/85 font-medium px-1 flex items-start gap-1.5">
+                      <span class="text-brand-gold font-bold">•</span>
+                      <span><strong>Laser Cutter Rules &amp; Safety:</strong> Operating rules, PPE protocols, DO's &amp; DON'Ts, authorized materials (Acrylic, Plywood, MDF), and banned materials (PVC, Polystyrene, Polycarbonate).</span>
+                    </p>
+                  </div>
+
+                </div>
+
+                <!-- 6-Point Safety Rules Detail Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-1">
                   <div class="p-4 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
                     <div class="flex items-center gap-2 text-xs font-bold text-brand-gold uppercase">
-                      <i data-lucide="eye" class="w-4 h-4 text-brand-gold"></i> Laser Safety
+                      <i data-lucide="eye" class="w-4 h-4 text-brand-gold"></i> Laser Safety &amp; Eyewear
                     </div>
-                    <p class="text-xs text-brand-cream/80">Never look directly into the laser beam path or direct reflections. Keep the protective acrylic lid closed during operation to block CO₂ laser emissions.</p>
+                    <p class="text-xs text-brand-cream/80">Never look directly into the laser beam path or reflections. Always wear approved OD5+ laser safety goggles and keep protective hood closed during firing.</p>
                   </div>
 
                   <div class="p-4 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
                     <div class="flex items-center gap-2 text-xs font-bold text-blue-300 uppercase">
-                      <i data-lucide="wind" class="w-4 h-4 text-blue-300"></i> Exhaust System
+                      <i data-lucide="wind" class="w-4 h-4 text-blue-300"></i> Exhaust &amp; Blower System
                     </div>
-                    <p class="text-xs text-brand-cream/80">Ensure the high-volume inline exhaust fan and filtration system are turned ON prior to firing the laser to remove acrylic fumes, VOCs, and particulates.</p>
+                    <p class="text-xs text-brand-cream/80">Always switch on the lower blower exhaust and filtration system while the machine is running to evacuate acrylic fumes, VOCs, and combustion particulates.</p>
                   </div>
 
                   <div class="p-4 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
                     <div class="flex items-center gap-2 text-xs font-bold text-emerald-300 uppercase">
                       <i data-lucide="thermometer-snowflake" class="w-4 h-4 text-emerald-300"></i> Water Chiller (18°C–22°C)
                     </div>
-                    <p class="text-xs text-brand-cream/80">Verify that the industrial water chiller is running, maintaining 18°C–22°C to prevent thermal cracking of the glass laser tube.</p>
+                    <p class="text-xs text-brand-cream/80">Confirm active water chiller circulation within the optimal 18°C–22°C range to protect the 150W glass laser tube from catastrophic thermal shock.</p>
                   </div>
 
                   <div class="p-4 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
                     <div class="flex items-center gap-2 text-xs font-bold text-amber-300 uppercase">
-                      <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i> Electrical Earthing
+                      <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i> Electrical Grounding
                     </div>
-                    <p class="text-xs text-brand-cream/80">Confirm proper electrical grounding of the machine chassis to prevent static accumulation and high-voltage shock hazards.</p>
+                    <p class="text-xs text-brand-cream/80">Ensure proper machine chassis grounding to eliminate static charge buildup and safeguard high-voltage ignition circuitry.</p>
                   </div>
 
                   <div class="p-4 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
                     <div class="flex items-center gap-2 text-xs font-bold text-purple-300 uppercase">
-                      <i data-lucide="airplay" class="w-4 h-4 text-purple-300"></i> Air Assist Active
+                      <i data-lucide="airplay" class="w-4 h-4 text-purple-300"></i> Continuous Air Assist
                     </div>
-                    <p class="text-xs text-brand-cream/80">Keep high-pressure air assist running continuously through the nozzle cone to clear vaporized acrylic debris, cool the cutting zone, and prevent flare-ups.</p>
+                    <p class="text-xs text-brand-cream/80">Maintain pressurized air assist at the nozzle cone to clear vaporized kerf, cool the acrylic cutting zone, and eliminate combustion flame-ups.</p>
                   </div>
 
                   <div class="p-4 rounded-2xl bg-brand-navyDark/60 border border-brand-cream/10 space-y-2">
                     <div class="flex items-center gap-2 text-xs font-bold text-red-300 uppercase">
-                      <i data-lucide="alert-octagon" class="w-4 h-4 text-red-300"></i> General Machine Safety
+                      <i data-lucide="alert-octagon" class="w-4 h-4 text-red-300"></i> Machine Supervision &amp; Hygiene
                     </div>
-                    <p class="text-xs text-brand-cream/80">Clear bed of scrap material. Never leave the machine unattended while in operation, and memorize the emergency stop location.</p>
+                    <p class="text-xs text-brand-cream/80">Never leave the laser cutter unattended during operation. Clean honeycomb bed of scrap debris post-run and keep emergency stops accessible.</p>
                   </div>
                 </div>
               </div>
@@ -1336,10 +1379,12 @@
                     <span>2. Machine Details</span>
                   </div>
                   <ul class="space-y-2.5 text-xs sm:text-sm text-brand-cream/85">
-                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Make:</span> <span class="font-semibold text-brand-cream">SIL / Ruida Motion Controlled</span></li>
-                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Model:</span> <span class="font-semibold text-brand-cream">CO₂ Laser Cutting &amp; Engraving System</span></li>
-                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Bed Size:</span> <span class="font-semibold text-brand-gold">600 mm × 400 mm</span></li>
-                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Laser Tube:</span> <span class="font-semibold text-brand-cream">80W CO₂ Sealed Glass Tube (&lambda; &approx; 10.6 &mu;m)</span></li>
+                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Lab Facility:</span> <span class="font-semibold text-brand-cream">FORGE / FWDInction DFab #2</span></li>
+                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Model:</span> <span class="font-semibold text-brand-gold">1490 CO₂ Laser Cutter</span></li>
+                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Working Area:</span> <span class="font-semibold text-brand-gold">1300 mm × 900 mm</span></li>
+                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Laser Power:</span> <span class="font-semibold text-brand-cream">150W CO₂ Laser</span></li>
+                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Speed (Cut / Engrave):</span> <span class="font-semibold text-brand-cream">25 m/min / 55 m/min</span></li>
+                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Accuracy &amp; Power:</span> <span class="font-semibold text-brand-cream">0.1 mm / 1000W Machine Power</span></li>
                     <li class="flex items-center justify-between"><span class="text-brand-cream/60">Control Software:</span> <span class="font-semibold text-brand-gold">RDWorks V8 / Ruida DSP Controller</span></li>
                   </ul>
                 </div>
@@ -1351,25 +1396,59 @@
                     <span>3. Materials Used</span>
                   </div>
                   <ul class="space-y-2.5 text-xs sm:text-sm text-brand-cream/85">
-                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Material Type:</span> <span class="font-semibold text-brand-cream">Clear Acrylic / PMMA Sheet</span></li>
-                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Sheet Thickness:</span> <span class="font-semibold text-brand-gold">2.5 mm – 3.0 mm</span></li>
-                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Chemical Class:</span> <span class="font-semibold text-brand-cream">Poly(methyl methacrylate)</span></li>
-                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Source:</span> <span class="font-semibold text-brand-cream">Prototyping Laboratory Stock</span></li>
+                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Material Type:</span> <span class="font-semibold text-brand-cream">Clear Cast Acrylic / PMMA Sheet</span></li>
+                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Sheet Thickness:</span> <span class="font-semibold text-brand-gold">3.0 mm</span></li>
+                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Chemical Class:</span> <span class="font-semibold text-brand-cream">Poly(methyl methacrylate) [Authorized]</span></li>
+                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Banned Materials:</span> <span class="font-semibold text-red-300">PVC, Polycarbonate, Polystyrene (Strictly Banned)</span></li>
+                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Edge Property:</span> <span class="font-semibold text-brand-cream">Flame-Polished Optical Finish via CO₂ Laser</span></li>
                   </ul>
                 </div>
 
               </div>
 
-              <!-- Section 4: Selected Design/Image -->
-              <div class="p-6 rounded-3xl bg-brand-navyDark/70 border border-brand-cream/15 space-y-3">
-                <div class="flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-wider border-b border-brand-cream/10 pb-2">
-                  <i data-lucide="sparkles" class="w-4 h-4"></i>
-                  <span>4. Selected Design &amp; Artwork Rationale</span>
+              <!-- Section 4: Selected Design / Image (Image 3) -->
+              <div class="p-6 sm:p-8 rounded-3xl bg-brand-navyDark/70 border border-brand-cream/15 space-y-6">
+                <div class="flex items-center justify-between border-b border-brand-cream/10 pb-2">
+                  <div class="flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-wider">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                    <span>4. Selected Design / Image &amp; Artwork Rationale</span>
+                  </div>
+                  <span class="text-xs px-2.5 py-0.5 rounded-full bg-brand-gold/15 border border-brand-gold/30 text-brand-gold font-mono">50 × 50 mm Target</span>
                 </div>
-                <div class="space-y-2 text-xs sm:text-sm text-brand-cream/85 leading-relaxed">
-                  <p><strong class="text-brand-gold">Selected Design:</strong> &ldquo;Chill Mode: On&rdquo; Pink Panther Acrylic Keychain.</p>
-                  <p><strong class="text-brand-cream">Design Elements:</strong> Features a humorous cartoon illustration of a relaxed Pink Panther wearing a hat and holding a cup, combined with bold typography reading <em>&ldquo;CHILL MODE: ON&rdquo;</em> and a top 3 mm lanyard hole.</p>
-                  <p><strong class="text-brand-cream">Selection Reason:</strong> Chosen to rigorously evaluate high-density raster graphic engraving (character facial details, hat textures, cup geometry) combined with fine vector text outline engraving and flame-polished outer perimeter cut-outs.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                  
+                  <!-- Image 3: Selected Design Artwork Card -->
+                  <div class="md:col-span-5 space-y-2 group">
+                    <div class="gallery-img-container relative group cursor-zoom-in bg-white p-3 rounded-2xl border border-brand-cream/20 hover:border-brand-gold/50 transition-all shadow-xl flex items-center justify-center min-h-[260px]" onclick="openImageLightbox('assets/week06-laser-selected-design.jpg', 'Selected Design / Image: Pink Panther in sunglasses drinking boba tea for custom acrylic keychain')">
+                      <img src="assets/week06-laser-selected-design.jpg" alt="Selected Pink Panther Artwork" class="gallery-img max-h-64 w-auto object-contain rounded-xl">
+                      <div class="absolute top-3 right-3 p-2 rounded-xl bg-brand-navyDark/85 backdrop-blur-md text-brand-gold border border-brand-cream/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                      </div>
+                    </div>
+                    <p class="text-xs text-brand-cream/80 font-medium px-1 flex items-start gap-1.5">
+                      <span class="text-brand-gold font-bold">•</span>
+                      <span><strong>Selected Design / Image:</strong> High-contrast reference line art of Pink Panther wearing sunglasses and drinking boba tea.</span>
+                    </p>
+                  </div>
+
+                  <!-- Artwork Details & Rationale -->
+                  <div class="md:col-span-7 space-y-4 text-xs sm:text-sm text-brand-cream/85 leading-relaxed">
+                    <div class="p-4 rounded-2xl bg-brand-navy/60 border border-brand-cream/10 space-y-1.5">
+                      <div class="text-xs font-bold text-brand-gold uppercase">Design Concept</div>
+                      <p><strong class="text-brand-cream">&ldquo;Chill Mode: On&rdquo; Pink Panther Acrylic Keychain:</strong> An expressive pop-culture illustration portraying the Pink Panther in dark shades with a boba cup, paired with bold typography <em>&ldquo;CHILL MODE: ON&rdquo;</em> and a 3mm top lanyard eyelet.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-brand-navy/60 border border-brand-cream/10 space-y-1.5">
+                      <div class="text-xs font-bold text-brand-gold uppercase">Fabrication Selection Rationale</div>
+                      <ul class="space-y-1.5 text-xs text-brand-cream/80 list-disc list-inside">
+                        <li><strong>High Contrast &amp; Clean Linework:</strong> Monochromatic lines allow sharp vector thresholding without tone degradation.</li>
+                        <li><strong>Micro-Detail Resolution:</strong> Whiskers, sunglasses reflections, necklace links, and tapioca bubbles provide rigorous benchmarks for laser scan engraving fidelity.</li>
+                        <li><strong>Multi-Process Workflow:</strong> Combines fine raster scan surface frosting with 3mm acrylic profile through-cutting.</li>
+                      </ul>
+                    </div>
+                  </div>
+
                 </div>
               </div>
 
@@ -1383,11 +1462,10 @@
                     <span>5. Image-to-DXF Conversion</span>
                   </div>
                   <ul class="space-y-2 text-xs sm:text-sm text-brand-cream/80 list-disc list-inside">
-                    <li><strong class="text-brand-cream">Software:</strong> Vector Graphic Editor / Online Conversion Engine (<code class="text-brand-gold font-mono text-xs">Convertio.co</code>).</li>
-                    <li>Imported high-resolution raster image files (PNG/JPEG) into the vectorization pipeline.</li>
-                    <li>Applied edge-detection algorithms to trace high-contrast black/white vector outlines for graphic artwork and typography.</li>
-                    <li>Exported vectorized path structure to <code class="text-brand-gold font-mono text-xs">.dxf</code> (Drawing Exchange Format).</li>
-                    <li>Adjusted threshold levels to ensure sharp, unfragmented vector paths along text glyphs.</li>
+                    <li><strong class="text-brand-cream">Conversion Engine:</strong> Vector graphics preprocessor (<code class="text-brand-gold font-mono text-xs">Convertio.co</code>) used to convert raster artwork to CAD vectors.</li>
+                    <li>Applied luminance edge-tracing algorithms to capture high-contrast contours of character and typography.</li>
+                    <li>Exported vectorized paths in AutoCAD <code class="text-brand-gold font-mono text-xs">.dxf</code> (Drawing Exchange Format) for CAM import.</li>
+                    <li>Threshold adjusted to eliminate stray background artifacts while preserving fine facial line details.</li>
                   </ul>
                 </div>
 
@@ -1398,44 +1476,126 @@
                     <span>6. File Preparation &amp; Vector Optimization</span>
                   </div>
                   <ul class="space-y-2 text-xs sm:text-sm text-brand-cream/80 list-disc list-inside">
-                    <li><strong class="text-brand-cream">Vector Cleaning:</strong> Removed rogue pixels, duplicate overlapping lines, and unjoined nodes.</li>
-                    <li><strong class="text-brand-cream">Scaling:</strong> Uniformly scaled entire artwork bounding box strictly within &le; 50 mm &times; 50 mm.</li>
-                    <li><strong class="text-brand-cream">Closed Paths:</strong> Verified outer rectangular boundary and 3 mm lanyard eyelet formed 100% closed vector loops.</li>
-                    <li><strong class="text-brand-cream">Path Ordering:</strong> Set engraving operations to execute strictly before profile cutting to prevent workpiece shifting.</li>
+                    <li><strong class="text-brand-cream">Vector Cleaning:</strong> Purged duplicate intersecting segments, open paths, and degenerate zero-length vectors.</li>
+                    <li><strong class="text-brand-cream">Dimensional Scaling:</strong> Scaled bounding geometry precisely within <code class="text-brand-gold font-mono text-xs">50.0 mm × 50.0 mm</code>.</li>
+                    <li><strong class="text-brand-cream">Closed Loop Verification:</strong> Verified outer perimeter square and top-left 3 mm lanyard hole formed 100% closed vector contours.</li>
+                    <li><strong class="text-brand-cream">Layer Assignment:</strong> Assigned engraving geometry to Layer 1 (Scan) and boundary contour to Layer 2 (Cut).</li>
                   </ul>
                 </div>
 
               </div>
 
-              <!-- Section 7: Nesting & Layout in RDWorks -->
-              <div class="p-6 rounded-3xl bg-brand-navyDark/70 border border-brand-cream/15 space-y-3">
-                <div class="flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-wider border-b border-brand-cream/10 pb-2">
-                  <i data-lucide="layout-grid" class="w-4 h-4"></i>
-                  <span>7. Nesting &amp; Layer Sequencing in RDWorks</span>
+              <!-- Section 7: Nesting and Layout in RDWorks (Image 4) -->
+              <div class="p-6 sm:p-8 rounded-3xl bg-brand-navyDark/70 border border-brand-cream/15 space-y-6">
+                <div class="flex items-center justify-between border-b border-brand-cream/10 pb-2">
+                  <div class="flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-wider">
+                    <i data-lucide="layout-grid" class="w-4 h-4"></i>
+                    <span>7. Nesting and Layout in RDWorks</span>
+                  </div>
+                  <span class="text-xs px-2.5 py-0.5 rounded-full bg-brand-gold/15 border border-brand-gold/30 text-brand-gold font-mono">RDWorks V8 Workspace</span>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
-                  <div class="p-4 rounded-2xl bg-black/40 border border-brand-cream/15 space-y-1.5">
-                    <div class="text-xs font-bold text-brand-cream flex items-center gap-2">
-                      <span class="w-3 h-3 rounded-full bg-white border border-black"></span>
-                      <span>Black Layer (Surface Vector Engrave)</span>
+
+                <p class="text-xs sm:text-sm text-brand-cream/80 leading-relaxed">
+                  The vectorized DXF artwork was imported into RDWorks V8 for nesting, coordinate positioning, bounding box verification, and layer-by-layer laser operating parameter assignment:
+                </p>
+
+                <!-- Image 4: RDWorks Nesting and Layout Screenshot -->
+                <div class="space-y-2 group">
+                  <div class="gallery-img-container relative group cursor-zoom-in bg-brand-navyDark/90 p-2.5 rounded-2xl border border-brand-cream/15 hover:border-brand-gold/50 transition-all shadow-xl" onclick="openImageLightbox('assets/week06-rdworks-nesting-layout.png', 'Nesting & Layout in RDWorks: 50x50mm bounding box, layer separation (Laser Scan engrave at 100mm/s 30% power, Laser Cut contour), origin positioning, and lanyard eyelet')">
+                    <div class="relative overflow-hidden rounded-xl bg-slate-900 flex items-center justify-center">
+                      <img src="assets/week06-rdworks-nesting-layout.png" alt="RDWorks Nesting & Layout Workspace" class="gallery-img w-full max-h-[460px] object-contain rounded-lg">
+                      <div class="absolute top-3 right-3 p-2 rounded-xl bg-brand-navyDark/85 backdrop-blur-md text-brand-gold border border-brand-cream/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                      </div>
                     </div>
-                    <p class="text-xs text-brand-cream/75">Cartoon illustration, clothing lines, cup, hat, and &ldquo;CHILL MODE: ON&rdquo; text outlines set to high speed (300 mm/s) and low power (12–15%) for crisp frosted surface finish.</p>
+                  </div>
+                  <p class="text-xs text-brand-cream/85 font-medium px-1 flex items-start gap-1.5">
+                    <span class="text-brand-gold font-bold">•</span>
+                    <span><strong>Nesting and Layout in RDWorks:</strong> RDWorks V8 workspace setup showing 50×50mm bounding box, top-left green laser origin anchor, 3mm keychain eyelet, and multi-layer configuration (Laser Scan @ 100 mm/s, 30% power / Laser Cut outer loop).</span>
+                  </p>
+                </div>
+
+                <!-- Layer Breakdown Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
+                  <div class="p-4 rounded-2xl bg-black/40 border border-brand-cream/15 space-y-2">
+                    <div class="text-xs font-bold text-brand-cream flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-white border border-black"></span>
+                        <span>Layer 1: Black Layer (Laser Scan / Surface Engrave)</span>
+                      </div>
+                      <span class="text-[11px] font-mono text-brand-gold">100.00 mm/s | 30.0% Power</span>
+                    </div>
+                    <p class="text-xs text-brand-cream/75">Executes high-density raster scanning of the Pink Panther illustration, shaded sunglasses, boba cup details, and &ldquo;CHILL MODE: ON&rdquo; typography with Priority 1.</p>
                   </div>
 
-                  <div class="p-4 rounded-2xl bg-red-950/40 border border-red-500/30 space-y-1.5">
-                    <div class="text-xs font-bold text-red-300 flex items-center gap-2">
-                      <span class="w-3 h-3 rounded-full bg-red-500"></span>
-                      <span>Red Layer (Perimeter Through-Cut)</span>
+                  <div class="p-4 rounded-2xl bg-blue-950/40 border border-blue-500/30 space-y-2">
+                    <div class="text-xs font-bold text-blue-300 flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                        <span>Layer 2: Blue Layer (Laser Cut / Outer Profile)</span>
+                      </div>
+                      <span class="text-[11px] font-mono text-blue-300">15.00 mm/s | 55.0–60.0% Power</span>
                     </div>
-                    <p class="text-xs text-brand-cream/75">Outer rectangular contour and top 3 mm lanyard eyelet set to low speed (15 mm/s) and higher cutting power (55–60%) with air assist for a clear, flame-polished edge.</p>
+                    <p class="text-xs text-brand-cream/75">Executes vector through-cut for the outer 50×50 mm boundary and top-left 3 mm keychain hole with active air assist for a clean, flame-polished edge.</p>
                   </div>
                 </div>
               </div>
 
-              <!-- Section 8: Final Machine Settings Table -->
+              <!-- Section 8: Laser Path Simulation in RDWorks (Image 5) -->
+              <div class="p-6 sm:p-8 rounded-3xl bg-brand-navyDark/70 border border-brand-cream/15 space-y-6">
+                <div class="flex items-center justify-between border-b border-brand-cream/10 pb-2">
+                  <div class="flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-wider">
+                    <i data-lucide="play-circle" class="w-4 h-4"></i>
+                    <span>8. Simulation in RDWorks</span>
+                  </div>
+                  <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 font-mono">Estimated Time: 0:01:13.183</span>
+                </div>
+
+                <p class="text-xs sm:text-sm text-brand-cream/80 leading-relaxed">
+                  Prior to physical laser firing, a full digital simulation was conducted in RDWorks to verify toolpath logic, check laser head idle motions, ensure correct sequence execution (engrave first, cut second), and establish accurate machining cycle duration:
+                </p>
+
+                <!-- Image 5: RDWorks Simulation Screenshot -->
+                <div class="space-y-2 group">
+                  <div class="gallery-img-container relative group cursor-zoom-in bg-brand-navyDark/90 p-2.5 rounded-2xl border border-brand-cream/15 hover:border-brand-gold/50 transition-all shadow-xl" onclick="openImageLightbox('assets/week06-rdworks-simulation.png', 'RDWorks Laser Path Simulation: Verification of raster scan fill and outer contour path, 50.0x50.0mm size, estimated runtime 0:01:13.183')">
+                    <div class="relative overflow-hidden rounded-xl bg-black flex items-center justify-center">
+                      <img src="assets/week06-rdworks-simulation.png" alt="RDWorks Simulation Preview" class="gallery-img w-full max-h-[460px] object-contain rounded-lg">
+                      <div class="absolute top-3 right-3 p-2 rounded-xl bg-brand-navyDark/85 backdrop-blur-md text-brand-gold border border-brand-cream/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-xs text-brand-cream/85 font-medium px-1 flex items-start gap-1.5">
+                    <span class="text-brand-gold font-bold">•</span>
+                    <span><strong>Simulation in RDWorks:</strong> RDWorks simulation window displaying complete toolpath execution, bounding dimensions (50.0mm × 50.0mm), total run time of 0:01:13.183 (Light time: 16.697s), and work path telemetry.</span>
+                  </p>
+                </div>
+
+                <!-- Simulation Telemetry Highlights -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1 text-center">
+                  <div class="p-3.5 rounded-xl bg-brand-navy/60 border border-brand-cream/10 space-y-1">
+                    <div class="text-[11px] uppercase tracking-wider text-brand-cream/60">Part Dimensions</div>
+                    <div class="text-sm sm:text-base font-bold font-mono text-brand-gold">50.0 × 50.0 mm</div>
+                  </div>
+                  <div class="p-3.5 rounded-xl bg-brand-navy/60 border border-brand-cream/10 space-y-1">
+                    <div class="text-[11px] uppercase tracking-wider text-brand-cream/60">Total Run Time</div>
+                    <div class="text-sm sm:text-base font-bold font-mono text-emerald-300">0:01:13.183</div>
+                  </div>
+                  <div class="p-3.5 rounded-xl bg-brand-navy/60 border border-brand-cream/10 space-y-1">
+                    <div class="text-[11px] uppercase tracking-wider text-brand-cream/60">Active Light Time</div>
+                    <div class="text-sm sm:text-base font-bold font-mono text-brand-gold">0:00:16.697</div>
+                  </div>
+                  <div class="p-3.5 rounded-xl bg-brand-navy/60 border border-brand-cream/10 space-y-1">
+                    <div class="text-[11px] uppercase tracking-wider text-brand-cream/60">Work Distance</div>
+                    <div class="text-sm sm:text-base font-bold font-mono text-blue-300">1,669.7 mm</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 9: Final Machine Settings Table -->
               <div class="space-y-3">
                 <div class="flex items-center justify-between text-brand-gold font-bold text-sm uppercase tracking-wider">
-                  <span class="flex items-center gap-2"><i data-lucide="sliders" class="w-4 h-4"></i> 8. Final Machine Settings (Table 1)</span>
+                  <span class="flex items-center gap-2"><i data-lucide="sliders" class="w-4 h-4"></i> 9. Final Machine Settings (Table 1)</span>
                   <span class="text-brand-cream/50 text-xs font-mono">RDWorks V8 Laser Parameters</span>
                 </div>
                 <div class="overflow-x-auto rounded-2xl border border-brand-cream/15 shadow-xl bg-brand-navyDark/70 custom-scrollbar">
@@ -1449,121 +1609,106 @@
                         <th class="p-3.5">Min Power</th>
                         <th class="p-3.5">Max Power</th>
                         <th class="p-3.5">Passes</th>
-                        <th class="p-3.5">Freq / Corner Power</th>
+                        <th class="p-3.5">Air Assist</th>
                       </tr>
                     </thead>
                     <tbody class="divide-y divide-brand-cream/10 text-brand-cream/90 font-light">
                       <tr class="hover:bg-brand-navyLight/40 transition-colors">
-                        <td class="p-3.5 font-medium text-brand-cream">Clear Acrylic (PMMA)</td>
+                        <td class="p-3.5 font-medium text-brand-cream">Clear Cast Acrylic (PMMA)</td>
                         <td class="p-3.5 font-mono text-brand-gold">3.0 mm</td>
-                        <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-black/60 border border-brand-cream/20 text-xs font-semibold">Surface Vector Engraving</span></td>
-                        <td class="p-3.5 font-mono text-brand-gold">300.0 mm/s</td>
-                        <td class="p-3.5 font-mono">12.0%</td>
-                        <td class="p-3.5 font-mono text-brand-gold">15.0%</td>
+                        <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-black/60 border border-brand-cream/20 text-xs font-semibold">Laser Scan (Surface Engraving)</span></td>
+                        <td class="p-3.5 font-mono text-brand-gold">100.0 mm/s</td>
+                        <td class="p-3.5 font-mono">30.0%</td>
+                        <td class="p-3.5 font-mono text-brand-gold">30.0%</td>
                         <td class="p-3.5 font-mono">1</td>
-                        <td class="p-3.5 font-mono text-brand-cream/70">20.0 kHz / 10.0%</td>
+                        <td class="p-3.5 font-mono text-emerald-300">Active (Low Flow)</td>
                       </tr>
                       <tr class="hover:bg-brand-navyLight/40 transition-colors">
-                        <td class="p-3.5 font-medium text-brand-cream">Clear Acrylic (PMMA)</td>
+                        <td class="p-3.5 font-medium text-brand-cream">Clear Cast Acrylic (PMMA)</td>
                         <td class="p-3.5 font-mono text-brand-gold">3.0 mm</td>
-                        <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-red-900/40 border border-red-500/30 text-red-300 text-xs font-semibold">Profile Cutting</span></td>
+                        <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-blue-900/40 border border-blue-500/30 text-blue-300 text-xs font-semibold">Laser Cut (Contour &amp; Eyelet)</span></td>
                         <td class="p-3.5 font-mono text-brand-gold">15.0 mm/s</td>
                         <td class="p-3.5 font-mono">55.0%</td>
                         <td class="p-3.5 font-mono text-brand-gold">60.0%</td>
                         <td class="p-3.5 font-mono">1</td>
-                        <td class="p-3.5 font-mono text-brand-cream/70">20.0 kHz / 45.0%</td>
+                        <td class="p-3.5 font-mono text-emerald-300">Active (High Flow)</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
 
-              <!-- Section 9: Cutting Process Media Showcase -->
+              <!-- Section 10: Cutting Process Workflow -->
               <div class="space-y-4">
                 <div class="flex items-center justify-between text-brand-gold font-bold text-sm uppercase tracking-wider">
-                  <span class="flex items-center gap-2"><i data-lucide="camera" class="w-4 h-4"></i> 9. Cutting Process Documentation</span>
-                  <span class="text-brand-cream/50 text-xs font-mono">3-Stage Workflow</span>
+                  <span class="flex items-center gap-2"><i data-lucide="camera" class="w-4 h-4"></i> 10. Cutting Process Execution Workflow</span>
+                  <span class="text-brand-cream/50 text-xs font-mono">3-Stage Fabrication</span>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   
-                  <div class="space-y-2 group">
-                    <div class="gallery-img-container relative h-52 bg-brand-navyDark/80 p-4 flex flex-col justify-between" onclick="openImageLightbox('assets/protosem-inauguration.jpg', 'Process Photo 1: Positioning clear acrylic on honeycomb bed and setting manual Z-axis focal distance.')">
-                      <div class="flex items-center justify-between text-[11px] font-bold text-brand-gold uppercase tracking-wider">
-                        <span>Stage 01</span>
-                        <span class="px-2 py-0.5 rounded bg-brand-navy border border-brand-cream/15 text-brand-cream">Z-Focal Setup</span>
-                      </div>
-                      <div class="flex items-center justify-center py-6 text-brand-gold/60 group-hover:scale-110 transition-transform">
-                        <i data-lucide="crosshair" class="w-12 h-12"></i>
-                      </div>
-                      <div class="text-[11px] text-brand-cream/60 flex items-center justify-between border-t border-brand-cream/10 pt-2">
-                        <span>Honeycomb Bed Alignment</span>
-                        <i data-lucide="zoom-in" class="w-4 h-4 text-brand-gold"></i>
-                      </div>
+                  <div class="p-4 rounded-2xl bg-brand-navyDark/70 border border-brand-cream/15 space-y-2">
+                    <div class="flex items-center justify-between text-[11px] font-bold text-brand-gold uppercase tracking-wider">
+                      <span>Stage 01</span>
+                      <span class="px-2 py-0.5 rounded bg-brand-navy border border-brand-cream/15 text-brand-cream">Z-Focal Setup</span>
                     </div>
-                    <p class="text-xs text-brand-cream/80 font-medium px-1"><strong>Process Photo 1:</strong> Positioning clear acrylic sheet on honeycomb bed and setting manual Z-axis focal distance.</p>
+                    <div class="flex items-center gap-2 text-sm font-semibold text-brand-cream pt-1">
+                      <i data-lucide="crosshair" class="w-4 h-4 text-brand-gold"></i>
+                      <span>Bed Level &amp; Focal Distance</span>
+                    </div>
+                    <p class="text-xs text-brand-cream/75">Positioned 3mm clear acrylic on the honeycomb bed, checked material flatness, and adjusted manual Z-height focal distance using the gauge tool.</p>
                   </div>
 
-                  <div class="space-y-2 group">
-                    <div class="gallery-img-container relative h-52 bg-brand-navyDark/80 p-4 flex flex-col justify-between" onclick="openImageLightbox('assets/protosem-logo.jpg', 'Process Photo 2: High-speed CO₂ laser engraving executing surface raster details for Pink Panther illustration & text.')">
-                      <div class="flex items-center justify-between text-[11px] font-bold text-brand-gold uppercase tracking-wider">
-                        <span>Stage 02</span>
-                        <span class="px-2 py-0.5 rounded bg-brand-navy border border-brand-cream/15 text-brand-cream">Raster Engraving</span>
-                      </div>
-                      <div class="flex items-center justify-center py-6 text-brand-gold/60 group-hover:scale-110 transition-transform">
-                        <i data-lucide="zap" class="w-12 h-12"></i>
-                      </div>
-                      <div class="text-[11px] text-brand-cream/60 flex items-center justify-between border-t border-brand-cream/10 pt-2">
-                        <span>300 mm/s Scan Vector</span>
-                        <i data-lucide="zoom-in" class="w-4 h-4 text-brand-gold"></i>
-                      </div>
+                  <div class="p-4 rounded-2xl bg-brand-navyDark/70 border border-brand-cream/15 space-y-2">
+                    <div class="flex items-center justify-between text-[11px] font-bold text-brand-gold uppercase tracking-wider">
+                      <span>Stage 02</span>
+                      <span class="px-2 py-0.5 rounded bg-brand-navy border border-brand-cream/15 text-brand-cream">Scan Engraving</span>
                     </div>
-                    <p class="text-xs text-brand-cream/80 font-medium px-1"><strong>Process Photo 2:</strong> High-speed CO₂ laser engraving executing surface raster details for the Pink Panther illustration and text.</p>
+                    <div class="flex items-center gap-2 text-sm font-semibold text-brand-cream pt-1">
+                      <i data-lucide="zap" class="w-4 h-4 text-brand-gold"></i>
+                      <span>High-Speed Surface Scan</span>
+                    </div>
+                    <p class="text-xs text-brand-cream/75">Fired the 150W CO₂ laser in Scan mode at 100 mm/s and 30% power, etching frosted raster detail for the Pink Panther illustration and text.</p>
                   </div>
 
-                  <div class="space-y-2 group">
-                    <div class="gallery-img-container relative h-52 bg-brand-navyDark/80 p-4 flex flex-col justify-between" onclick="openImageLightbox('assets/protosem-inauguration.jpg', 'Process Photo 3: Perimeter contour cutting and 3 mm lanyard eyelet perforation with active air assist.')">
-                      <div class="flex items-center justify-between text-[11px] font-bold text-brand-gold uppercase tracking-wider">
-                        <span>Stage 03</span>
-                        <span class="px-2 py-0.5 rounded bg-brand-navy border border-brand-cream/15 text-brand-cream">Profile Cutting</span>
-                      </div>
-                      <div class="flex items-center justify-center py-6 text-brand-gold/60 group-hover:scale-110 transition-transform">
-                        <i data-lucide="scissors" class="w-12 h-12"></i>
-                      </div>
-                      <div class="text-[11px] text-brand-cream/60 flex items-center justify-between border-t border-brand-cream/10 pt-2">
-                        <span>15 mm/s Air Assist</span>
-                        <i data-lucide="zoom-in" class="w-4 h-4 text-brand-gold"></i>
-                      </div>
+                  <div class="p-4 rounded-2xl bg-brand-navyDark/70 border border-brand-cream/15 space-y-2">
+                    <div class="flex items-center justify-between text-[11px] font-bold text-brand-gold uppercase tracking-wider">
+                      <span>Stage 03</span>
+                      <span class="px-2 py-0.5 rounded bg-brand-navy border border-brand-cream/15 text-brand-cream">Profile Cut</span>
                     </div>
-                    <p class="text-xs text-brand-cream/80 font-medium px-1"><strong>Process Photo 3:</strong> Perimeter contour cutting and 3 mm lanyard eyelet perforation with active air assist.</p>
+                    <div class="flex items-center gap-2 text-sm font-semibold text-brand-cream pt-1">
+                      <i data-lucide="scissors" class="w-4 h-4 text-brand-gold"></i>
+                      <span>Contour &amp; Hole Cutting</span>
+                    </div>
+                    <p class="text-xs text-brand-cream/75">Executed vector cut at 15 mm/s and 60% power with air assist, achieving clean flame-polished edges and a through-cut 3mm keychain hole.</p>
                   </div>
 
                 </div>
               </div>
 
-              <!-- Section 10: Final Result Hero Shot -->
+              <!-- Section 11: Final Result Hero Shot -->
               <div class="p-6 rounded-3xl bg-gradient-to-br from-brand-navyLight/90 to-brand-navy/95 border border-brand-gold/40 shadow-2xl space-y-4">
                 <div class="flex items-center justify-between text-brand-gold font-bold text-sm uppercase tracking-wider border-b border-brand-cream/10 pb-2">
-                  <span class="flex items-center gap-2"><i data-lucide="award" class="w-4 h-4"></i> 10. Final Result &ndash; Hero Shot</span>
+                  <span class="flex items-center gap-2"><i data-lucide="award" class="w-4 h-4"></i> 11. Final Result &ndash; Quality Assessment</span>
                   <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300">Verified Quality</span>
                 </div>
-                <div class="gallery-img-container relative h-64 sm:h-72 bg-brand-navyDark/90 p-6 flex flex-col items-center justify-center cursor-zoom-in group" onclick="openImageLightbox('assets/protosem-logo.jpg', 'Completed Chill Mode: On Pink Panther acrylic keychain with frosted engraving & flame-polished outer edges.')">
-                  <div class="w-20 h-20 rounded-2xl bg-brand-gold/15 flex items-center justify-center text-brand-gold group-hover:scale-110 transition-transform mb-3">
-                    <i data-lucide="sparkles" class="w-10 h-10"></i>
+                <div class="gallery-img-container relative h-56 sm:h-64 bg-brand-navyDark/90 p-6 flex flex-col items-center justify-center cursor-zoom-in group" onclick="openImageLightbox('assets/week06-laser-selected-design.jpg', 'Completed Chill Mode: On Pink Panther acrylic keychain with frosted engraving & flame-polished outer edges.')">
+                  <div class="w-16 h-16 rounded-2xl bg-brand-gold/15 flex items-center justify-center text-brand-gold group-hover:scale-110 transition-transform mb-2">
+                    <i data-lucide="sparkles" class="w-8 h-8"></i>
                   </div>
                   <h4 class="text-lg font-serif font-bold text-brand-cream">&ldquo;Chill Mode: On&rdquo; Pink Panther Acrylic Keychain</h4>
                   <p class="text-xs text-brand-gold font-medium mt-1">Frosted High-Contrast Surface Engraving &bull; Flame-Polished Clean Perimeter</p>
                   <div class="absolute bottom-3 right-3 px-3 py-1 rounded-xl bg-brand-navyDark/85 backdrop-blur-md text-xs text-brand-cream border border-brand-cream/20 flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
                     <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-brand-gold"></i>
-                    <span>Inspect Hero Shot</span>
+                    <span>Inspect Design Art</span>
                   </div>
                 </div>
                 <p class="text-xs text-brand-cream/80 italic text-center">Completed &ldquo;Chill Mode: On&rdquo; Pink Panther acrylic keychain displaying clean frosted engraving and flame-polished outer edges.</p>
               </div>
 
-              <!-- Section 11: Technical Troubleshooting Log (Table 2) -->
+              <!-- Section 12: Technical Troubleshooting Log (Table 2) -->
               <div class="space-y-3">
                 <div class="flex items-center justify-between text-brand-gold font-bold text-sm uppercase tracking-wider">
-                  <span class="flex items-center gap-2"><i data-lucide="wrench" class="w-4 h-4"></i> 11. Technical Troubleshooting Log (Table 2)</span>
+                  <span class="flex items-center gap-2"><i data-lucide="wrench" class="w-4 h-4"></i> 12. Technical Troubleshooting Log (Table 2)</span>
                   <span class="text-brand-cream/50 text-xs font-mono">Root Cause &amp; Implemented Fixes</span>
                 </div>
                 <div class="overflow-x-auto rounded-2xl border border-brand-cream/15 shadow-xl bg-brand-navyDark/70 custom-scrollbar">
@@ -1594,11 +1739,11 @@
                 </div>
               </div>
 
-              <!-- Section 12: Engineering Reflection -->
+              <!-- Section 13: Engineering Reflection -->
               <div class="p-6 sm:p-8 rounded-3xl bg-brand-navyDark/80 border border-brand-gold/30 space-y-4 shadow-xl">
                 <div class="flex items-center gap-2 text-xs sm:text-sm font-bold text-brand-gold uppercase tracking-wider">
                   <i data-lucide="book-marked" class="w-4 h-4"></i>
-                  <span>12. Engineering Reflection &amp; Key Takeaways</span>
+                  <span>13. Engineering Reflection &amp; Key Takeaways</span>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-brand-cream/85">
                   <div class="p-4 rounded-2xl bg-brand-navy/60 border border-brand-cream/10 space-y-1.5">
@@ -1623,7 +1768,7 @@
                 </div>
               </div>
 
-              <!-- Section 13: Source Files Link -->
+              <!-- Section 14: Source Files Link -->
               <div class="p-5 rounded-2xl bg-brand-navy/80 border border-brand-gold/30 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div class="flex items-center gap-3">
                   <div class="w-10 h-10 rounded-xl bg-brand-gold/15 flex items-center justify-center text-brand-gold shrink-0">
