@@ -1638,13 +1638,59 @@
                 </div>
               </div>
 
-              <!-- Section 10: Cutting Process Workflow -->
-              <div class="space-y-4">
-                <div class="flex items-center justify-between text-brand-gold font-bold text-sm uppercase tracking-wider">
-                  <span class="flex items-center gap-2"><i data-lucide="camera" class="w-4 h-4"></i> 10. Cutting Process Execution Workflow</span>
-                  <span class="text-brand-cream/50 text-xs font-mono">3-Stage Fabrication</span>
+              <!-- Section 10: Cutting Process Workflow & Machine Operation -->
+              <div class="space-y-6">
+                <div class="flex items-center justify-between border-b border-brand-cream/10 pb-2">
+                  <div class="flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-wider">
+                    <i data-lucide="camera" class="w-4 h-4"></i>
+                    <span>10. Cutting Process &amp; Machine Operation Workflow</span>
+                  </div>
+                  <span class="text-xs px-2.5 py-0.5 rounded-full bg-blue-500/15 border border-blue-500/30 text-blue-300 font-mono">Hands-On DFab Lab Session</span>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+                <p class="text-xs sm:text-sm text-brand-cream/80 leading-relaxed">
+                  Real-time photo documentation capturing hands-on machine operation at the FORGE DFab facility and the active CO₂ laser engraving execution:
+                </p>
+
+                <!-- Process Documentation Gallery (Machine Operation & In-Process Engraving) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  
+                  <!-- Photo: Operating the Laser Cutter Machine -->
+                  <div class="space-y-2 group">
+                    <div class="gallery-img-container relative group cursor-zoom-in bg-brand-navyDark/90 p-2.5 rounded-2xl border border-brand-cream/15 hover:border-brand-gold/50 transition-all shadow-xl" onclick="openImageLightbox('assets/week06-laser-operating-machine.jpg', 'Operating the Laser Cutter: Neha configuring the FORGE 1490 CO2 Laser control panel wearing protective goggles in the prototyping lab.')">
+                      <div class="relative overflow-hidden rounded-xl bg-slate-900 flex items-center justify-center min-h-[240px]">
+                        <img src="assets/week06-laser-operating-machine.jpg" alt="Operating the Laser Cutting Machine" class="gallery-img w-full max-h-72 object-cover object-center rounded-lg">
+                        <div class="absolute top-3 right-3 p-2 rounded-xl bg-brand-navyDark/85 backdrop-blur-md text-brand-gold border border-brand-cream/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                          <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="text-xs text-brand-cream/85 font-medium px-1 flex items-start gap-1.5">
+                      <span class="text-brand-gold font-bold">•</span>
+                      <span><strong>Machine Operation:</strong> Operating the FORGE 1490 CO₂ laser cutter control panel with safety goggles, verifying origin positioning, water chiller flow, and exhaust ventilation before firing.</span>
+                    </p>
+                  </div>
+
+                  <!-- Photo: Laser Engraving in Process -->
+                  <div class="space-y-2 group">
+                    <div class="gallery-img-container relative group cursor-zoom-in bg-brand-navyDark/90 p-2.5 rounded-2xl border border-brand-cream/15 hover:border-brand-gold/50 transition-all shadow-xl" onclick="openImageLightbox('assets/week06-laser-engraving-in-process.jpg', 'Laser Engraving in Process: High-precision laser nozzle with air assist actively etching the Pink Panther illustration on 3mm clear acrylic on the honeycomb bed.')">
+                      <div class="relative overflow-hidden rounded-xl bg-slate-900 flex items-center justify-center min-h-[240px]">
+                        <img src="assets/week06-laser-engraving-in-process.jpg" alt="Laser Engraving in Process on Acrylic" class="gallery-img w-full max-h-72 object-cover object-center rounded-lg">
+                        <div class="absolute top-3 right-3 p-2 rounded-xl bg-brand-navyDark/85 backdrop-blur-md text-brand-gold border border-brand-cream/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                          <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="text-xs text-brand-cream/85 font-medium px-1 flex items-start gap-1.5">
+                      <span class="text-brand-gold font-bold">•</span>
+                      <span><strong>Laser Engraving in Process:</strong> Coaxial cone nozzle with pressurized air assist actively executing high-speed raster scan lines across the clear cast acrylic sheet on the honeycomb bed.</span>
+                    </p>
+                  </div>
+
+                </div>
+
+                <!-- 3-Stage Fabrication Stages -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-1">
                   
                   <div class="p-4 rounded-2xl bg-brand-navyDark/70 border border-brand-cream/15 space-y-2">
                     <div class="flex items-center justify-between text-[11px] font-bold text-brand-gold uppercase tracking-wider">
@@ -1653,9 +1699,9 @@
                     </div>
                     <div class="flex items-center gap-2 text-sm font-semibold text-brand-cream pt-1">
                       <i data-lucide="crosshair" class="w-4 h-4 text-brand-gold"></i>
-                      <span>Bed Level &amp; Focal Distance</span>
+                      <span>Bed Level &amp; Focal Gauge</span>
                     </div>
-                    <p class="text-xs text-brand-cream/75">Positioned 3mm clear acrylic on the honeycomb bed, checked material flatness, and adjusted manual Z-height focal distance using the gauge tool.</p>
+                    <p class="text-xs text-brand-cream/75">Positioned 3mm clear acrylic on honeycomb bed, checked material flatness, and calibrated manual Z-height focal distance.</p>
                   </div>
 
                   <div class="p-4 rounded-2xl bg-brand-navyDark/70 border border-brand-cream/15 space-y-2">
@@ -1665,9 +1711,9 @@
                     </div>
                     <div class="flex items-center gap-2 text-sm font-semibold text-brand-cream pt-1">
                       <i data-lucide="zap" class="w-4 h-4 text-brand-gold"></i>
-                      <span>High-Speed Surface Scan</span>
+                      <span>High-Speed Raster Scan</span>
                     </div>
-                    <p class="text-xs text-brand-cream/75">Fired the 150W CO₂ laser in Scan mode at 100 mm/s and 30% power, etching frosted raster detail for the Pink Panther illustration and text.</p>
+                    <p class="text-xs text-brand-cream/75">Fired the 150W laser at 100 mm/s and 30% power, generating crisp frosted artwork and typography.</p>
                   </div>
 
                   <div class="p-4 rounded-2xl bg-brand-navyDark/70 border border-brand-cream/15 space-y-2">
@@ -1677,32 +1723,59 @@
                     </div>
                     <div class="flex items-center gap-2 text-sm font-semibold text-brand-cream pt-1">
                       <i data-lucide="scissors" class="w-4 h-4 text-brand-gold"></i>
-                      <span>Contour &amp; Hole Cutting</span>
+                      <span>Contour &amp; 3mm Eyelet</span>
                     </div>
-                    <p class="text-xs text-brand-cream/75">Executed vector cut at 15 mm/s and 60% power with air assist, achieving clean flame-polished edges and a through-cut 3mm keychain hole.</p>
+                    <p class="text-xs text-brand-cream/75">Executed vector through-cut at 15 mm/s and 60% power with air assist for a clear, flame-polished perimeter.</p>
                   </div>
 
                 </div>
               </div>
 
               <!-- Section 11: Final Result Hero Shot -->
-              <div class="p-6 rounded-3xl bg-gradient-to-br from-brand-navyLight/90 to-brand-navy/95 border border-brand-gold/40 shadow-2xl space-y-4">
-                <div class="flex items-center justify-between text-brand-gold font-bold text-sm uppercase tracking-wider border-b border-brand-cream/10 pb-2">
-                  <span class="flex items-center gap-2"><i data-lucide="award" class="w-4 h-4"></i> 11. Final Result &ndash; Quality Assessment</span>
-                  <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300">Verified Quality</span>
-                </div>
-                <div class="gallery-img-container relative h-56 sm:h-64 bg-brand-navyDark/90 p-6 flex flex-col items-center justify-center cursor-zoom-in group" onclick="openImageLightbox('assets/week06-laser-selected-design.jpg', 'Completed Chill Mode: On Pink Panther acrylic keychain with frosted engraving & flame-polished outer edges.')">
-                  <div class="w-16 h-16 rounded-2xl bg-brand-gold/15 flex items-center justify-center text-brand-gold group-hover:scale-110 transition-transform mb-2">
-                    <i data-lucide="sparkles" class="w-8 h-8"></i>
+              <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-brand-navyLight/90 to-brand-navy/95 border border-brand-gold/40 shadow-2xl space-y-6">
+                <div class="flex items-center justify-between border-b border-brand-cream/10 pb-2">
+                  <div class="flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-wider">
+                    <i data-lucide="award" class="w-4 h-4"></i>
+                    <span>11. Final Result &ndash; Physical Prototype Quality Assessment</span>
                   </div>
-                  <h4 class="text-lg font-serif font-bold text-brand-cream">&ldquo;Chill Mode: On&rdquo; Pink Panther Acrylic Keychain</h4>
-                  <p class="text-xs text-brand-gold font-medium mt-1">Frosted High-Contrast Surface Engraving &bull; Flame-Polished Clean Perimeter</p>
-                  <div class="absolute bottom-3 right-3 px-3 py-1 rounded-xl bg-brand-navyDark/85 backdrop-blur-md text-xs text-brand-cream border border-brand-cream/20 flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-brand-gold"></i>
-                    <span>Inspect Design Art</span>
-                  </div>
+                  <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 font-mono">Fabrication Verified</span>
                 </div>
-                <p class="text-xs text-brand-cream/80 italic text-center">Completed &ldquo;Chill Mode: On&rdquo; Pink Panther acrylic keychain displaying clean frosted engraving and flame-polished outer edges.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                  
+                  <!-- Photo: Final Result Artwork -->
+                  <div class="md:col-span-6 space-y-2 group">
+                    <div class="gallery-img-container relative group cursor-zoom-in bg-slate-900 p-2.5 rounded-2xl border border-brand-cream/20 hover:border-brand-gold/50 transition-all shadow-xl flex items-center justify-center" onclick="openImageLightbox('assets/week06-laser-final-result.jpg', 'Final Fabricated Result: Completed \"Chill Mode: On\" Pink Panther custom acrylic keychain with frosted engraving, 3mm lanyard hole, and flame-polished outer edges.')">
+                      <img src="assets/week06-laser-final-result.jpg" alt="Final Fabricated Pink Panther Acrylic Keychain" class="gallery-img max-h-80 w-auto object-contain rounded-xl">
+                      <div class="absolute top-3 right-3 p-2 rounded-xl bg-brand-navyDark/85 backdrop-blur-md text-brand-gold border border-brand-cream/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                      </div>
+                    </div>
+                    <p class="text-xs text-brand-cream/80 font-medium px-1 flex items-start gap-1.5">
+                      <span class="text-brand-gold font-bold">•</span>
+                      <span><strong>Figure 11.1 (Final Result):</strong> Completed physical acrylic keychain showing frosted Pink Panther engraving, sharp &ldquo;CHILL MODE: ON&rdquo; lettering, and flame-polished perimeter.</span>
+                    </p>
+                  </div>
+
+                  <!-- Quality Review Points -->
+                  <div class="md:col-span-6 space-y-3.5 text-xs sm:text-sm text-brand-cream/85 leading-relaxed">
+                    <div class="p-4 rounded-2xl bg-brand-navy/60 border border-brand-cream/10 space-y-1.5">
+                      <div class="text-xs font-bold text-brand-gold uppercase">Surface Engraving Contrast</div>
+                      <p>The 100 mm/s scan speed at 30% power delivered a uniform, light-scattering frosted finish on the clear acrylic, highlighting character outlines, sunglasses, and boba drink textures with high contrast.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-brand-navy/60 border border-brand-cream/10 space-y-1.5">
+                      <div class="text-xs font-bold text-emerald-300 uppercase">Edge Quality &amp; Dimensional Precision</div>
+                      <p>Air-assisted vector cutting at 15 mm/s produced 90° perpendicular, flame-polished transparent perimeter edges with zero charring or thermal burrs, alongside a clean 3 mm lanyard hole.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-brand-navy/60 border border-brand-cream/10 space-y-1.5">
+                      <div class="text-xs font-bold text-brand-gold uppercase">Typography Resolution</div>
+                      <p>Individual glyphs across &ldquo;CHILL MODE: ON&rdquo; maintained crisp legibility without kerf bridging, validating our DXF manual kerning compensation.</p>
+                    </div>
+                  </div>
+
+                </div>
               </div>
 
               <!-- Section 12: Technical Troubleshooting Log (Table 2) -->
