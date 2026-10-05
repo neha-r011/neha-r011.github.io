@@ -1991,36 +1991,76 @@
             <!-- ================================================================= -->
             <div id="week6-content-3dprinting" class="space-y-10 hidden transition-opacity duration-300">
               
-              <!-- Section 1 & 2: Printer Details & Slicer -->
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Section 1 & 2: Printer Details & Filament Selection -->
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 
-                <!-- 1. Printer Details -->
-                <div class="p-6 rounded-3xl bg-brand-navyDark/70 border border-brand-cream/15 space-y-4">
-                  <div class="flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-wider border-b border-brand-cream/10 pb-2">
-                    <i data-lucide="printer" class="w-4 h-4"></i>
-                    <span>1. 3D Printer Specifications</span>
+                <!-- 1. 3D Printer Specifications & Photo -->
+                <div class="p-6 sm:p-7 rounded-3xl bg-brand-navyDark/70 border border-brand-cream/15 space-y-5 flex flex-col justify-between">
+                  <div class="space-y-4">
+                    <div class="flex items-center justify-between border-b border-brand-cream/10 pb-2">
+                      <div class="flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-wider">
+                        <i data-lucide="printer" class="w-4 h-4"></i>
+                        <span>1. 3D Printer Specifications</span>
+                      </div>
+                      <span class="text-xs px-2.5 py-0.5 rounded-full bg-brand-gold/15 border border-brand-gold/30 text-brand-gold font-mono">FDM / CoreXY</span>
+                    </div>
+
+                    <!-- 3D Printer Image (Image 1) -->
+                    <div class="space-y-2 group">
+                      <div class="gallery-img-container relative group cursor-zoom-in bg-white/5 p-3 rounded-2xl border border-brand-cream/15 hover:border-brand-gold/50 transition-all shadow-lg flex items-center justify-center min-h-[220px]" onclick="openImageLightbox('assets/week06-3d-printer.png', '3D Printer Specifications: Bambu Lab Precision FDM 3D Printer with enclosed chamber and multi-filament AMS system')">
+                        <img src="assets/week06-3d-printer.png" alt="Bambu Lab 3D Printer" class="gallery-img max-h-56 w-auto object-contain rounded-lg">
+                        <div class="absolute top-3 right-3 p-2 rounded-xl bg-brand-navyDark/85 backdrop-blur-md text-brand-gold border border-brand-cream/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                          <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                        </div>
+                      </div>
+                      <p class="text-xs text-brand-cream/80 font-medium px-1 flex items-start gap-1.5">
+                        <span class="text-brand-gold font-bold">•</span>
+                        <span><strong>Figure 1.1 (3D Printer):</strong> Bambu Lab precision 3D printer featuring enclosed build volume, automated multi-point bed leveling, and top-mounted AMS multi-filament feeding unit.</span>
+                      </p>
+                    </div>
+
+                    <ul class="space-y-2 text-xs sm:text-sm text-brand-cream/85 pt-1">
+                      <li class="flex items-center justify-between"><span class="text-brand-cream/60">Make:</span> <span class="font-semibold text-brand-cream">Bambu Lab</span></li>
+                      <li class="flex items-center justify-between"><span class="text-brand-cream/60">Model:</span> <span class="font-semibold text-brand-gold">Bambu Lab A1 / CoreXY Series</span></li>
+                      <li class="flex items-center justify-between"><span class="text-brand-cream/60">Build Volume:</span> <span class="font-semibold text-brand-gold font-mono">256 mm &times; 256 mm &times; 256 mm</span></li>
+                      <li class="flex items-center justify-between"><span class="text-brand-cream/60">Nozzle Size:</span> <span class="font-semibold text-brand-cream">0.4 mm Stainless / Hardened Steel</span></li>
+                      <li class="flex items-center justify-between"><span class="text-brand-cream/60">Supported Materials:</span> <span class="font-semibold text-brand-gold">PLA, PETG, TPU, PVA</span></li>
+                    </ul>
                   </div>
-                  <ul class="space-y-2.5 text-xs sm:text-sm text-brand-cream/85">
-                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Make:</span> <span class="font-semibold text-brand-cream">Bambu Lab</span></li>
-                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Model:</span> <span class="font-semibold text-brand-cream">Bambu Lab A1 (FDM / CoreXY)</span></li>
-                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Build Volume:</span> <span class="font-semibold text-brand-gold">256 mm &times; 256 mm &times; 256 mm</span></li>
-                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Nozzle Size:</span> <span class="font-semibold text-brand-cream">0.4 mm Stainless / Hardened Steel</span></li>
-                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Supported Materials:</span> <span class="font-semibold text-brand-gold">PLA, PETG, TPU, PVA</span></li>
-                  </ul>
                 </div>
 
-                <!-- 2. Slicer & Material -->
-                <div class="p-6 rounded-3xl bg-brand-navyDark/70 border border-brand-cream/15 space-y-4">
-                  <div class="flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-wider border-b border-brand-cream/10 pb-2">
-                    <i data-lucide="package" class="w-4 h-4"></i>
-                    <span>2. Slicer &amp; Filament Selection</span>
+                <!-- 2. Slicer & Filament Selection -->
+                <div class="p-6 sm:p-7 rounded-3xl bg-brand-navyDark/70 border border-brand-cream/15 space-y-5 flex flex-col justify-between">
+                  <div class="space-y-4">
+                    <div class="flex items-center justify-between border-b border-brand-cream/10 pb-2">
+                      <div class="flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-wider">
+                        <i data-lucide="package" class="w-4 h-4"></i>
+                        <span>2. Slicer &amp; Filament Selection</span>
+                      </div>
+                      <span class="text-xs px-2.5 py-0.5 rounded-full bg-blue-500/15 border border-blue-500/30 text-blue-300 font-mono">1.75 mm PLA</span>
+                    </div>
+
+                    <!-- Filament Spool Image (Image 2) -->
+                    <div class="space-y-2 group">
+                      <div class="gallery-img-container relative group cursor-zoom-in bg-white/5 p-3 rounded-2xl border border-brand-cream/15 hover:border-brand-gold/50 transition-all shadow-lg flex items-center justify-center min-h-[220px]" onclick="openImageLightbox('assets/week06-3d-filament-spool.png', 'Filament Selection: Bambu PLA Basic 1.75mm Spool (White) with high dimensional stability')">
+                        <img src="assets/week06-3d-filament-spool.png" alt="Bambu PLA Basic Filament Spool" class="gallery-img max-h-56 w-auto object-contain rounded-lg">
+                        <div class="absolute top-3 right-3 p-2 rounded-xl bg-brand-navyDark/85 backdrop-blur-md text-brand-gold border border-brand-cream/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                          <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                        </div>
+                      </div>
+                      <p class="text-xs text-brand-cream/80 font-medium px-1 flex items-start gap-1.5">
+                        <span class="text-brand-gold font-bold">•</span>
+                        <span><strong>Figure 2.1 (Filament Spool):</strong> Bambu PLA Basic (1.75 mm diameter) filament spool in white, engineered for tight diameter tolerance (&plusmn;0.03 mm) and low thermal shrinkage.</span>
+                      </p>
+                    </div>
+
+                    <ul class="space-y-2 text-xs sm:text-sm text-brand-cream/85 pt-1">
+                      <li class="flex items-center justify-between"><span class="text-brand-cream/60">Slicer Software:</span> <span class="font-semibold text-brand-gold">Bambu Studio (Windows 64-bit)</span></li>
+                      <li class="flex items-center justify-between"><span class="text-brand-cream/60">Material Used:</span> <span class="font-semibold text-brand-cream">Bambu PLA Basic (White)</span></li>
+                      <li class="flex items-center justify-between"><span class="text-brand-cream/60">Filament Diameter:</span> <span class="font-semibold text-brand-gold font-mono">1.75 mm</span></li>
+                      <li class="flex items-center justify-between"><span class="text-brand-cream/60">Extrusion Class:</span> <span class="font-semibold text-brand-cream">Fused Deposition Modeling (FDM)</span></li>
+                    </ul>
                   </div>
-                  <ul class="space-y-2.5 text-xs sm:text-sm text-brand-cream/85">
-                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Slicer Software:</span> <span class="font-semibold text-brand-gold">Bambu Studio (Windows 64-bit)</span></li>
-                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Material Used:</span> <span class="font-semibold text-brand-cream">Bambu PLA Basic (Original Filament)</span></li>
-                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Filament Diameter:</span> <span class="font-semibold text-brand-gold">1.75 mm</span></li>
-                    <li class="flex items-center justify-between"><span class="text-brand-cream/60">Extrusion Class:</span> <span class="font-semibold text-brand-cream">Fused Deposition Modeling (FDM)</span></li>
-                  </ul>
                 </div>
 
               </div>
@@ -2028,17 +2068,17 @@
               <!-- Section 3 & 4: Printer Limits & Why Cannot Be Made Subtractively -->
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
-                <!-- 3. Printer Limits & Capabilities -->
+                <!-- 3. Printer Limits & Kinematics -->
                 <div class="p-6 rounded-3xl bg-brand-navyDark/70 border border-brand-cream/15 space-y-3">
                   <div class="flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-wider border-b border-brand-cream/10 pb-2">
                     <i data-lucide="gauge" class="w-4 h-4"></i>
                     <span>3. Printer Limits &amp; Kinematics</span>
                   </div>
                   <p class="text-xs sm:text-sm text-brand-cream/80 leading-relaxed">
-                    The Bambu Lab A1 provides high motion accuracy with automated bed leveling, active vibration compensation, and dynamic flow rate calibration. Its core capabilities allow complex <strong>print-in-place articulated assemblies</strong> with tight mechanical clearances to be fabricated in a single run.
+                    The 3D printer provides high motion accuracy with automated bed leveling, active vibration compensation, and dynamic flow rate calibration. Its core capabilities allow complex <strong>print-in-place articulated assemblies</strong> with tight mechanical clearances to be fabricated in a single uninterrupted run.
                   </p>
                   <p class="text-xs sm:text-sm text-brand-cream/70 leading-relaxed">
-                    Limitations include build volume boundaries (256 mm&sup3;) and inherent Z-axis inter-layer tensile anisotropy typical of layer-by-layer polymer extrusion.
+                    Limitations include build volume boundaries (256 mm&sup3;), bridging angles exceeding 45&deg; without supports, and inherent Z-axis inter-layer tensile anisotropy typical of layer-by-layer polymer extrusion.
                   </p>
                 </div>
 
@@ -2059,42 +2099,90 @@
               </div>
 
               <!-- Section 5 & 6: STL Definition & Selected Model -->
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
-                <!-- 5. STL Definition -->
-                <div class="p-6 rounded-3xl bg-brand-navyDark/70 border border-brand-cream/15 space-y-3">
-                  <div class="flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-wider border-b border-brand-cream/10 pb-2">
-                    <i data-lucide="box" class="w-4 h-4"></i>
-                    <span>5. STL Mesh Architecture</span>
-                  </div>
-                  <ul class="space-y-2 text-xs sm:text-sm text-brand-cream/80">
-                    <li><strong class="text-brand-cream">STL Definition:</strong> STL stands for <strong>STereoLithography</strong> (or Standard Tessellation Language).</li>
-                    <li><strong class="text-brand-cream">Triangular Surface Mesh:</strong> Represents 3D surface geometry through interconnected planar triangles defined by 3D vertex coordinates and outward normal vectors.</li>
-                    <li><strong class="text-brand-cream">Why Commonly Used:</strong> Universal standard that simplifies complex parametric CAD surfaces into 2D horizontal layer slices interpretable by slicer toolpaths.</li>
-                  </ul>
-                </div>
-
-                <!-- 6. Selected STL File -->
-                <div class="p-6 rounded-3xl bg-brand-navyDark/70 border border-brand-cream/15 space-y-3">
-                  <div class="flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-wider border-b border-brand-cream/10 pb-2">
+              <div class="p-6 sm:p-8 rounded-3xl bg-brand-navyDark/70 border border-brand-cream/15 space-y-6">
+                <div class="flex items-center justify-between border-b border-brand-cream/10 pb-2">
+                  <div class="flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-wider">
                     <i data-lucide="cuboid" class="w-4 h-4"></i>
-                    <span>6. Selected Model: Infinity Cube</span>
+                    <span>5 &amp; 6. STL Mesh Architecture &amp; Selected Model</span>
                   </div>
-                  <ul class="space-y-2 text-xs sm:text-sm text-brand-cream/80">
-                    <li><strong class="text-brand-cream">Model Name:</strong> Infinity Cube Fidget Toy (Print-in-Place Articulated Mechanism).</li>
-                    <li><strong class="text-brand-cream">Sourced From:</strong> MakerWorld Model Repository.</li>
-                    <li><strong class="text-brand-cream">Selection Reason:</strong> Evaluates print-in-place kinematics, overhang control, wall loop tolerances, and precise gap clearances without post-print assembly.</li>
-                  </ul>
+                  <span class="text-xs px-2.5 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 font-mono">Reference Model Demonstration</span>
                 </div>
 
+                <!-- STL Definition Overview -->
+                <div class="p-4 rounded-2xl bg-brand-navy/60 border border-brand-cream/10 space-y-2 text-xs sm:text-sm text-brand-cream/80">
+                  <div class="font-bold text-brand-gold uppercase text-xs">STL (STereoLithography) Definition &amp; Triangular Mesh</div>
+                  <p>
+                    STL represents 3D surface geometry through interconnected planar triangles defined by 3D vertex coordinates and outward normal unit vectors. It serves as the universal CAD-to-CAM format that simplifies complex parametric CAD surfaces into 2D horizontal layer slices interpretable by slicer toolpaths.
+                  </p>
+                </div>
+
+                <!-- Notice Banner: Reference Model Note -->
+                <div class="p-3.5 rounded-2xl bg-brand-gold/10 border border-brand-gold/30 text-xs text-brand-cream/90 flex items-center gap-3">
+                  <i data-lucide="info" class="w-5 h-5 text-brand-gold shrink-0"></i>
+                  <div>
+                    <strong class="text-brand-gold">Selected Reference Model:</strong> The images below showcase the selected reference design demonstrating the dual folding kinematic states (flat elongated position &amp; folded 2&times;2 cube). <em>(Note: This is the design reference model illustrating the print-in-place mechanism).</em>
+                  </div>
+                </div>
+
+                <!-- 2-View Model Reference Gallery (Images 3 & 4) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  
+                  <!-- Image 3: Flat Unfolded Configuration -->
+                  <div class="space-y-2 group">
+                    <div class="gallery-img-container relative group cursor-zoom-in bg-slate-950 p-3 rounded-2xl border border-brand-cream/15 hover:border-brand-gold/50 transition-all shadow-xl flex items-center justify-center min-h-[220px]" onclick="openImageLightbox('assets/week06-3d-model-flat.png', 'Selected Reference Model (View 1): Infinity Cube in flat unfolded elongated position showing internal interlocking captive hinge joints')">
+                      <img src="assets/week06-3d-model-flat.png" alt="Selected Model Flat Unfolded Configuration" class="gallery-img max-h-60 w-auto object-contain rounded-lg">
+                      <div class="absolute top-3 right-3 p-2 rounded-xl bg-brand-navyDark/85 backdrop-blur-md text-brand-gold border border-brand-cream/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                      </div>
+                    </div>
+                    <p class="text-xs text-brand-cream/85 font-medium px-1 flex items-start gap-1.5">
+                      <span class="text-brand-gold font-bold">•</span>
+                      <span><strong>Figure 6.1 (Selected Model - Flat Position):</strong> Reference model arranged in flat 4&times;2 link orientation, showing the internal captive hinge connectors and horizontal bed orientation.</span>
+                    </p>
+                  </div>
+
+                  <!-- Image 4: Folded 2x2 Cube Configuration -->
+                  <div class="space-y-2 group">
+                    <div class="gallery-img-container relative group cursor-zoom-in bg-slate-950 p-3 rounded-2xl border border-brand-cream/15 hover:border-brand-gold/50 transition-all shadow-xl flex items-center justify-center min-h-[220px]" onclick="openImageLightbox('assets/week06-3d-model-cube.png', 'Selected Reference Model (View 2): Infinity Cube folded into 2x2 compact cube configuration demonstrating multi-axis kinematic rotation')">
+                      <img src="assets/week06-3d-model-cube.png" alt="Selected Model Folded Cube Configuration" class="gallery-img max-h-60 w-auto object-contain rounded-lg">
+                      <div class="absolute top-3 right-3 p-2 rounded-xl bg-brand-navyDark/85 backdrop-blur-md text-brand-gold border border-brand-cream/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                      </div>
+                    </div>
+                    <p class="text-xs text-brand-cream/85 font-medium px-1 flex items-start gap-1.5">
+                      <span class="text-brand-gold font-bold">•</span>
+                      <span><strong>Figure 6.2 (Selected Model - Folded Cube):</strong> Reference model folded into a 2&times;2&times;2 compact cube, validating multi-directional rotational freedom without hinge binding.</span>
+                    </p>
+                  </div>
+
+                </div>
               </div>
 
-              <!-- Section 7: Slicer Settings (Table 3) -->
-              <div class="space-y-3">
-                <div class="flex items-center justify-between text-brand-gold font-bold text-sm uppercase tracking-wider">
-                  <span class="flex items-center gap-2"><i data-lucide="settings" class="w-4 h-4"></i> 7. Bambu Studio Slicer Configuration (Table 3)</span>
-                  <span class="text-brand-cream/50 text-xs font-mono">BBL A1 Factory Profile</span>
+              <!-- Section 7: Bambu Studio Slicer Configuration & Slicing Result Image -->
+              <div class="space-y-6">
+                <div class="flex items-center justify-between border-b border-brand-cream/10 pb-2">
+                  <div class="flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-wider">
+                    <i data-lucide="settings" class="w-4 h-4"></i>
+                    <span>7. Bambu Studio Slicer Configuration &amp; Slicing Result</span>
+                  </div>
+                  <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 font-mono">Bambu Studio Slicing Workspace</span>
                 </div>
+
+                <!-- Slicer Result Showcase (Image 5) -->
+                <div class="space-y-2 group">
+                  <div class="gallery-img-container relative group cursor-zoom-in bg-slate-950 p-3 rounded-2xl border border-brand-cream/20 hover:border-brand-gold/50 transition-all shadow-2xl flex items-center justify-center" onclick="openImageLightbox('assets/week06-3d-slicer-result.png', 'Bambu Studio Slicing Result: Slicing on Bambu Textured PEI Plate showing 448 layers, 1h 06m model print time, 1h 15m total duration, 28.35g PLA weight, and 9.35m filament consumption')">
+                    <img src="assets/week06-3d-slicer-result.png" alt="Bambu Studio Slicing Result Workspace" class="gallery-img max-h-96 w-auto object-contain rounded-xl">
+                    <div class="absolute top-3 right-3 p-2 rounded-xl bg-brand-navyDark/85 backdrop-blur-md text-brand-gold border border-brand-cream/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                    </div>
+                  </div>
+                  <p class="text-xs text-brand-cream/85 font-medium px-1 flex items-start gap-1.5">
+                    <span class="text-brand-gold font-bold">•</span>
+                    <span><strong>Figure 7.1 (Bambu Studio Slicer Readout):</strong> Slicing verification on Bambu Textured PEI Plate displaying 448 total layers, 0.20mm standard profile, 1h 06m active model print time (1h 15m total job duration including 6m 15s bed leveling + 2m 37s timelapse), 28.35 g PLA material weight, and 9.35 m filament extrusion length.</span>
+                  </p>
+                </div>
+
+                <!-- Slicer Parameters Table (Table 3) -->
                 <div class="overflow-x-auto rounded-2xl border border-brand-cream/15 shadow-xl bg-brand-navyDark/70 custom-scrollbar">
                   <table class="w-full text-left border-collapse text-xs sm:text-sm">
                     <thead>
@@ -2176,7 +2264,7 @@
                         <td class="p-3 font-medium text-brand-cream">Total Layer Count</td>
                         <td class="p-3 font-mono text-brand-gold">448</td>
                         <td class="p-3 font-mono">Layers</td>
-                        <td class="p-3 text-xs text-brand-cream/80">Smooth step progression across total Z-height.</td>
+                        <td class="p-3 text-xs text-brand-cream/80">Smooth step progression across total Z-height (visible in slicer readout).</td>
                       </tr>
                       <tr class="hover:bg-brand-navyLight/40 transition-colors">
                         <td class="p-3 font-medium text-brand-cream">Supports</td>
@@ -2216,82 +2304,37 @@
                         <td class="p-3.5 font-medium text-brand-cream">Active Printing Time</td>
                         <td class="p-3.5 font-mono text-brand-gold">1 h 06 min</td>
                         <td class="p-3.5 font-mono text-brand-gold">1 h 06 min</td>
-                        <td class="p-3.5 text-xs text-emerald-300 font-medium">0% variance; continuous toolhead extrusion.</td>
+                        <td class="p-3.5 text-xs text-emerald-300 font-medium">0% variance; continuous toolhead extrusion at 448 layers.</td>
                       </tr>
                       <tr class="hover:bg-brand-navyLight/40 transition-colors">
                         <td class="p-3.5 font-medium text-brand-cream">Prepare &amp; Timelapse Time</td>
-                        <td class="p-3.5 font-mono text-brand-cream/80">8 min 53 s</td>
-                        <td class="p-3.5 font-mono text-brand-cream/80">8 min 53 s</td>
-                        <td class="p-3.5 text-xs text-brand-cream/70">Auto bed leveling (6m 15s) + video capture (2m 38s).</td>
+                        <td class="p-3.5 font-mono text-brand-cream/80">8 min 52 s (6m15s + 2m37s)</td>
+                        <td class="p-3.5 font-mono text-brand-cream/80">8 min 52 s</td>
+                        <td class="p-3.5 text-xs text-brand-cream/70">Auto bed leveling (6m 15s) + video capture timelapse (2m 37s).</td>
                       </tr>
                       <tr class="hover:bg-brand-navyLight/40 transition-colors">
                         <td class="p-3.5 font-medium text-brand-cream">Total Job Duration</td>
                         <td class="p-3.5 font-mono text-brand-gold">1 h 15 min</td>
                         <td class="p-3.5 font-mono text-brand-gold">1 h 15 min</td>
-                        <td class="p-3.5 text-xs text-brand-cream/70">End-to-end turnaround time.</td>
+                        <td class="p-3.5 text-xs text-brand-cream/70">End-to-end turnaround time from start to cooling.</td>
                       </tr>
                       <tr class="hover:bg-brand-navyLight/40 transition-colors">
                         <td class="p-3.5 font-medium text-brand-cream">Material Weight</td>
                         <td class="p-3.5 font-mono text-brand-gold">28.35 g</td>
                         <td class="p-3.5 font-mono text-brand-gold">28.40 g</td>
-                        <td class="p-3.5 text-xs text-brand-cream/70">+0.05 g difference due to minor scale calibration rounding.</td>
+                        <td class="p-3.5 text-xs text-brand-cream/70">+0.05 g difference due to minor digital scale rounding.</td>
                       </tr>
                       <tr class="hover:bg-brand-navyLight/40 transition-colors">
                         <td class="p-3.5 font-medium text-brand-cream">Filament Length</td>
                         <td class="p-3.5 font-mono text-brand-gold">9.35 m</td>
                         <td class="p-3.5 font-mono text-brand-gold">9.35 m</td>
-                        <td class="p-3.5 text-xs text-brand-cream/70">Total 1.75 mm PLA extrusion path.</td>
+                        <td class="p-3.5 text-xs text-brand-cream/70">Total 1.75 mm PLA extrusion path across 448 vertical slices.</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
                 <div class="p-4 rounded-2xl bg-brand-navy/60 border border-brand-gold/20 text-xs sm:text-sm text-brand-cream/85">
-                  <strong class="text-brand-gold">Observations:</strong> The Bambu Lab A1 completed the 448-layer print cleanly in 1h 15m total duration. The print-in-place hinge clearances were correctly maintained throughout the print, allowing all joint segments to rotate freely immediately after bed removal without fusing.
-                </div>
-              </div>
-
-              <!-- Section 10: Final Result (3D Print Photos) -->
-              <div class="space-y-4">
-                <div class="flex items-center justify-between text-brand-gold font-bold text-sm uppercase tracking-wider">
-                  <span class="flex items-center gap-2"><i data-lucide="image" class="w-4 h-4"></i> 10. Final Result &amp; Documentation Gallery</span>
-                  <span class="text-brand-cream/50 text-xs font-mono">2-View Showcase</span>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                  
-                  <div class="space-y-2 group">
-                    <div class="gallery-img-container relative h-60 bg-brand-navyDark/90 p-4 flex flex-col justify-between cursor-zoom-in" onclick="openImageLightbox('assets/protosem-logo.jpg', '3D Print Photo 1: Bambu Studio Slicer workspace showing toolpath generation, 448 layers, and joint clearance check.')">
-                      <div class="flex items-center justify-between text-[11px] font-bold text-brand-gold uppercase tracking-wider">
-                        <span>Slicer View</span>
-                        <span class="px-2 py-0.5 rounded bg-brand-navy border border-brand-cream/15 text-brand-cream">448 Layers</span>
-                      </div>
-                      <div class="flex items-center justify-center py-6 text-brand-gold/60 group-hover:scale-110 transition-transform">
-                        <i data-lucide="layers" class="w-14 h-14"></i>
-                      </div>
-                      <div class="text-[11px] text-brand-cream/60 flex items-center justify-between border-t border-brand-cream/10 pt-2">
-                        <span>Toolpath Simulation</span>
-                        <i data-lucide="zoom-in" class="w-4 h-4 text-brand-gold"></i>
-                      </div>
-                    </div>
-                    <p class="text-xs text-brand-cream/85 font-medium px-1"><strong>3D Print Photo 1:</strong> Bambu Studio Slicer workspace showing toolpath generation, 448 layers, and joint clearance check.</p>
-                  </div>
-
-                  <div class="space-y-2 group">
-                    <div class="gallery-img-container relative h-60 bg-brand-navyDark/90 p-4 flex flex-col justify-between cursor-zoom-in" onclick="openImageLightbox('assets/protosem-inauguration.jpg', '3D Print Photo 2: Fully articulated 3D printed Infinity Cube Fidget Toy with smooth folding action and clean surface finish.')">
-                      <div class="flex items-center justify-between text-[11px] font-bold text-brand-gold uppercase tracking-wider">
-                        <span>Physical Print</span>
-                        <span class="px-2 py-0.5 rounded bg-brand-navy border border-brand-cream/15 text-brand-cream">Articulated Assembly</span>
-                      </div>
-                      <div class="flex items-center justify-center py-6 text-brand-gold/60 group-hover:scale-110 transition-transform">
-                        <i data-lucide="box" class="w-14 h-14"></i>
-                      </div>
-                      <div class="text-[11px] text-brand-cream/60 flex items-center justify-between border-t border-brand-cream/10 pt-2">
-                        <span>Smooth Folding Motion</span>
-                        <i data-lucide="zoom-in" class="w-4 h-4 text-brand-gold"></i>
-                      </div>
-                    </div>
-                    <p class="text-xs text-brand-cream/85 font-medium px-1"><strong>3D Print Photo 2:</strong> Fully articulated 3D printed Infinity Cube Fidget Toy with smooth folding action and clean surface finish.</p>
-                  </div>
-
+                  <strong class="text-brand-gold">Observations:</strong> The Bambu Lab printer completed the 448-layer job in 1h 15m total duration. The print-in-place hinge clearances were correctly maintained throughout the print, allowing all joint segments to rotate freely immediately after bed removal without fusing.
                 </div>
               </div>
 
@@ -2319,9 +2362,9 @@
                   <span>References &amp; Credits</span>
                 </div>
                 <ol class="space-y-1.5 text-xs text-brand-cream/75 list-decimal list-inside">
-                  <li><strong class="text-brand-cream">Software Applications:</strong> RDWorks V8 (Ruida Motion Controller Suite), Bambu Studio Slicer (Bambu Lab), and Convertio Vector Conversion Utility.</li>
-                  <li><strong class="text-brand-cream">Model Sourcing:</strong> MakerWorld Model Platform by Bambu Lab.</li>
-                  <li><strong class="text-brand-cream">Hardware Documentation:</strong> Bambu Lab A1 User Guide &amp; SIL CO₂ Laser Operating Manual.</li>
+                  <li><strong class="text-brand-cream">Software Applications:</strong> Bambu Studio Slicer (Bambu Lab), RDWorks V8 (Ruida Motion Controller Suite), and Convertio Vector Utility.</li>
+                  <li><strong class="text-brand-cream">Model Sourcing:</strong> MakerWorld Model Repository by Bambu Lab.</li>
+                  <li><strong class="text-brand-cream">Hardware Documentation:</strong> Bambu Lab 3D Printer User Manual &amp; SIL CO₂ Laser Operating Manual.</li>
                 </ol>
               </div>
 
